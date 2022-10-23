@@ -1,0 +1,66 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	[# th:if = "${Yubi_Application_Id != null}"]
+	private String [(${Yubi_Application_Id})];
+	public void set[(${Yubi_Application_Id})](String Yubi_Application_Id){
+		this.[(${Yubi_Application_Id})] = Yubi_Application_Id;
+	}
+	public String getYubi_Application_Id(){
+		return this.[(${Yubi_Application_Id})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Product_Application_Id != null}"]
+	private String [(${Yubi_Product_Application_Id})];
+	public void set[(${Yubi_Product_Application_Id})](String Yubi_Product_Application_Id){
+		this.[(${Yubi_Product_Application_Id})] = Yubi_Product_Application_Id;
+	}
+	public String getYubi_Product_Application_Id(){
+		return this.[(${Yubi_Product_Application_Id})];
+	}
+	[/]
+
+	[# th:if = "${Client_Application_ID != null}"]
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+	[/]
+
+	[# th:if = "${Lender_Application_id != null}"]
+	private String [(${Lender_Application_id})];
+	public void set[(${Lender_Application_id})](String Lender_Application_id){
+		this.[(${Lender_Application_id})] = Lender_Application_id;
+	}
+	public String getLender_Application_id(){
+		return this.[(${Lender_Application_id})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Application_status != null}"]
+	private String [(${Yubi_Application_status})];
+	public void set[(${Yubi_Application_status})](String Yubi_Application_status){
+		this.[(${Yubi_Application_status})] = Yubi_Application_status;
+	}
+	public String getYubi_Application_status(){
+		return this.[(${Yubi_Application_status})];
+	}
+	[/]
+
+	[# th:if = "${Engagement_ID != null}"]
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+	[/]
+}

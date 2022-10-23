@@ -1,0 +1,108 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	[# th:if = "${Bureau_Type != null}"]
+	private String [(${Bureau_Type})];
+	public void set[(${Bureau_Type})](String Bureau_Type){
+		this.[(${Bureau_Type})] = Bureau_Type;
+	}
+	public String getBureau_Type(){
+		return this.[(${Bureau_Type})];
+	}
+	[/]
+
+	[# th:if = "${Bureau_Name != null}"]
+	private String [(${Bureau_Name})];
+	public void set[(${Bureau_Name})](String Bureau_Name){
+		this.[(${Bureau_Name})] = Bureau_Name;
+	}
+	public String getBureau_Name(){
+		return this.[(${Bureau_Name})];
+	}
+	[/]
+
+	[# th:if = "${Bureau_Score != null}"]
+	private Number [(${Bureau_Score})];
+	public void set[(${Bureau_Score})](Number Bureau_Score){
+		this.[(${Bureau_Score})] = Bureau_Score;
+	}
+	public Number getBureau_Score(){
+		return this.[(${Bureau_Score})];
+	}
+	[/]
+
+	[# th:if = "${Bureau_Vintage != null}"]
+	private Number [(${Bureau_Vintage})];
+	public void set[(${Bureau_Vintage})](Number Bureau_Vintage){
+		this.[(${Bureau_Vintage})] = Bureau_Vintage;
+	}
+	public Number getBureau_Vintage(){
+		return this.[(${Bureau_Vintage})];
+	}
+	[/]
+
+	[# th:if = "${Partner_score_on_the_customer != null}"]
+	private Number [(${Partner_score_on_the_customer})];
+	public void set[(${Partner_score_on_the_customer})](Number Partner_score_on_the_customer){
+		this.[(${Partner_score_on_the_customer})] = Partner_score_on_the_customer;
+	}
+	public Number getPartner_score_on_the_customer(){
+		return this.[(${Partner_score_on_the_customer})];
+	}
+	[/]
+
+	[# th:if = "${Key != null}"]
+	private String [(${Key})];
+	public void set[(${Key})](String Key){
+		this.[(${Key})] = Key;
+	}
+	public String getKey(){
+		return this.[(${Key})];
+	}
+	[/]
+
+	[# th:if = "${Value != null}"]
+	private String [(${Value})];
+	public void set[(${Value})](String Value){
+		this.[(${Value})] = Value;
+	}
+	public String getValue(){
+		return this.[(${Value})];
+	}
+	[/]
+}

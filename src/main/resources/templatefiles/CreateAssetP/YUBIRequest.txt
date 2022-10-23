@@ -1,0 +1,432 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${Id})];
+	public void set[(${Id})](String Id){
+		this.[(${Id})] = Id;
+	}
+	public String getId(){
+		return this.[(${Id})];
+	}
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+
+	[# th:if = "${sub_type != null}"]
+	private String [(${sub_type})];
+	public void set[(${sub_type})](String sub_type){
+		this.[(${sub_type})] = sub_type;
+	}
+	public String getsub_type(){
+		return this.[(${sub_type})];
+	}
+	[/]
+
+	[# th:if = "${Age != null}"]
+	private String [(${Age})];
+	public void set[(${Age})](String Age){
+		this.[(${Age})] = Age;
+	}
+	public String getAge(){
+		return this.[(${Age})];
+	}
+	[/]
+
+	[# th:if = "${FIV_Status != null}"]
+	private String [(${FIV_Status})];
+	public void set[(${FIV_Status})](String FIV_Status){
+		this.[(${FIV_Status})] = FIV_Status;
+	}
+	public String getFIV_Status(){
+		return this.[(${FIV_Status})];
+	}
+	[/]
+
+	[# th:if = "${CLSS_applicablity != null}"]
+	private String [(${CLSS_applicablity})];
+	public void set[(${CLSS_applicablity})](String CLSS_applicablity){
+		this.[(${CLSS_applicablity})] = CLSS_applicablity;
+	}
+	public String getCLSS_applicablity(){
+		return this.[(${CLSS_applicablity})];
+	}
+	[/]
+
+	[# th:if = "${Description != null}"]
+	private String [(${Description})];
+	public void set[(${Description})](String Description){
+		this.[(${Description})] = Description;
+	}
+	public String getDescription(){
+		return this.[(${Description})];
+	}
+	[/]
+
+	[# th:if = "${Ownership_Status != null}"]
+	private String [(${Ownership_Status})];
+	public void set[(${Ownership_Status})](String Ownership_Status){
+		this.[(${Ownership_Status})] = Ownership_Status;
+	}
+	public String getOwnership_Status(){
+		return this.[(${Ownership_Status})];
+	}
+	[/]
+
+	[# th:if = "${Name_of_Developer != null}"]
+	private String [(${Name_of_Developer})];
+	public void set[(${Name_of_Developer})](String Name_of_Developer){
+		this.[(${Name_of_Developer})] = Name_of_Developer;
+	}
+	public String getName_of_Developer(){
+		return this.[(${Name_of_Developer})];
+	}
+	[/]
+
+	[# th:if = "${Category_of_Builder != null}"]
+	private String [(${Category_of_Builder})];
+	public void set[(${Category_of_Builder})](String Category_of_Builder){
+		this.[(${Category_of_Builder})] = Category_of_Builder;
+	}
+	public String getCategory_of_Builder(){
+		return this.[(${Category_of_Builder})];
+	}
+	[/]
+
+	[# th:if = "${Project_Name != null}"]
+	private String [(${Project_Name})];
+	public void set[(${Project_Name})](String Project_Name){
+		this.[(${Project_Name})] = Project_Name;
+	}
+	public String getProject_Name(){
+		return this.[(${Project_Name})];
+	}
+	[/]
+
+	[# th:if = "${Property_owner_name != null}"]
+	private String [(${Property_owner_name})];
+	public void set[(${Property_owner_name})](String Property_owner_name){
+		this.[(${Property_owner_name})] = Property_owner_name;
+	}
+	public String getProperty_owner_name(){
+		return this.[(${Property_owner_name})];
+	}
+	[/]
+
+	[# th:if = "${PropertyValue_self_declared != null}"]
+	private Number [(${PropertyValue_self_declared})];
+	public void set[(${PropertyValue_self_declared})](Number PropertyValue_self_declared){
+		this.[(${PropertyValue_self_declared})] = PropertyValue_self_declared;
+	}
+	public Number getPropertyValue_self_declared(){
+		return this.[(${PropertyValue_self_declared})];
+	}
+	[/]
+
+	private Number [(${Property_Market_value})];
+	public void set[(${Property_Market_value})](Number Property_Market_value){
+		this.[(${Property_Market_value})] = Property_Market_value;
+	}
+	public Number getProperty_Market_value(){
+		return this.[(${Property_Market_value})];
+	}
+
+	[# th:if = "${Occupancy_Status != null}"]
+	private String [(${Occupancy_Status})];
+	public void set[(${Occupancy_Status})](String Occupancy_Status){
+		this.[(${Occupancy_Status})] = Occupancy_Status;
+	}
+	public String getOccupancy_Status(){
+		return this.[(${Occupancy_Status})];
+	}
+	[/]
+
+	[# th:if = "${Property_Area != null}"]
+	private String [(${Property_Area})];
+	public void set[(${Property_Area})](String Property_Area){
+		this.[(${Property_Area})] = Property_Area;
+	}
+	public String getProperty_Area(){
+		return this.[(${Property_Area})];
+	}
+	[/]
+
+	[# th:if = "${Technical_Verification_Parameters != null}"]
+	private String [(${Technical_Verification_Parameters})];
+	public void set[(${Technical_Verification_Parameters})](String Technical_Verification_Parameters){
+		this.[(${Technical_Verification_Parameters})] = Technical_Verification_Parameters;
+	}
+	public String getTechnical_Verification_Parameters(){
+		return this.[(${Technical_Verification_Parameters})];
+	}
+	[/]
+
+	[# th:if = "${Title_Clear_Flag != null}"]
+	private String [(${Title_Clear_Flag})];
+	public void set[(${Title_Clear_Flag})](String Title_Clear_Flag){
+		this.[(${Title_Clear_Flag})] = Title_Clear_Flag;
+	}
+	public String getTitle_Clear_Flag(){
+		return this.[(${Title_Clear_Flag})];
+	}
+	[/]
+
+	[# th:if = "${Property_Verifier != null}"]
+	private String [(${Property_Verifier})];
+	public void set[(${Property_Verifier})](String Property_Verifier){
+		this.[(${Property_Verifier})] = Property_Verifier;
+	}
+	public String getProperty_Verifier(){
+		return this.[(${Property_Verifier})];
+	}
+	[/]
+
+	[# th:if = "${Construction_Status != null}"]
+	private String [(${Construction_Status})];
+	public void set[(${Construction_Status})](String Construction_Status){
+		this.[(${Construction_Status})] = Construction_Status;
+	}
+	public String getConstruction_Status(){
+		return this.[(${Construction_Status})];
+	}
+	[/]
+
+	[# th:if = "${Property_approval_authority != null}"]
+	private String [(${Property_approval_authority})];
+	public void set[(${Property_approval_authority})](String Property_approval_authority){
+		this.[(${Property_approval_authority})] = Property_approval_authority;
+	}
+	public String getProperty_approval_authority(){
+		return this.[(${Property_approval_authority})];
+	}
+	[/]
+
+	[# th:if = "${Property_AreaType != null}"]
+	private String [(${Property_AreaType})];
+	public void set[(${Property_AreaType})](String Property_AreaType){
+		this.[(${Property_AreaType})] = Property_AreaType;
+	}
+	public String getProperty_AreaType(){
+		return this.[(${Property_AreaType})];
+	}
+	[/]
+
+	private String [(${Mortgage_in_favour_of})];
+	public void set[(${Mortgage_in_favour_of})](String Mortgage_in_favour_of){
+		this.[(${Mortgage_in_favour_of})] = Mortgage_in_favour_of;
+	}
+	public String getMortgage_in_favour_of(){
+		return this.[(${Mortgage_in_favour_of})];
+	}
+
+	[# th:if = "${Property_residual_age != null}"]
+	private Integer [(${Property_residual_age})];
+	public void set[(${Property_residual_age})](Integer Property_residual_age){
+		this.[(${Property_residual_age})] = Property_residual_age;
+	}
+	public Integer getProperty_residual_age(){
+		return this.[(${Property_residual_age})];
+	}
+	[/]
+
+	[# th:if = "${construction_remaining_tenure != null}"]
+	private Integer [(${construction_remaining_tenure})];
+	public void set[(${construction_remaining_tenure})](Integer construction_remaining_tenure){
+		this.[(${construction_remaining_tenure})] = construction_remaining_tenure;
+	}
+	public Integer getconstruction_remaining_tenure(){
+		return this.[(${construction_remaining_tenure})];
+	}
+	[/]
+
+	[# th:if = "${construction_original_tenure != null}"]
+	private Integer [(${construction_original_tenure})];
+	public void set[(${construction_original_tenure})](Integer construction_original_tenure){
+		this.[(${construction_original_tenure})] = construction_original_tenure;
+	}
+	public Integer getconstruction_original_tenure(){
+		return this.[(${construction_original_tenure})];
+	}
+	[/]
+
+	[# th:if = "${construction_total_tenure != null}"]
+	private Integer [(${construction_total_tenure})];
+	public void set[(${construction_total_tenure})](Integer construction_total_tenure){
+		this.[(${construction_total_tenure})] = construction_total_tenure;
+	}
+	public Integer getconstruction_total_tenure(){
+		return this.[(${construction_total_tenure})];
+	}
+	[/]
+
+	[# th:if = "${Property_registration_charges != null}"]
+	private Float [(${Property_registration_charges})];
+	public void set[(${Property_registration_charges})](Float Property_registration_charges){
+		this.[(${Property_registration_charges})] = Property_registration_charges;
+	}
+	public Float getProperty_registration_charges(){
+		return this.[(${Property_registration_charges})];
+	}
+	[/]
+
+	[# th:if = "${Cost_of_Building != null}"]
+	private Float [(${Cost_of_Building})];
+	public void set[(${Cost_of_Building})](Float Cost_of_Building){
+		this.[(${Cost_of_Building})] = Cost_of_Building;
+	}
+	public Float getCost_of_Building(){
+		return this.[(${Cost_of_Building})];
+	}
+	[/]
+
+	[# th:if = "${Cost_of_Plot != null}"]
+	private Float [(${Cost_of_Plot})];
+	public void set[(${Cost_of_Plot})](Float Cost_of_Plot){
+		this.[(${Cost_of_Plot})] = Cost_of_Plot;
+	}
+	public Float getCost_of_Plot(){
+		return this.[(${Cost_of_Plot})];
+	}
+	[/]
+
+	[# th:if = "${Total_Cost_of_Property != null}"]
+	private Float [(${Total_Cost_of_Property})];
+	public void set[(${Total_Cost_of_Property})](Float Total_Cost_of_Property){
+		this.[(${Total_Cost_of_Property})] = Total_Cost_of_Property;
+	}
+	public Float getTotal_Cost_of_Property(){
+		return this.[(${Total_Cost_of_Property})];
+	}
+	[/]
+
+	[# th:if = "${Property_Valuation_method != null}"]
+	private String [(${Property_Valuation_method})];
+	public void set[(${Property_Valuation_method})](String Property_Valuation_method){
+		this.[(${Property_Valuation_method})] = Property_Valuation_method;
+	}
+	public String getProperty_Valuation_method(){
+		return this.[(${Property_Valuation_method})];
+	}
+	[/]
+
+	private String [(${manufacturer_name})];
+	public void set[(${manufacturer_name})](String manufacturer_name){
+		this.[(${manufacturer_name})] = manufacturer_name;
+	}
+	public String getmanufacturer_name(){
+		return this.[(${manufacturer_name})];
+	}
+
+	[# th:if = "${Whether_Asset_is_in_negative_area != null}"]
+	private String [(${Whether_Asset_is_in_negative_area})];
+	public void set[(${Whether_Asset_is_in_negative_area})](String Whether_Asset_is_in_negative_area){
+		this.[(${Whether_Asset_is_in_negative_area})] = Whether_Asset_is_in_negative_area;
+	}
+	public String getWhether_Asset_is_in_negative_area(){
+		return this.[(${Whether_Asset_is_in_negative_area})];
+	}
+	[/]
+
+	[# th:if = "${GEO_LIMIT != null}"]
+	private Number [(${GEO_LIMIT})];
+	public void set[(${GEO_LIMIT})](Number GEO_LIMIT){
+		this.[(${GEO_LIMIT})] = GEO_LIMIT;
+	}
+	public Number getGEO_LIMIT(){
+		return this.[(${GEO_LIMIT})];
+	}
+	[/]
+
+	[# th:if = "${VALUER_NAME_1 != null}"]
+	private String [(${VALUER_NAME_1})];
+	public void set[(${VALUER_NAME_1})](String VALUER_NAME_1){
+		this.[(${VALUER_NAME_1})] = VALUER_NAME_1;
+	}
+	public String getVALUER_NAME_1(){
+		return this.[(${VALUER_NAME_1})];
+	}
+	[/]
+
+	[# th:if = "${VALUER_NAME_2 != null}"]
+	private String [(${VALUER_NAME_2})];
+	public void set[(${VALUER_NAME_2})](String VALUER_NAME_2){
+		this.[(${VALUER_NAME_2})] = VALUER_NAME_2;
+	}
+	public String getVALUER_NAME_2(){
+		return this.[(${VALUER_NAME_2})];
+	}
+	[/]
+
+	[# th:if = "${AssetID != null}"]
+	private String [(${AssetID})];
+	public void set[(${AssetID})](String AssetID){
+		this.[(${AssetID})] = AssetID;
+	}
+	public String getAssetID(){
+		return this.[(${AssetID})];
+	}
+	[/]
+
+	[# th:if = "${Asset_VALUATION_TYPE != null}"]
+	private String [(${Asset_VALUATION_TYPE})];
+	public void set[(${Asset_VALUATION_TYPE})](String Asset_VALUATION_TYPE){
+		this.[(${Asset_VALUATION_TYPE})] = Asset_VALUATION_TYPE;
+	}
+	public String getAsset_VALUATION_TYPE(){
+		return this.[(${Asset_VALUATION_TYPE})];
+	}
+	[/]
+
+	[# th:if = "${Machinery_Hypothecated_to != null}"]
+	private String [(${Machinery_Hypothecated_to})];
+	public void set[(${Machinery_Hypothecated_to})](String Machinery_Hypothecated_to){
+		this.[(${Machinery_Hypothecated_to})] = Machinery_Hypothecated_to;
+	}
+	public String getMachinery_Hypothecated_to(){
+		return this.[(${Machinery_Hypothecated_to})];
+	}
+	[/]
+
+	[# th:if = "${key != null}"]
+	private String [(${key})];
+	public void set[(${key})](String key){
+		this.[(${key})] = key;
+	}
+	public String getkey(){
+		return this.[(${key})];
+	}
+	[/]
+
+	[# th:if = "${Value != null}"]
+	private String [(${Value})];
+	public void set[(${Value})](String Value){
+		this.[(${Value})] = Value;
+	}
+	public String getValue(){
+		return this.[(${Value})];
+	}
+	[/]
+}

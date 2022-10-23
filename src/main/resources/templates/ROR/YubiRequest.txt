@@ -1,0 +1,23 @@
+class YubiRequest
+
+    def set_[(${fname})]=(fname)
+        @[(${fname})] = fname
+    end
+
+    def set_[(${dob})]=(dob)
+        @[(${dob})] = dob
+    end
+
+    def set_[(${voterNumber})]=(voterNumber)
+        @[(${voterNumber})] = voterNumber
+    end
+
+    def set_[(${amount})]=(amount)
+        @[(${amount})] = amount
+    end
+
+    def set_[(${cibilScore})]=(cibilScore)
+        @[(${cibilScore})] = cibilScore
+    end
+
+end

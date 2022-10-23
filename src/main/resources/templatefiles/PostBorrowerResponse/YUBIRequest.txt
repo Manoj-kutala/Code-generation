@@ -1,0 +1,194 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	[# th:if = "${Client_Customer_ID != null}"]
+	private String [(${Client_Customer_ID})];
+	public void set[(${Client_Customer_ID})](String Client_Customer_ID){
+		this.[(${Client_Customer_ID})] = Client_Customer_ID;
+	}
+	public String getClient_Customer_ID(){
+		return this.[(${Client_Customer_ID})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Borrower_ID != null}"]
+	private String [(${Yubi_Borrower_ID})];
+	public void set[(${Yubi_Borrower_ID})](String Yubi_Borrower_ID){
+		this.[(${Yubi_Borrower_ID})] = Yubi_Borrower_ID;
+	}
+	public String getYubi_Borrower_ID(){
+		return this.[(${Yubi_Borrower_ID})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Product_Borrower_ID != null}"]
+	private String [(${Yubi_Product_Borrower_ID})];
+	public void set[(${Yubi_Product_Borrower_ID})](String Yubi_Product_Borrower_ID){
+		this.[(${Yubi_Product_Borrower_ID})] = Yubi_Product_Borrower_ID;
+	}
+	public String getYubi_Product_Borrower_ID(){
+		return this.[(${Yubi_Product_Borrower_ID})];
+	}
+	[/]
+
+	[# th:if = "${Engagement_ID != null}"]
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+	[/]
+
+	[# th:if = "${Lender_Borrower_ID != null}"]
+	private String [(${Lender_Borrower_ID})];
+	public void set[(${Lender_Borrower_ID})](String Lender_Borrower_ID){
+		this.[(${Lender_Borrower_ID})] = Lender_Borrower_ID;
+	}
+	public String getLender_Borrower_ID(){
+		return this.[(${Lender_Borrower_ID})];
+	}
+	[/]
+
+	private String [(${firstName})];
+	public void set[(${firstName})](String firstName){
+		this.[(${firstName})] = firstName;
+	}
+	public String getfirstName(){
+		return this.[(${firstName})];
+	}
+
+	[# th:if = "${middlename != null}"]
+	private String [(${middlename})];
+	public void set[(${middlename})](String middlename){
+		this.[(${middlename})] = middlename;
+	}
+	public String getmiddlename(){
+		return this.[(${middlename})];
+	}
+	[/]
+
+	[# th:if = "${lastname != null}"]
+	private String [(${lastname})];
+	public void set[(${lastname})](String lastname){
+		this.[(${lastname})] = lastname;
+	}
+	public String getlastname(){
+		return this.[(${lastname})];
+	}
+	[/]
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+
+	private Number [(${Number})];
+	public void set[(${Number})](Number Number){
+		this.[(${Number})] = Number;
+	}
+	public Number getNumber(){
+		return this.[(${Number})];
+	}
+
+	[# th:if = "${Area_Code != null}"]
+	private Number [(${Area_Code})];
+	public void set[(${Area_Code})](Number Area_Code){
+		this.[(${Area_Code})] = Area_Code;
+	}
+	public Number getArea_Code(){
+		return this.[(${Area_Code})];
+	}
+	[/]
+
+	[# th:if = "${is_preferred != null}"]
+	private String [(${is_preferred})];
+	public void set[(${is_preferred})](String is_preferred){
+		this.[(${is_preferred})] = is_preferred;
+	}
+	public String getis_preferred(){
+		return this.[(${is_preferred})];
+	}
+	[/]
+
+	private String [(${type1})];
+	public void set[(${type1})](String type1){
+		this.[(${type1})] = type1;
+	}
+	public String gettype1(){
+		return this.[(${type1})];
+	}
+
+	private String [(${id})];
+	public void set[(${id})](String id){
+		this.[(${id})] = id;
+	}
+	public String getid(){
+		return this.[(${id})];
+	}
+
+	private String [(${Yubi_Borrower_status})];
+	public void set[(${Yubi_Borrower_status})](String Yubi_Borrower_status){
+		this.[(${Yubi_Borrower_status})] = Yubi_Borrower_status;
+	}
+	public String getYubi_Borrower_status(){
+		return this.[(${Yubi_Borrower_status})];
+	}
+
+	[# th:if = "${Yubi_Product_Borrower_Status != null}"]
+	private String [(${Yubi_Product_Borrower_Status})];
+	public void set[(${Yubi_Product_Borrower_Status})](String Yubi_Product_Borrower_Status){
+		this.[(${Yubi_Product_Borrower_Status})] = Yubi_Product_Borrower_Status;
+	}
+	public String getYubi_Product_Borrower_Status(){
+		return this.[(${Yubi_Product_Borrower_Status})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_borrower_Creation_date != null}"]
+	private String [(${Yubi_borrower_Creation_date})];
+	public void set[(${Yubi_borrower_Creation_date})](String Yubi_borrower_Creation_date){
+		this.[(${Yubi_borrower_Creation_date})] = Yubi_borrower_Creation_date;
+	}
+	public String getYubi_borrower_Creation_date(){
+		return this.[(${Yubi_borrower_Creation_date})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Loan_Id != null}"]
+	private String [(${Yubi_Loan_Id})];
+	public void set[(${Yubi_Loan_Id})](String Yubi_Loan_Id){
+		this.[(${Yubi_Loan_Id})] = Yubi_Loan_Id;
+	}
+	public String getYubi_Loan_Id(){
+		return this.[(${Yubi_Loan_Id})];
+	}
+	[/]
+
+	[# th:if = "${Yubi_Product_Loan_Id != null}"]
+	private String [(${Yubi_Product_Loan_Id})];
+	public void set[(${Yubi_Product_Loan_Id})](String Yubi_Product_Loan_Id){
+		this.[(${Yubi_Product_Loan_Id})] = Yubi_Product_Loan_Id;
+	}
+	public String getYubi_Product_Loan_Id(){
+		return this.[(${Yubi_Product_Loan_Id})];
+	}
+	[/]
+
+	[# th:if = "${Client_Loan_ID != null}"]
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+	[/]
+}

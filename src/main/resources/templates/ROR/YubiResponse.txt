@@ -1,0 +1,15 @@
+class YubiResponse
+
+    def [(${loanID})]
+        @[(${loanID})]
+    end
+
+    def [(${date})]
+        @[(${date})]
+    end
+
+    def [(${amount})]
+        @[(${amount})]
+    end
+
+end

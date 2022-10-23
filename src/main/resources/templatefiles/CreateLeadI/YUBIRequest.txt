@@ -1,0 +1,414 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
+	}
+
+	private String [(${Client_customer_ID})];
+	public void set[(${Client_customer_ID})](String Client_customer_ID){
+		this.[(${Client_customer_ID})] = Client_customer_ID;
+	}
+	public String getClient_customer_ID(){
+		return this.[(${Client_customer_ID})];
+	}
+
+	private String [(${customer_Type})];
+	public void set[(${customer_Type})](String customer_Type){
+		this.[(${customer_Type})] = customer_Type;
+	}
+	public String getcustomer_Type(){
+		return this.[(${customer_Type})];
+	}
+
+	private String [(${identifier_Type})];
+	public void set[(${identifier_Type})](String identifier_Type){
+		this.[(${identifier_Type})] = identifier_Type;
+	}
+	public String getidentifier_Type(){
+		return this.[(${identifier_Type})];
+	}
+
+	private String [(${identifier})];
+	public void set[(${identifier})](String identifier){
+		this.[(${identifier})] = identifier;
+	}
+	public String getidentifier(){
+		return this.[(${identifier})];
+	}
+
+	[# th:if = "${issuing_country != null}"]
+	private String [(${issuing_country})];
+	public void set[(${issuing_country})](String issuing_country){
+		this.[(${issuing_country})] = issuing_country;
+	}
+	public String getissuing_country(){
+		return this.[(${issuing_country})];
+	}
+	[/]
+
+	private String [(${first_name})];
+	public void set[(${first_name})](String first_name){
+		this.[(${first_name})] = first_name;
+	}
+	public String getfirst_name(){
+		return this.[(${first_name})];
+	}
+
+	[# th:if = "${middle_name != null}"]
+	private String [(${middle_name})];
+	public void set[(${middle_name})](String middle_name){
+		this.[(${middle_name})] = middle_name;
+	}
+	public String getmiddle_name(){
+		return this.[(${middle_name})];
+	}
+	[/]
+
+	[# th:if = "${last_name != null}"]
+	private String [(${last_name})];
+	public void set[(${last_name})](String last_name){
+		this.[(${last_name})] = last_name;
+	}
+	public String getlast_name(){
+		return this.[(${last_name})];
+	}
+	[/]
+
+	[# th:if = "${date_of_birth != null}"]
+	private String [(${date_of_birth})];
+	public void set[(${date_of_birth})](String date_of_birth){
+		this.[(${date_of_birth})] = date_of_birth;
+	}
+	public String getdate_of_birth(){
+		return this.[(${date_of_birth})];
+	}
+	[/]
+
+	[# th:if = "${gender != null}"]
+	private String [(${gender})];
+	public void set[(${gender})](String gender){
+		this.[(${gender})] = gender;
+	}
+	public String getgender(){
+		return this.[(${gender})];
+	}
+	[/]
+
+	[# th:if = "${marital_status != null}"]
+	private String [(${marital_status})];
+	public void set[(${marital_status})](String marital_status){
+		this.[(${marital_status})] = marital_status;
+	}
+	public String getmarital_status(){
+		return this.[(${marital_status})];
+	}
+	[/]
+
+	[# th:if = "${category != null}"]
+	private String [(${category})];
+	public void set[(${category})](String category){
+		this.[(${category})] = category;
+	}
+	public String getcategory(){
+		return this.[(${category})];
+	}
+	[/]
+
+	[# th:if = "${religion != null}"]
+	private String [(${religion})];
+	public void set[(${religion})](String religion){
+		this.[(${religion})] = religion;
+	}
+	public String getreligion(){
+		return this.[(${religion})];
+	}
+	[/]
+
+	[# th:if = "${nationality != null}"]
+	private String [(${nationality})];
+	public void set[(${nationality})](String nationality){
+		this.[(${nationality})] = nationality;
+	}
+	public String getnationality(){
+		return this.[(${nationality})];
+	}
+	[/]
+
+	[# th:if = "${spouse_name != null}"]
+	private String [(${spouse_name})];
+	public void set[(${spouse_name})](String spouse_name){
+		this.[(${spouse_name})] = spouse_name;
+	}
+	public String getspouse_name(){
+		return this.[(${spouse_name})];
+	}
+	[/]
+
+	[# th:if = "${father_name != null}"]
+	private String [(${father_name})];
+	public void set[(${father_name})](String father_name){
+		this.[(${father_name})] = father_name;
+	}
+	public String getfather_name(){
+		return this.[(${father_name})];
+	}
+	[/]
+
+	[# th:if = "${mother_name != null}"]
+	private String [(${mother_name})];
+	public void set[(${mother_name})](String mother_name){
+		this.[(${mother_name})] = mother_name;
+	}
+	public String getmother_name(){
+		return this.[(${mother_name})];
+	}
+	[/]
+
+	[# th:if = "${number_of_dependents != null}"]
+	private String [(${number_of_dependents})];
+	public void set[(${number_of_dependents})](String number_of_dependents){
+		this.[(${number_of_dependents})] = number_of_dependents;
+	}
+	public String getnumber_of_dependents(){
+		return this.[(${number_of_dependents})];
+	}
+	[/]
+
+	[# th:if = "${politically_exposed != null}"]
+	private String [(${politically_exposed})];
+	public void set[(${politically_exposed})](String politically_exposed){
+		this.[(${politically_exposed})] = politically_exposed;
+	}
+	public String getpolitically_exposed(){
+		return this.[(${politically_exposed})];
+	}
+	[/]
+
+	[# th:if = "${spouse_occupation != null}"]
+	private String [(${spouse_occupation})];
+	public void set[(${spouse_occupation})](String spouse_occupation){
+		this.[(${spouse_occupation})] = spouse_occupation;
+	}
+	public String getspouse_occupation(){
+		return this.[(${spouse_occupation})];
+	}
+	[/]
+
+	[# th:if = "${No_of_children != null}"]
+	private String [(${No_of_children})];
+	public void set[(${No_of_children})](String No_of _children){
+		this.[(${No_of_children})] = No_of _children;
+	}
+	public String getNo_of_children(){
+		return this.[(${No_of_children})];
+	}
+	[/]
+
+	[# th:if = "${Education_Qualification != null}"]
+	private String [(${Education_Qualification})];
+	public void set[(${Education_Qualification})](String Education_Qualification){
+		this.[(${Education_Qualification})] = Education_Qualification;
+	}
+	public String getEducation_Qualification(){
+		return this.[(${Education_Qualification})];
+	}
+	[/]
+
+	[# th:if = "${Physically_Challenged != null}"]
+	private Boolean [(${Physically_Challenged})];
+	public void set[(${Physically_Challenged})](Boolean Physically_Challenged){
+		this.[(${Physically_Challenged})] = Physically_Challenged;
+	}
+	public Boolean getPhysically_Challenged(){
+		return this.[(${Physically_Challenged})];
+	}
+	[/]
+
+	[# th:if = "${customer_category != null}"]
+	private String [(${customer_category})];
+	public void set[(${customer_category})](String customer_category){
+		this.[(${customer_category})] = customer_category;
+	}
+	public String getcustomer_category(){
+		return this.[(${customer_category})];
+	}
+	[/]
+
+	[# th:if = "${Source != null}"]
+	private String [(${Source})];
+	public void set[(${Source})](String Source){
+		this.[(${Source})] = Source;
+	}
+	public String getSource(){
+		return this.[(${Source})];
+	}
+	[/]
+
+	[# th:if = "${Total_experience != null}"]
+	private String [(${Total_experience})];
+	public void set[(${Total_experience})](String Total_experience){
+		this.[(${Total_experience})] = Total_experience;
+	}
+	public String getTotal_experience(){
+		return this.[(${Total_experience})];
+	}
+	[/]
+
+	[# th:if = "${Occupation != null}"]
+	private String [(${Occupation})];
+	public void set[(${Occupation})](String Occupation){
+		this.[(${Occupation})] = Occupation;
+	}
+	public String getOccupation(){
+		return this.[(${Occupation})];
+	}
+	[/]
+
+	[# th:if = "${Industry1 != null}"]
+	private String [(${Industry1})];
+	public void set[(${Industry1})](String Industry1){
+		this.[(${Industry1})] = Industry1;
+	}
+	public String getIndustry1(){
+		return this.[(${Industry1})];
+	}
+	[/]
+
+	[# th:if = "${currency != null}"]
+	private String [(${currency})];
+	public void set[(${currency})](String currency){
+		this.[(${currency})] = currency;
+	}
+	public String getcurrency(){
+		return this.[(${currency})];
+	}
+	[/]
+
+	[# th:if = "${payment_type != null}"]
+	private String [(${payment_type})];
+	public void set[(${payment_type})](String payment_type){
+		this.[(${payment_type})] = payment_type;
+	}
+	public String getpayment_type(){
+		return this.[(${payment_type})];
+	}
+	[/]
+
+	[# th:if = "${frequency != null}"]
+	private String [(${frequency})];
+	public void set[(${frequency})](String frequency){
+		this.[(${frequency})] = frequency;
+	}
+	public String getfrequency(){
+		return this.[(${frequency})];
+	}
+	[/]
+
+	[# th:if = "${type != null}"]
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[/]
+
+	[# th:if = "${Value != null}"]
+	private String [(${Value})];
+	public void set[(${Value})](String Value){
+		this.[(${Value})] = Value;
+	}
+	public String getValue(){
+		return this.[(${Value})];
+	}
+	[/]
+
+	[# th:if = "${employer_name != null}"]
+	private String [(${employer_name})];
+	public void set[(${employer_name})](String employer_name){
+		this.[(${employer_name})] = employer_name;
+	}
+	public String getemployer_name(){
+		return this.[(${employer_name})];
+	}
+	[/]
+
+	[# th:if = "${employed_since != null}"]
+	private String [(${employed_since})];
+	public void set[(${employed_since})](String employed_since){
+		this.[(${employed_since})] = employed_since;
+	}
+	public String getemployed_since(){
+		return this.[(${employed_since})];
+	}
+	[/]
+
+	[# th:if = "${job_title != null}"]
+	private String [(${job_title})];
+	public void set[(${job_title})](String job_title){
+		this.[(${job_title})] = job_title;
+	}
+	public String getjob_title(){
+		return this.[(${job_title})];
+	}
+	[/]
+
+	[# th:if = "${designation != null}"]
+	private String [(${designation})];
+	public void set[(${designation})](String designation){
+		this.[(${designation})] = designation;
+	}
+	public String getdesignation(){
+		return this.[(${designation})];
+	}
+	[/]
+
+	[# th:if = "${Indsutry != null}"]
+	private String [(${Indsutry})];
+	public void set[(${Indsutry})](String Indsutry){
+		this.[(${Indsutry})] = Indsutry;
+	}
+	public String getIndsutry(){
+		return this.[(${Indsutry})];
+	}
+	[/]
+
+	[# th:if = "${Sector != null}"]
+	private String [(${Sector})];
+	public void set[(${Sector})](String Sector){
+		this.[(${Sector})] = Sector;
+	}
+	public String getSector(){
+		return this.[(${Sector})];
+	}
+	[/]
+
+	[# th:if = "${Work_experience != null}"]
+	private String [(${Work_experience})];
+	public void set[(${Work_experience})](String Work_experience){
+		this.[(${Work_experience})] = Work_experience;
+	}
+	public String getWork_experience(){
+		return this.[(${Work_experience})];
+	}
+	[/]
+
+	[# th:if = "${is_current_employment != null}"]
+	private String [(${is_current_employment})];
+	public void set[(${is_current_employment})](String is_current_employment){
+		this.[(${is_current_employment})] = is_current_employment;
+	}
+	public String getis_current_employment(){
+		return this.[(${is_current_employment})];
+	}
+	[/]
+}

@@ -1,0 +1,74 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	[# th:if = "${Instrument_type != null}"]
+	private String [(${Instrument_type})];
+	public void set[(${Instrument_type})](String Instrument_type){
+		this.[(${Instrument_type})] = Instrument_type;
+	}
+	public String getInstrument_type(){
+		return this.[(${Instrument_type})];
+	}
+	[/]
+
+	[# th:if = "${Reference_Id != null}"]
+	private String [(${Reference_Id})];
+	public void set[(${Reference_Id})](String Reference_Id){
+		this.[(${Reference_Id})] = Reference_Id;
+	}
+	public String getReference_Id(){
+		return this.[(${Reference_Id})];
+	}
+	[/]
+
+	private String [(${Investor_UTR})];
+	public void set[(${Investor_UTR})](String Investor_UTR){
+		this.[(${Investor_UTR})] = Investor_UTR;
+	}
+	public String getInvestor_UTR(){
+		return this.[(${Investor_UTR})];
+	}
+
+	private Date [(${Investor_transfer_date})];
+	public void set[(${Investor_transfer_date})](Date Investor_transfer_date){
+		this.[(${Investor_transfer_date})] = Investor_transfer_date;
+	}
+	public Date getInvestor_transfer_date(){
+		return this.[(${Investor_transfer_date})];
+	}
+
+	private Float [(${Amount})];
+	public void set[(${Amount})](Float Amount){
+		this.[(${Amount})] = Amount;
+	}
+	public Float getAmount(){
+		return this.[(${Amount})];
+	}
+
+	private String [(${payment_ID})];
+	public void set[(${payment_ID})](String payment_ID){
+		this.[(${payment_ID})] = payment_ID;
+	}
+	public String getpayment_ID(){
+		return this.[(${payment_ID})];
+	}
+}

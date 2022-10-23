@@ -1,0 +1,66 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
+	}
+
+	private String [(${Client_customer_ID})];
+	public void set[(${Client_customer_ID})](String Client_customer_ID){
+		this.[(${Client_customer_ID})] = Client_customer_ID;
+	}
+	public String getClient_customer_ID(){
+		return this.[(${Client_customer_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Consent_Date})];
+	public void set[(${Consent_Date})](String Consent_Date){
+		this.[(${Consent_Date})] = Consent_Date;
+	}
+	public String getConsent_Date(){
+		return this.[(${Consent_Date})];
+	}
+
+	private String [(${Consent_for})];
+	public void set[(${Consent_for})](String Consent_for){
+		this.[(${Consent_for})] = Consent_for;
+	}
+	public String getConsent_for(){
+		return this.[(${Consent_for})];
+	}
+
+	[# th:if = "${I_P_Address != null}"]
+	private String [(${I_P_Address})];
+	public void set[(${I_P_Address})](String I_P_Address){
+		this.[(${I_P_Address})] = I_P_Address;
+	}
+	public String getI_P_Address(){
+		return this.[(${I_P_Address})];
+	}
+	[/]
+
+	[# th:if = "${Remarks != null}"]
+	private String [(${Remarks})];
+	public void set[(${Remarks})](String Remarks){
+		this.[(${Remarks})] = Remarks;
+	}
+	public String getRemarks(){
+		return this.[(${Remarks})];
+	}
+	[/]
+}

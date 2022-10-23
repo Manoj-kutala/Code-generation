@@ -1,0 +1,146 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${Name_of_BT_Financier})];
+	public void set[(${Name_of_BT_Financier})](String Name_of_BT_Financier){
+		this.[(${Name_of_BT_Financier})] = Name_of_BT_Financier;
+	}
+	public String getName_of_BT_Financier(){
+		return this.[(${Name_of_BT_Financier})];
+	}
+
+	[# th:if = "${Loan_Amount_of_Original_Loan != null}"]
+	private Float [(${Loan_Amount_of_Original_Loan})];
+	public void set[(${Loan_Amount_of_Original_Loan})](Float Loan_Amount_of_Original_Loan){
+		this.[(${Loan_Amount_of_Original_Loan})] = Loan_Amount_of_Original_Loan;
+	}
+	public Float getLoan_Amount_of_Original_Loan(){
+		return this.[(${Loan_Amount_of_Original_Loan})];
+	}
+	[/]
+
+	[# th:if = "${Tenure_of_Original_Loan_in_months != null}"]
+	private String [(${Tenure_of_Original_Loan_in_months})];
+	public void set[(${Tenure_of_Original_Loan_in_months})](String Tenure_of_Original_Loan_in_months){
+		this.[(${Tenure_of_Original_Loan_in_months})] = Tenure_of_Original_Loan_in_months;
+	}
+	public String getTenure_of_Original_Loan_in_months(){
+		return this.[(${Tenure_of_Original_Loan_in_months})];
+	}
+	[/]
+
+	[# th:if = "${Balance_Tenure_of_Original_Loan_in_months != null}"]
+	private String [(${Balance_Tenure_of_Original_Loan_in_months})];
+	public void set[(${Balance_Tenure_of_Original_Loan_in_months})](String Balance_Tenure_of_Original_Loan_in_months){
+		this.[(${Balance_Tenure_of_Original_Loan_in_months})] = Balance_Tenure_of_Original_Loan_in_months;
+	}
+	public String getBalance_Tenure_of_Original_Loan_in_months(){
+		return this.[(${Balance_Tenure_of_Original_Loan_in_months})];
+	}
+	[/]
+
+	[# th:if = "${POS_of_Original_Loan != null}"]
+	private Float [(${POS_of_Original_Loan})];
+	public void set[(${POS_of_Original_Loan})](Float POS_of_Original_Loan){
+		this.[(${POS_of_Original_Loan})] = POS_of_Original_Loan;
+	}
+	public Float getPOS_of_Original_Loan(){
+		return this.[(${POS_of_Original_Loan})];
+	}
+	[/]
+
+	[# th:if = "${No_of_EMI_paid_in_Base_Loan != null}"]
+	private Number [(${No_of_EMI_paid_in_Base_Loan})];
+	public void set[(${No_of_EMI_paid_in_Base_Loan})](Number No_of_EMI_paid_in_Base_Loan){
+		this.[(${No_of_EMI_paid_in_Base_Loan})] = No_of_EMI_paid_in_Base_Loan;
+	}
+	public Number getNo_of_EMI_paid_in_Base_Loan(){
+		return this.[(${No_of_EMI_paid_in_Base_Loan})];
+	}
+	[/]
+
+	[# th:if = "${DPD_in_last_6M_in_Base_Loan != null}"]
+	private Number [(${DPD_in_last_6M_in_Base_Loan})];
+	public void set[(${DPD_in_last_6M_in_Base_Loan})](Number DPD_in_last_6M_in_Base_Loan){
+		this.[(${DPD_in_last_6M_in_Base_Loan})] = DPD_in_last_6M_in_Base_Loan;
+	}
+	public Number getDPD_in_last_6M_in_Base_Loan(){
+		return this.[(${DPD_in_last_6M_in_Base_Loan})];
+	}
+	[/]
+
+	[# th:if = "${Bounces_in_last_6M_in_base_loan != null}"]
+	private Number [(${Bounces_in_last_6M_in_base_loan})];
+	public void set[(${Bounces_in_last_6M_in_base_loan})](Number Bounces_in_last_6M_in_base_loan){
+		this.[(${Bounces_in_last_6M_in_base_loan})] = Bounces_in_last_6M_in_base_loan;
+	}
+	public Number getBounces_in_last_6M_in_base_loan(){
+		return this.[(${Bounces_in_last_6M_in_base_loan})];
+	}
+	[/]
+
+	[# th:if = "${Approve_LTV_of_Original_Loan != null}"]
+	private Float [(${Approve_LTV_of_Original_Loan})];
+	public void set[(${Approve_LTV_of_Original_Loan})](Float Approve_LTV_of_Original_Loan){
+		this.[(${Approve_LTV_of_Original_Loan})] = Approve_LTV_of_Original_Loan;
+	}
+	public Float getApprove_LTV_of_Original_Loan(){
+		return this.[(${Approve_LTV_of_Original_Loan})];
+	}
+	[/]
+
+	[# th:if = "${LTV_of_Top_up_loan != null}"]
+	private Float [(${LTV_of_Top_up_loan})];
+	public void set[(${LTV_of_Top_up_loan})](Float LTV_of_Top_up_loan){
+		this.[(${LTV_of_Top_up_loan})] = LTV_of_Top_up_loan;
+	}
+	public Float getLTV_of_Top_up_loan(){
+		return this.[(${LTV_of_Top_up_loan})];
+	}
+	[/]
+
+	[# th:if = "${Percentage_of_Reduction_In_Principal != null}"]
+	private Float [(${Percentage_of_Reduction_In_Principal})];
+	public void set[(${Percentage_of_Reduction_In_Principal})](Float Percentage_of_Reduction_In_Principal){
+		this.[(${Percentage_of_Reduction_In_Principal})] = Percentage_of_Reduction_In_Principal;
+	}
+	public Float getPercentage_of_Reduction_In_Principal(){
+		return this.[(${Percentage_of_Reduction_In_Principal})];
+	}
+	[/]
+}

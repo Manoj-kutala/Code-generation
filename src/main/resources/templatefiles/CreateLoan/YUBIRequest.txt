@@ -1,0 +1,46 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Loan_Booked_Date})];
+	public void set[(${Loan_Booked_Date})](String Loan_Booked_Date){
+		this.[(${Loan_Booked_Date})] = Loan_Booked_Date;
+	}
+	public String getLoan_Booked_Date(){
+		return this.[(${Loan_Booked_Date})];
+	}
+}

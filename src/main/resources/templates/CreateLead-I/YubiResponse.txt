@@ -1,0 +1,35 @@
+package DCG;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import java.util.Date;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class YubiResponse{
+
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   private int [(${loanID})];
+
+   private String [(${date})] = (new Date()).toString();
+   private int [(${amount})];
+
+
+   public int get[(${loanID})](int loanID){
+      return this.[(${loanID})];
+   }
+
+   public String get[(${date})](String date){
+        return this.[(${date})];
+   }
+
+   public int get[(${amount})](int amount){
+         return this.[(${amount})];
+   }
+
+
+}

@@ -1,0 +1,112 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	[# th:if = "${Land_Holding_Type != null}"]
+	private String [(${Land_Holding_Type})];
+	public void set[(${Land_Holding_Type})](String Land_Holding_Type){
+		this.[(${Land_Holding_Type})] = Land_Holding_Type;
+	}
+	public String getLand_Holding_Type(){
+		return this.[(${Land_Holding_Type})];
+	}
+	[/]
+
+	[# th:if = "${Land_Holding_Value_In_Acres != null}"]
+	private Number [(${Land_Holding_Value_In_Acres})];
+	public void set[(${Land_Holding_Value_In_Acres})](Number Land_Holding_Value_In_Acres){
+		this.[(${Land_Holding_Value_In_Acres})] = Land_Holding_Value_In_Acres;
+	}
+	public Number getLand_Holding_Value_In_Acres(){
+		return this.[(${Land_Holding_Value_In_Acres})];
+	}
+	[/]
+
+	[# th:if = "${Land_Holding_Description != null}"]
+	private String [(${Land_Holding_Description})];
+	public void set[(${Land_Holding_Description})](String Land_Holding_Description){
+		this.[(${Land_Holding_Description})] = Land_Holding_Description;
+	}
+	public String getLand_Holding_Description(){
+		return this.[(${Land_Holding_Description})];
+	}
+	[/]
+
+	[# th:if = "${Number_of_Cattle != null}"]
+	private Number [(${Number_of_Cattle})];
+	public void set[(${Number_of_Cattle})](Number Number_of_Cattle){
+		this.[(${Number_of_Cattle})] = Number_of_Cattle;
+	}
+	public Number getNumber_of_Cattle(){
+		return this.[(${Number_of_Cattle})];
+	}
+	[/]
+
+	[# th:if = "${farming_vintage != null}"]
+	private Number [(${farming_vintage})];
+	public void set[(${farming_vintage})](Number farming_vintage){
+		this.[(${farming_vintage})] = farming_vintage;
+	}
+	public Number getfarming_vintage(){
+		return this.[(${farming_vintage})];
+	}
+	[/]
+
+	[# th:if = "${land_holding != null}"]
+	private Number [(${land_holding})];
+	public void set[(${land_holding})](Number land_holding){
+		this.[(${land_holding})] = land_holding;
+	}
+	public Number getland_holding(){
+		return this.[(${land_holding})];
+	}
+	[/]
+
+	[# th:if = "${cropping_pattern != null}"]
+	private String [(${cropping_pattern})];
+	public void set[(${cropping_pattern})](String cropping_pattern){
+		this.[(${cropping_pattern})] = cropping_pattern;
+	}
+	public String getcropping_pattern(){
+		return this.[(${cropping_pattern})];
+	}
+	[/]
+
+	[# th:if = "${irrigation_source != null}"]
+	private String [(${irrigation_source})];
+	public void set[(${irrigation_source})](String irrigation_source){
+		this.[(${irrigation_source})] = irrigation_source;
+	}
+	public String getirrigation_source(){
+		return this.[(${irrigation_source})];
+	}
+	[/]
+
+	[# th:if = "${residence_type != null}"]
+	private String [(${residence_type})];
+	public void set[(${residence_type})](String residence_type){
+		this.[(${residence_type})] = residence_type;
+	}
+	public String getresidence_type(){
+		return this.[(${residence_type})];
+	}
+	[/]
+}

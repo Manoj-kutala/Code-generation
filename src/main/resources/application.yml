@@ -1,0 +1,8 @@
+grpc:
+  client:
+    sample:
+      address: static://localhost:7575
+      negotiationType: plaintext
+    sample1:
+      address: static://localhost:7577
+      negotiationType: plaintext

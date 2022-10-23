@@ -1,0 +1,94 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private Number [(${tranche_Number})];
+	public void set[(${tranche_Number})](Number tranche_Number){
+		this.[(${tranche_Number})] = tranche_Number;
+	}
+	public Number gettranche_Number(){
+		return this.[(${tranche_Number})];
+	}
+
+	private Float [(${tranche_Principal})];
+	public void set[(${tranche_Principal})](Float tranche_Principal){
+		this.[(${tranche_Principal})] = tranche_Principal;
+	}
+	public Float gettranche_Principal(){
+		return this.[(${tranche_Principal})];
+	}
+
+	[# th:if = "${number_Of_Tranches != null}"]
+	private Number [(${number_Of_Tranches})];
+	public void set[(${number_Of_Tranches})](Number number_Of_Tranches){
+		this.[(${number_Of_Tranches})] = number_Of_Tranches;
+	}
+	public Number getnumber_Of_Tranches(){
+		return this.[(${number_Of_Tranches})];
+	}
+	[/]
+
+	[# th:if = "${balance_loan_Principal != null}"]
+	private Float [(${balance_loan_Principal})];
+	public void set[(${balance_loan_Principal})](Float balance_loan_Principal){
+		this.[(${balance_loan_Principal})] = balance_loan_Principal;
+	}
+	public Float getbalance_loan_Principal(){
+		return this.[(${balance_loan_Principal})];
+	}
+	[/]
+
+	[# th:if = "${charge != null}"]
+	private String [(${charge})];
+	public void set[(${charge})](String charge){
+		this.[(${charge})] = charge;
+	}
+	public String getcharge(){
+		return this.[(${charge})];
+	}
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private String [(${amount})];
+	public void set[(${amount})](String amount){
+		this.[(${amount})] = amount;
+	}
+	public String getamount(){
+		return this.[(${amount})];
+	}
+	[/]
+}

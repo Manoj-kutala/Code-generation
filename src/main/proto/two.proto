@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.sample";
+
+
+message response1{
+  string res = 1;
+}
+
+message request1{
+  string req = 1;
+}
+
+service sample1{
+  rpc func1(request1) returns (response1);
+
+}

@@ -1,0 +1,6 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Response {
+}

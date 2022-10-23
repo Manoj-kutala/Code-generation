@@ -1,0 +1,14 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Response {
+
+	private String Yubi_Payment_Id;
+	public void setYubi_Payment_Id(String Yubi_Payment_Id){
+		this.Yubi_Payment_Id = Yubi_Payment_Id;
+	}
+	public String get[(${Yubi_Payment_Id})](){
+		return this.Yubi_Payment_Id;
+	}
+}

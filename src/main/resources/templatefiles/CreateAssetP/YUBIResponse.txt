@@ -1,0 +1,16 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Response {
+
+	[# th:if = "${Yubi_Asset_ID != null}"]
+	private String Yubi_Asset_ID;
+	public void setYubi_Asset_ID(String Yubi_Asset_ID){
+		this.Yubi_Asset_ID = Yubi_Asset_ID;
+	}
+	public String get[(${Yubi_Asset_ID})](){
+		return this.Yubi_Asset_ID;
+	}
+	[/]
+}

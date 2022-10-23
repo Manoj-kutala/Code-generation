@@ -1,0 +1,138 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	[# th:if = "${BANK_ACCOUNT_TYPE_FOR_ASSESSMENT != null}"]
+	private String [(${BANK_ACCOUNT_TYPE_FOR_ASSESSMENT})];
+	public void set[(${BANK_ACCOUNT_TYPE_FOR_ASSESSMENT})](String BANK_ACCOUNT_TYPE_FOR_ASSESSMENT){
+		this.[(${BANK_ACCOUNT_TYPE_FOR_ASSESSMENT})] = BANK_ACCOUNT_TYPE_FOR_ASSESSMENT;
+	}
+	public String getBANK_ACCOUNT_TYPE_FOR_ASSESSMENT(){
+		return this.[(${BANK_ACCOUNT_TYPE_FOR_ASSESSMENT})];
+	}
+	[/]
+
+	[# th:if = "${NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT  != null}"]
+	private Number [(${NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT })];
+	public void set[(${NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT })](Number NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT ){
+		this.[(${NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT })] = NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT ;
+	}
+	public Number getNO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT (){
+		return this.[(${NO_OF_INWARD_CHQ_RETURNS_SAVINGS_ACCOUNT })];
+	}
+	[/]
+
+	[# th:if = "${NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT != null}"]
+	private Number [(${NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT})];
+	public void set[(${NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT})](Number NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT){
+		this.[(${NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT})] = NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT;
+	}
+	public Number getNO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT(){
+		return this.[(${NO_OF_OUTWARD_CHQ_RETURNS_SAVINGS_ACCOUNT})];
+	}
+	[/]
+
+	[# th:if = "${NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT  != null}"]
+	private Number [(${NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT })];
+	public void set[(${NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT })](Number NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT ){
+		this.[(${NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT })] = NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT ;
+	}
+	public Number getNO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT (){
+		return this.[(${NO_OF_INWARD_CHQ_RETURNS_CURRENT_ACCOUNT })];
+	}
+	[/]
+
+	[# th:if = "${NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT != null}"]
+	private Number [(${NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT})];
+	public void set[(${NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT})](Number NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT){
+		this.[(${NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT})] = NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT;
+	}
+	public Number getNO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT(){
+		return this.[(${NO_OF_OUTWARD_CHQ_RETURNS_CURRENT_ACCOUNT})];
+	}
+	[/]
+
+	[# th:if = "${No_of_bank_transactions != null}"]
+	private Number [(${No_of_bank_transactions})];
+	public void set[(${No_of_bank_transactions})](Number No_of_bank_transactions){
+		this.[(${No_of_bank_transactions})] = No_of_bank_transactions;
+	}
+	public Number getNo_of_bank_transactions(){
+		return this.[(${No_of_bank_transactions})];
+	}
+	[/]
+
+	[# th:if = "${No_of_Inward_transactions != null}"]
+	private Number [(${No_of_Inward_transactions})];
+	public void set[(${No_of_Inward_transactions})](Number No_of_Inward_transactions){
+		this.[(${No_of_Inward_transactions})] = No_of_Inward_transactions;
+	}
+	public Number getNo_of_Inward_transactions(){
+		return this.[(${No_of_Inward_transactions})];
+	}
+	[/]
+
+	[# th:if = "${Credit_Summation != null}"]
+	private String [(${Credit_Summation})];
+	public void set[(${Credit_Summation})](String Credit_Summation){
+		this.[(${Credit_Summation})] = Credit_Summation;
+	}
+	public String getCredit_Summation(){
+		return this.[(${Credit_Summation})];
+	}
+	[/]
+
+	[# th:if = "${ABB != null}"]
+	private Number [(${ABB})];
+	public void set[(${ABB})](Number ABB){
+		this.[(${ABB})] = ABB;
+	}
+	public Number getABB(){
+		return this.[(${ABB})];
+	}
+	[/]
+
+	[# th:if = "${ABD != null}"]
+	private Number [(${ABD})];
+	public void set[(${ABD})](Number ABD){
+		this.[(${ABD})] = ABD;
+	}
+	public Number getABD(){
+		return this.[(${ABD})];
+	}
+	[/]
+}

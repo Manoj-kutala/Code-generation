@@ -1,0 +1,96 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${linked_loan_id})];
+	public void set[(${linked_loan_id})](String linked_loan_id){
+		this.[(${linked_loan_id})] = linked_loan_id;
+	}
+	public String getlinked_loan_id(){
+		return this.[(${linked_loan_id})];
+	}
+
+	[# th:if = "${fore_closure != null}"]
+	private Boolean [(${fore_closure})];
+	public void set[(${fore_closure})](Boolean fore_closure){
+		this.[(${fore_closure})] = fore_closure;
+	}
+	public Boolean getfore_closure(){
+		return this.[(${fore_closure})];
+	}
+	[/]
+
+	[# th:if = "${principal != null}"]
+	private Number [(${principal})];
+	public void set[(${principal})](Number principal){
+		this.[(${principal})] = principal;
+	}
+	public Number getprincipal(){
+		return this.[(${principal})];
+	}
+	[/]
+
+	[# th:if = "${interest != null}"]
+	private Number [(${interest})];
+	public void set[(${interest})](Number interest){
+		this.[(${interest})] = interest;
+	}
+	public Number getinterest(){
+		return this.[(${interest})];
+	}
+	[/]
+
+	[# th:if = "${type != null}"]
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private Float [(${amount})];
+	public void set[(${amount})](Float amount){
+		this.[(${amount})] = amount;
+	}
+	public Float getamount(){
+		return this.[(${amount})];
+	}
+	[/]
+}

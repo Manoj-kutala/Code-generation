@@ -1,0 +1,36 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Response {
+
+	[# th:if = "${Yubi_Application_Id != null}"]
+	private String Yubi_Application_Id;
+	public void setYubi_Application_Id(String Yubi_Application_Id){
+		this.Yubi_Application_Id = Yubi_Application_Id;
+	}
+	public String get[(${Yubi_Application_Id})](){
+		return this.Yubi_Application_Id;
+	}
+	[/]
+
+	[# th:if = "${Yubi_Product_Application_Id != null}"]
+	private String Yubi_Product_Application_Id;
+	public void setYubi_Product_Application_Id(String Yubi_Product_Application_Id){
+		this.Yubi_Product_Application_Id = Yubi_Product_Application_Id;
+	}
+	public String get[(${Yubi_Product_Application_Id})](){
+		return this.Yubi_Product_Application_Id;
+	}
+	[/]
+
+	[# th:if = "${Client_Application_ID != null}"]
+	private String Client_Application_ID;
+	public void setClient_Application_ID(String Client_Application_ID){
+		this.Client_Application_ID = Client_Application_ID;
+	}
+	public String get[(${Client_Application_ID})](){
+		return this.Client_Application_ID;
+	}
+	[/]
+}

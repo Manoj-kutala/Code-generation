@@ -1,0 +1,148 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${Account_Holder_type})];
+	public void set[(${Account_Holder_type})](String Account_Holder_type){
+		this.[(${Account_Holder_type})] = Account_Holder_type;
+	}
+	public String getAccount_Holder_type(){
+		return this.[(${Account_Holder_type})];
+	}
+
+	private String [(${account_Holder_Name})];
+	public void set[(${account_Holder_Name})](String account_Holder_Name){
+		this.[(${account_Holder_Name})] = account_Holder_Name;
+	}
+	public String getaccount_Holder_Name(){
+		return this.[(${account_Holder_Name})];
+	}
+
+	private String [(${Bank_accountType})];
+	public void set[(${Bank_accountType})](String Bank_accountType){
+		this.[(${Bank_accountType})] = Bank_accountType;
+	}
+	public String getBank_accountType(){
+		return this.[(${Bank_accountType})];
+	}
+
+	private Number [(${account_Number})];
+	public void set[(${account_Number})](Number account_Number){
+		this.[(${account_Number})] = account_Number;
+	}
+	public Number getaccount_Number(){
+		return this.[(${account_Number})];
+	}
+
+	[# th:if = "${vpa != null}"]
+	private String [(${vpa})];
+	public void set[(${vpa})](String vpa){
+		this.[(${vpa})] = vpa;
+	}
+	public String getvpa(){
+		return this.[(${vpa})];
+	}
+	[/]
+
+	[# th:if = "${bank_Name != null}"]
+	private String [(${bank_Name})];
+	public void set[(${bank_Name})](String bank_Name){
+		this.[(${bank_Name})] = bank_Name;
+	}
+	public String getbank_Name(){
+		return this.[(${bank_Name})];
+	}
+	[/]
+
+	[# th:if = "${branch_Name != null}"]
+	private String [(${branch_Name})];
+	public void set[(${branch_Name})](String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
+	}
+	public String getbranch_Name(){
+		return this.[(${branch_Name})];
+	}
+	[/]
+
+	private String [(${branch_IFSC})];
+	public void set[(${branch_IFSC})](String branch_IFSC){
+		this.[(${branch_IFSC})] = branch_IFSC;
+	}
+	public String getbranch_IFSC(){
+		return this.[(${branch_IFSC})];
+	}
+
+	[# th:if = "${date_Of_Opening != null}"]
+	private Date [(${date_Of_Opening})];
+	public void set[(${date_Of_Opening})](Date date_Of_Opening){
+		this.[(${date_Of_Opening})] = date_Of_Opening;
+	}
+	public Date getdate_Of_Opening(){
+		return this.[(${date_Of_Opening})];
+	}
+	[/]
+
+	[# th:if = "${Status != null}"]
+	private String [(${Status})];
+	public void set[(${Status})](String Status){
+		this.[(${Status})] = Status;
+	}
+	public String getStatus(){
+		return this.[(${Status})];
+	}
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private Float [(${amount})];
+	public void set[(${amount})](Float amount){
+		this.[(${amount})] = amount;
+	}
+	public Float getamount(){
+		return this.[(${amount})];
+	}
+	[/]
+
+	[# th:if = "${account_Number1 != null}"]
+	private Number [(${account_Number1})];
+	public void set[(${account_Number1})](Number account_Number1){
+		this.[(${account_Number1})] = account_Number1;
+	}
+	public Number getaccount_Number1(){
+		return this.[(${account_Number1})];
+	}
+	[/]
+}

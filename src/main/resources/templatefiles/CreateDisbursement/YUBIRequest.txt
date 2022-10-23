@@ -1,0 +1,118 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+
+	private Float [(${Net_Disbursed_Amount})];
+	public void set[(${Net_Disbursed_Amount})](Float Net_Disbursed_Amount){
+		this.[(${Net_Disbursed_Amount})] = Net_Disbursed_Amount;
+	}
+	public Float getNet_Disbursed_Amount(){
+		return this.[(${Net_Disbursed_Amount})];
+	}
+
+	private Number [(${Bank_account_number})];
+	public void set[(${Bank_account_number})](Number Bank_account_number){
+		this.[(${Bank_account_number})] = Bank_account_number;
+	}
+	public Number getBank_account_number(){
+		return this.[(${Bank_account_number})];
+	}
+
+	private String [(${Account_holder_type})];
+	public void set[(${Account_holder_type})](String Account_holder_type){
+		this.[(${Account_holder_type})] = Account_holder_type;
+	}
+	public String getAccount_holder_type(){
+		return this.[(${Account_holder_type})];
+	}
+
+	private Float [(${Disbursement_Amount})];
+	public void set[(${Disbursement_Amount})](Float Disbursement_Amount){
+		this.[(${Disbursement_Amount})] = Disbursement_Amount;
+	}
+	public Float getDisbursement_Amount(){
+		return this.[(${Disbursement_Amount})];
+	}
+
+	[# th:if = "${Settlement_date != null}"]
+	private Date [(${Settlement_date})];
+	public void set[(${Settlement_date})](Date Settlement_date){
+		this.[(${Settlement_date})] = Settlement_date;
+	}
+	public Date getSettlement_date(){
+		return this.[(${Settlement_date})];
+	}
+	[/]
+
+	private Date [(${Disbrusement_date})];
+	public void set[(${Disbrusement_date})](Date Disbrusement_date){
+		this.[(${Disbrusement_date})] = Disbrusement_date;
+	}
+	public Date getDisbrusement_date(){
+		return this.[(${Disbrusement_date})];
+	}
+
+	[# th:if = "${UTR_Number != null}"]
+	private String [(${UTR_Number})];
+	public void set[(${UTR_Number})](String UTR_Number){
+		this.[(${UTR_Number})] = UTR_Number;
+	}
+	public String getUTR_Number(){
+		return this.[(${UTR_Number})];
+	}
+	[/]
+
+	[# th:if = "${Refernce_number != null}"]
+	private String [(${Refernce_number})];
+	public void set[(${Refernce_number})](String Refernce_number){
+		this.[(${Refernce_number})] = Refernce_number;
+	}
+	public String getRefernce_number(){
+		return this.[(${Refernce_number})];
+	}
+	[/]
+
+	[# th:if = "${Instrument_type != null}"]
+	private String [(${Instrument_type})];
+	public void set[(${Instrument_type})](String Instrument_type){
+		this.[(${Instrument_type})] = Instrument_type;
+	}
+	public String getInstrument_type(){
+		return this.[(${Instrument_type})];
+	}
+	[/]
+}

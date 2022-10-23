@@ -1,0 +1,166 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
+	}
+
+	private String [(${Client_customer_ID})];
+	public void set[(${Client_customer_ID})](String Client_customer_ID){
+		this.[(${Client_customer_ID})] = Client_customer_ID;
+	}
+	public String getClient_customer_ID(){
+		return this.[(${Client_customer_ID})];
+	}
+
+	[# th:if = "${Client_Application_ID != null}"]
+	private String [(${Client_Application_ID})];
+	public void set[(${Client_Application_ID})](String Client_Application_ID){
+		this.[(${Client_Application_ID})] = Client_Application_ID;
+	}
+	public String getClient_Application_ID(){
+		return this.[(${Client_Application_ID})];
+	}
+	[/]
+
+	[# th:if = "${Client_Loan_ID != null}"]
+	private String [(${Client_Loan_ID})];
+	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
+		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	}
+	public String getClient_Loan_ID(){
+		return this.[(${Client_Loan_ID})];
+	}
+	[/]
+
+	[# th:if = "${source != null}"]
+	private String [(${source})];
+	public void set[(${source})](String source){
+		this.[(${source})] = source;
+	}
+	public String getsource(){
+		return this.[(${source})];
+	}
+	[/]
+
+	[# th:if = "${sourceType != null}"]
+	private String [(${sourceType})];
+	public void set[(${sourceType})](String sourceType){
+		this.[(${sourceType})] = sourceType;
+	}
+	public String getsourceType(){
+		return this.[(${sourceType})];
+	}
+	[/]
+
+	private String [(${doc_id})];
+	public void set[(${doc_id})](String doc_id){
+		this.[(${doc_id})] = doc_id;
+	}
+	public String getdoc_id(){
+		return this.[(${doc_id})];
+	}
+
+	[# th:if = "${format != null}"]
+	private String [(${format})];
+	public void set[(${format})](String format){
+		this.[(${format})] = format;
+	}
+	public String getformat(){
+		return this.[(${format})];
+	}
+	[/]
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+
+	private String [(${url1})];
+	public void set[(${url1})](String url1){
+		this.[(${url1})] = url1;
+	}
+	public String geturl1(){
+		return this.[(${url1})];
+	}
+
+	[# th:if = "${data1 != null}"]
+	private String [(${data1})];
+	public void set[(${data1})](String data1){
+		this.[(${data1})] = data1;
+	}
+	public String getdata1(){
+		return this.[(${data1})];
+	}
+	[/]
+
+	[# th:if = "${issue_Date != null}"]
+	private String [(${issue_Date})];
+	public void set[(${issue_Date})](String issue_Date){
+		this.[(${issue_Date})] = issue_Date;
+	}
+	public String getissue_Date(){
+		return this.[(${issue_Date})];
+	}
+	[/]
+
+	[# th:if = "${expiry_Date != null}"]
+	private Date [(${expiry_Date})];
+	public void set[(${expiry_Date})](Date expiry_Date){
+		this.[(${expiry_Date})] = expiry_Date;
+	}
+	public Date getexpiry_Date(){
+		return this.[(${expiry_Date})];
+	}
+	[/]
+
+	[# th:if = "${issuing_Authority != null}"]
+	private String [(${issuing_Authority})];
+	public void set[(${issuing_Authority})](String issuing_Authority){
+		this.[(${issuing_Authority})] = issuing_Authority;
+	}
+	public String getissuing_Authority(){
+		return this.[(${issuing_Authority})];
+	}
+	[/]
+
+	[# th:if = "${password != null}"]
+	private String [(${password})];
+	public void set[(${password})](String password){
+		this.[(${password})] = password;
+	}
+	public String getpassword(){
+		return this.[(${password})];
+	}
+	[/]
+
+	[# th:if = "${url != null}"]
+	private String [(${url})];
+	public void set[(${url})](String url){
+		this.[(${url})] = url;
+	}
+	public String geturl(){
+		return this.[(${url})];
+	}
+	[/]
+
+	[# th:if = "${data != null}"]
+	private String [(${data})];
+	public void set[(${data})](String data){
+		this.[(${data})] = data;
+	}
+	public String getdata(){
+		return this.[(${data})];
+	}
+	[/]
+}

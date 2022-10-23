@@ -1,0 +1,92 @@
+package DCG;
+
+import java.util.Date;
+
+public class [(${api_name})]Request {
+
+	private String [(${Originator_ID})];
+	public void set[(${Originator_ID})](String Originator_ID){
+		this.[(${Originator_ID})] = Originator_ID;
+	}
+	public String getOriginator_ID(){
+		return this.[(${Originator_ID})];
+	}
+
+	private String [(${Engagement_ID})];
+	public void set[(${Engagement_ID})](String Engagement_ID){
+		this.[(${Engagement_ID})] = Engagement_ID;
+	}
+	public String getEngagement_ID(){
+		return this.[(${Engagement_ID})];
+	}
+
+	[# th:if = "${Product_category != null}"]
+	private String [(${Product_category})];
+	public void set[(${Product_category})](String Product_category){
+		this.[(${Product_category})] = Product_category;
+	}
+	public String getProduct_category(){
+		return this.[(${Product_category})];
+	}
+	[/]
+
+	[# th:if = "${Down_Payment_Amount != null}"]
+	private Number [(${Down_Payment_Amount})];
+	public void set[(${Down_Payment_Amount})](Number Down_Payment_Amount){
+		this.[(${Down_Payment_Amount})] = Down_Payment_Amount;
+	}
+	public Number getDown_Payment_Amount(){
+		return this.[(${Down_Payment_Amount})];
+	}
+	[/]
+
+	[# th:if = "${Price_of_Product != null}"]
+	private Number [(${Price_of_Product})];
+	public void set[(${Price_of_Product})](Number Price_of_Product){
+		this.[(${Price_of_Product})] = Price_of_Product;
+	}
+	public Number getPrice_of_Product(){
+		return this.[(${Price_of_Product})];
+	}
+	[/]
+
+	[# th:if = "${Retailer_Name != null}"]
+	private String [(${Retailer_Name})];
+	public void set[(${Retailer_Name})](String Retailer_Name){
+		this.[(${Retailer_Name})] = Retailer_Name;
+	}
+	public String getRetailer_Name(){
+		return this.[(${Retailer_Name})];
+	}
+	[/]
+
+	[# th:if = "${Manufacturer_Name != null}"]
+	private String [(${Manufacturer_Name})];
+	public void set[(${Manufacturer_Name})](String Manufacturer_Name){
+		this.[(${Manufacturer_Name})] = Manufacturer_Name;
+	}
+	public String getManufacturer_Name(){
+		return this.[(${Manufacturer_Name})];
+	}
+	[/]
+
+	[# th:if = "${Model_Name != null}"]
+	private String [(${Model_Name})];
+	public void set[(${Model_Name})](String Model_Name){
+		this.[(${Model_Name})] = Model_Name;
+	}
+	public String getModel_Name(){
+		return this.[(${Model_Name})];
+	}
+	[/]
+
+	[# th:if = "${Model_Year != null}"]
+	private Number [(${Model_Year})];
+	public void set[(${Model_Year})](Number Model_Year){
+		this.[(${Model_Year})] = Model_Year;
+	}
+	public Number getModel_Year(){
+		return this.[(${Model_Year})];
+	}
+	[/]
+}
