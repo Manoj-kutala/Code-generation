@@ -1,0 +1,15 @@
+package DCG;
+
+import org.springframework.http.HttpEntity;
+
+public class RequestBuilder {
+
+    [# th:each="apiname : ${apinames}"]
+    public HttpEntity<[(${apiname})]Request> build([(${apiname})]Request yubiRequest){
+
+        HttpEntity<[(${apiname})]Request> entity = new HttpEntity<>(yubiRequest);
+        return entity;
+    }
+
+   [/]
+}

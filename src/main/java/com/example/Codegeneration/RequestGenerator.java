@@ -22,10 +22,7 @@ import org.codehaus.jettison.json.JSONException;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 public class RequestGenerator {
@@ -39,9 +36,10 @@ public class RequestGenerator {
     public sample1Grpc.sample1BlockingStub stub1;
 
     static HashMap<String, String> maps = new HashMap<>();
+    static List<String> apinames = new ArrayList<String>();
 
     @PostMapping("/generate")
-    public String createRequest(@RequestBody Payload payload) throws JSONException, ParseException {
+    public String createRequest(@RequestBody Payload payload) throws JSONException, ParseException, IOException {
 
         System.out.println(payload);
         System.out.println(payload.getOriginator_name());
@@ -114,6 +112,7 @@ public class RequestGenerator {
                 System.out.println("jsonObj------->" + jsonObj);
 
 
+
                 String api_name="";
 
                 if(jsonObj.has("api_name")){
@@ -122,6 +121,7 @@ public class RequestGenerator {
                     api_name = (String) jsonObj.get("webhook_name");
                 }
                 System.out.println("api_name-------->"+api_name);
+                apinames.add(api_name);
 
                 maps = new HashMap<>();
                 check(api_name, key1, key2, p.parse(jsonObj.toString()));
@@ -145,6 +145,23 @@ public class RequestGenerator {
                 throw new RuntimeException(e);
             }
         });
+
+        context.setVariable("apinames", apinames);
+
+        String request_text = textTemplateEngine.process("/loan", context);
+        FileWriter request_file = new FileWriter(outputPath + "/Loan.java");
+        request_file.write(request_text);
+        request_file.close();
+
+        request_text = textTemplateEngine.process("/RequestBuilder", context);
+        request_file = new FileWriter(outputPath + "/RequestBuilder.java");
+        request_file.write(request_text);
+        request_file.close();
+
+        request_text = textTemplateEngine.process("/SendRequest", context);
+        request_file = new FileWriter(outputPath + "/SendRequest.java");
+        request_file.write(request_text);
+        request_file.close();
 
 
 

@@ -1,0 +1,20 @@
+package DCG;
+
+import org.springframework.http.HttpEntity;
+
+public class Loan {
+
+    [# th:each="apiname : ${apinames}"]
+    public [(${apiname})]Response create([(${apiname})]Request yubiRequest){
+
+        RequestBuilder requestBuilder =  new RequestBuilder();
+        HttpEntity<[(${apiname})]Request> entity = requestBuilder.build(yubiRequest);
+
+        SendRequest sendRequest = new SendRequest();
+        return sendRequest.send[(${apiname})](entity).getBody();
+   }
+
+   [/]
+
+}
+

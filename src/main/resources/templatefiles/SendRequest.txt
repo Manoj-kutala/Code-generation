@@ -1,0 +1,21 @@
+package DCG;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+
+
+public class SendRequest {
+
+    RestTemplate restTemplate = new RestTemplate();
+
+    [# th:each="apiname : ${apinames}"]
+    public ResponseEntity<[(${apiname})]Response> send[(${apiname})](HttpEntity<[(${apiname})]Request> entity) {
+
+        return restTemplate.exchange("http://localhost:8002/api/v1/loans/create", HttpMethod.POST, entity, [(${apiname})]Response.class);
+    }
+
+   [/]
+}
