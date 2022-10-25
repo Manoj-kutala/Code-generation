@@ -36,7 +36,7 @@ public class RequestGenerator {
     public sample1Grpc.sample1BlockingStub stub1;
 
     static HashMap<String, String> maps = new HashMap<>();
-    static List<String> apinames = new ArrayList<String>();
+
 
     @PostMapping("/generate")
     public String createRequest(@RequestBody Payload payload) throws JSONException, ParseException, IOException {
@@ -49,6 +49,7 @@ public class RequestGenerator {
         final Context context = new Context();
 
         RestTemplate restTemplate = new RestTemplate();
+        List<String> apinames = new ArrayList<String>();
 
 
         //output path for storing the files
@@ -146,22 +147,23 @@ public class RequestGenerator {
             }
         });
 
-        context.setVariable("apinames", apinames);
+        final Context context1 = new Context();
+        context1.setVariable("apinames", apinames);
 
-        String request_text = textTemplateEngine.process("/loan", context);
-        FileWriter request_file = new FileWriter(outputPath + "/Loan.java");
-        request_file.write(request_text);
-        request_file.close();
+        String loan_text = textTemplateEngine.process("/loan", context1);
+        FileWriter loan_file = new FileWriter(outputPath + "/Loan.java");
+        loan_file.write(loan_text);
+        loan_file.close();
 
-        request_text = textTemplateEngine.process("/RequestBuilder", context);
-        request_file = new FileWriter(outputPath + "/RequestBuilder.java");
-        request_file.write(request_text);
-        request_file.close();
+        String requestbuilder_text = textTemplateEngine.process("/RequestBuilder", context1);
+        FileWriter requestbuilder_file = new FileWriter(outputPath + "/RequestBuilder.java");
+        requestbuilder_file.write(requestbuilder_text);
+        requestbuilder_file.close();
 
-        request_text = textTemplateEngine.process("/SendRequest", context);
-        request_file = new FileWriter(outputPath + "/SendRequest.java");
-        request_file.write(request_text);
-        request_file.close();
+        String sendrequest_text = textTemplateEngine.process("/SendRequest", context1);
+        FileWriter sendrequest_file = new FileWriter(outputPath + "/SendRequest.java");
+        sendrequest_file.write(sendrequest_text);
+        sendrequest_file.close();
 
 
 
