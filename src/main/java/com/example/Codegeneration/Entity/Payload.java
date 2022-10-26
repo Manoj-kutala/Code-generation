@@ -1,4 +1,4 @@
-package com.example.Codegeneration;
+package com.example.Codegeneration.Entity;
 
 public class Payload {
 

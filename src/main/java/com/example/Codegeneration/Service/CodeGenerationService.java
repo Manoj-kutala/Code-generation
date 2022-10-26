@@ -1,93 +1,42 @@
-package com.example.Codegeneration;
+package com.example.Codegeneration.Service;
 
-import com.example.sample.request;
+
 import com.example.sample.request1;
 import com.example.sample.sample1Grpc;
-import com.example.sample.sampleGrpc;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.FileSystemUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import org.codehaus.jettison.json.JSONException;
-
-import org.json.simple.parser.ParseException;
-
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
-@RestController
-public class RequestGenerator {
-    @Autowired
-    private TemplateEngine textTemplateEngine;
 
-    @GrpcClient("sample")
-    public sampleGrpc.sampleBlockingStub stub;
+@Service
+public class CodeGenerationService {
 
     @GrpcClient("sample1")
     public sample1Grpc.sample1BlockingStub stub1;
 
+    @Autowired
+    private TemplateEngine textTemplateEngine;
+
     static HashMap<String, String> maps = new HashMap<>();
 
-
-    @PostMapping("/generate")
-    public String createRequest(@RequestBody Payload payload) throws JSONException, ParseException, IOException {
-
-        System.out.println(payload);
-        System.out.println(payload.getOriginator_name());
-        String originatorname = payload.getOriginator_name();
-
+    public String generateCodeFiles(String mappingfile,String outputfolder, String outputPath) throws IOException {
 
         final Context context = new Context();
 
         RestTemplate restTemplate = new RestTemplate();
         List<String> apinames = new ArrayList<String>();
 
-
-        //output path for storing the files
-        String outputfolder = "/Users/manoj.kutala/Desktop/EFS/" + payload.getOriginator_name();
-
-
-        File f1 = new File(outputfolder);
-        boolean bool = f1.mkdir();
-        if (bool) {
-            System.out.println("Folder is created successfully");
-        } else {
-            System.out.println("Error Found!");
-        }
-
-        String outputPath = "/Users/manoj.kutala/Desktop/EFS/" + payload.getOriginator_name() + "/DCG";
-        File f2 = new File(outputPath);
-        bool = f2.mkdir();
-        if (bool) {
-            System.out.println("Folder is created successfully");
-        } else {
-            System.out.println("Error Found!");
-        }
-
-
-//        //getting other files of sdk
-//        File src = new File("/Users/manoj.kutala/Desktop/DCG");
-//        File dest = new File(outputPath);
-//
-//        try {
-//            FileSystemUtils.copyRecursively(src, dest);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
-        String a = stub.func(request.newBuilder().setReq(originatorname).build()).getRes();
-
-        JSONObject jsonObject = new JSONObject(a);
+        JSONObject jsonObject = new JSONObject(mappingfile);
 
 
         JSONArray apiList = jsonObject.getJSONArray("consolidatedAPIs");
@@ -102,9 +51,6 @@ public class RequestGenerator {
         String key1 = "yubiFieldName";
         JsonParser p = new JsonParser();
 
-
-
-//        Iterator<String> iterator = apiList.iterator();
 
         apiList.forEach(api -> {
             JSONObject jsonObj = null;
@@ -167,34 +113,11 @@ public class RequestGenerator {
 
 
 
-
-//        //
-//        Gson gson = new Gson();
-//        HashMap<String, String> maps = gson.fromJson(String.valueOf(jsonObject), HashMap.class);
-//        maps.forEach((k, v) -> context.setVariable(k, v));
-//
-//
-//        String request_text = textTemplateEngine.process("YubiRequest", context);
-//        FileWriter request_file = new FileWriter(outputPath + "/YubiRequest.java");
-//        request_file.write(request_text);
-//        request_file.close();
-//
-//        String response_text = textTemplateEngine.process("YubiResponse", context);
-//        FileWriter response_file = new FileWriter(outputPath + "/YubiResponse.java");
-//        response_file.write(response_text);
-//        response_file.close();
-
-
-
-
         return stub1.func1(request1.newBuilder().setReq(outputfolder).build()).getRes();
 
     }
 
-
-
     private void check(String api_name, String key1, String key2, JsonElement jsonElement) {
-
 
         String key = "api_name",value =api_name;// "this.getClass().getPackage()";
         if (jsonElement.isJsonArray()) {
@@ -227,5 +150,3 @@ public class RequestGenerator {
     }
 
 }
-
-
