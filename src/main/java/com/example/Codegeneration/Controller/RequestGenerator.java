@@ -49,14 +49,12 @@ public class RequestGenerator {
         }
 
 
-        String a = getMappingService.getOriginatorMappingFile(originatorname);
+        String mappingjson = getMappingService.getOriginatorMappingFile(originatorname);
 
-        String b = codeGenerationService.generateCodeFiles(a,outputfolder,outputPath);
+        String filelocation = codeGenerationService.generateCodeFiles(mappingjson,outputfolder,outputPath);
 
-        return b;
+        return filelocation;
     }
-
-
 
 
 

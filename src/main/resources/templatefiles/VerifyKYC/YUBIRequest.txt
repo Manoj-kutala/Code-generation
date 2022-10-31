@@ -11,100 +11,155 @@ public class [(${api_name})]Request {
 	public String getoriginator_ID(){
 		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_customer_ID})];
-	public void set[(${Client_customer_ID})](String Client_customer_ID){
-		this.[(${Client_customer_ID})] = Client_customer_ID;
-	}
-	public String getClient_customer_ID(){
-		return this.[(${Client_customer_ID})];
-	}
-
-	[# th:if = "${CKYC_ID != null}"]
-	private String [(${CKYC_ID})];
-	public void set[(${CKYC_ID})](String CKYC_ID){
-		this.[(${CKYC_ID})] = CKYC_ID;
-	}
-	public String getCKYC_ID(){
-		return this.[(${CKYC_ID})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	[# th:if = "${CKYC_DATE_OF_birth != null}"]
-	private Date [(${CKYC_DATE_OF_birth})];
-	public void set[(${CKYC_DATE_OF_birth})](Date CKYC_DATE_OF_birth){
-		this.[(${CKYC_DATE_OF_birth})] = CKYC_DATE_OF_birth;
+	private String [(${client_customer_ID})];
+	public void set[(${client_customer_ID})](String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
 	}
-	public Date getCKYC_DATE_OF_birth(){
-		return this.[(${CKYC_DATE_OF_birth})];
+	public String getclient_customer_ID(){
+		return this.[(${client_customer_ID})];
 	}
-	[/]
-
-	[# th:if = "${CKYC_PAN_NUMBER != null}"]
-	private String [(${CKYC_PAN_NUMBER })];
-	public void set[(${CKYC_PAN_NUMBER })](String CKYC_PAN_NUMBER ){
-		this.[(${CKYC_PAN_NUMBER })] = CKYC_PAN_NUMBER ;
-	}
-	public String getCKYC_PAN_NUMBER (){
-		return this.[(${CKYC_PAN_NUMBER })];
+	[# th:if = "${client_customer_ID} != 'client_customer_ID' "]
+	private void setclient_customer_ID(String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
 	}
 	[/]
 
-	[# th:if = "${CKYC_MOBILE_NUMBER != null}"]
-	private Number [(${CKYC_MOBILE_NUMBER })];
-	public void set[(${CKYC_MOBILE_NUMBER })](Number CKYC_MOBILE NUMBER ){
-		this.[(${CKYC_MOBILE_NUMBER })] = CKYC_MOBILE NUMBER ;
+	[# th:if = "${cKYC_ID != null}"]
+	private String [(${cKYC_ID})];
+	public void set[(${cKYC_ID})](String cKYC_ID){
+		this.[(${cKYC_ID})] = cKYC_ID;
 	}
-	public Number getCKYC_MOBILE_NUMBER (){
-		return this.[(${CKYC_MOBILE_NUMBER })];
+	public String getcKYC_ID(){
+		return this.[(${cKYC_ID})];
 	}
-	[/]
-
-	[# th:if = "${CKYC_PERMANENT_PINCODE != null}"]
-	private Number [(${CKYC_PERMANENT_PINCODE})];
-	public void set[(${CKYC_PERMANENT_PINCODE})](Number CKYC_PERMANENT_PINCODE){
-		this.[(${CKYC_PERMANENT_PINCODE})] = CKYC_PERMANENT_PINCODE;
-	}
-	public Number getCKYC_PERMANENT_PINCODE(){
-		return this.[(${CKYC_PERMANENT_PINCODE})];
+	[# th:if = "${cKYC_ID} != 'cKYC_ID' "]
+	private void setcKYC_ID(String cKYC_ID){
+		this.[(${cKYC_ID})] = cKYC_ID;
 	}
 	[/]
-
-	[# th:if = "${CKYC_PASSPORT_NUMBER != null}"]
-	private String [(${CKYC_PASSPORT_NUMBER})];
-	public void set[(${CKYC_PASSPORT_NUMBER})](String CKYC_PASSPORT_NUMBER){
-		this.[(${CKYC_PASSPORT_NUMBER})] = CKYC_PASSPORT_NUMBER;
-	}
-	public String getCKYC_PASSPORT_NUMBER(){
-		return this.[(${CKYC_PASSPORT_NUMBER})];
-	}
 	[/]
 
-	[# th:if = "${CKYC_DL_NUMBER != null}"]
-	private String [(${CKYC_DL_NUMBER})];
-	public void set[(${CKYC_DL_NUMBER})](String CKYC_DL_NUMBER){
-		this.[(${CKYC_DL_NUMBER})] = CKYC_DL_NUMBER;
+	[# th:if = "${cKYC_DATE_OF_birth != null}"]
+	private Date [(${cKYC_DATE_OF_birth})];
+	public void set[(${cKYC_DATE_OF_birth})](Date cKYC_DATE_OF_birth){
+		this.[(${cKYC_DATE_OF_birth})] = cKYC_DATE_OF_birth;
 	}
-	public String getCKYC_DL_NUMBER(){
-		return this.[(${CKYC_DL_NUMBER})];
+	public Date getcKYC_DATE_OF_birth(){
+		return this.[(${cKYC_DATE_OF_birth})];
 	}
-	[/]
-
-	[# th:if = "${CKYC_VOTERID_NUMBER != null}"]
-	private String [(${CKYC_VOTERID_NUMBER})];
-	public void set[(${CKYC_VOTERID_NUMBER})](String CKYC_VOTERID_NUMBER){
-		this.[(${CKYC_VOTERID_NUMBER})] = CKYC_VOTERID_NUMBER;
-	}
-	public String getCKYC_VOTERID_NUMBER(){
-		return this.[(${CKYC_VOTERID_NUMBER})];
+	[# th:if = "${cKYC_DATE_OF_birth} != 'cKYC_DATE_OF_birth' "]
+	private void setcKYC_DATE_OF_birth(Date cKYC_DATE_OF_birth){
+		this.[(${cKYC_DATE_OF_birth})] = cKYC_DATE_OF_birth;
 	}
 	[/]
+	[/]
 
-	private String [(${CKYC_Action_trigger})];
-	public void set[(${CKYC_Action_trigger})](String CKYC_Action_trigger){
-		this.[(${CKYC_Action_trigger})] = CKYC_Action_trigger;
+	[# th:if = "${cKYC_PAN_NUMBER != null}"]
+	private String [(${cKYC_PAN_NUMBER})];
+	public void set[(${cKYC_PAN_NUMBER})](String cKYC_PAN_NUMBER){
+		this.[(${cKYC_PAN_NUMBER})] = cKYC_PAN_NUMBER;
 	}
-	public String getCKYC_Action_trigger(){
-		return this.[(${CKYC_Action_trigger})];
+	public String getcKYC_PAN_NUMBER(){
+		return this.[(${cKYC_PAN_NUMBER})];
 	}
+	[# th:if = "${cKYC_PAN_NUMBER} != 'cKYC_PAN_NUMBER' "]
+	private void setcKYC_PAN_NUMBER(String cKYC_PAN_NUMBER){
+		this.[(${cKYC_PAN_NUMBER})] = cKYC_PAN_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_MOBILE_NUMBER != null}"]
+	private Number [(${cKYC_MOBILE_NUMBER})];
+	public void set[(${cKYC_MOBILE_NUMBER})](Number cKYC_MOBILE_NUMBER){
+		this.[(${cKYC_MOBILE_NUMBER})] = cKYC_MOBILE_NUMBER;
+	}
+	public Number getcKYC_MOBILE_NUMBER(){
+		return this.[(${cKYC_MOBILE_NUMBER})];
+	}
+	[# th:if = "${cKYC_MOBILE_NUMBER} != 'cKYC_MOBILE_NUMBER' "]
+	private void setcKYC_MOBILE_NUMBER(Number cKYC_MOBILE_NUMBER){
+		this.[(${cKYC_MOBILE_NUMBER})] = cKYC_MOBILE_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_PERMANENT_PINCODE != null}"]
+	private Number [(${cKYC_PERMANENT_PINCODE})];
+	public void set[(${cKYC_PERMANENT_PINCODE})](Number cKYC_PERMANENT_PINCODE){
+		this.[(${cKYC_PERMANENT_PINCODE})] = cKYC_PERMANENT_PINCODE;
+	}
+	public Number getcKYC_PERMANENT_PINCODE(){
+		return this.[(${cKYC_PERMANENT_PINCODE})];
+	}
+	[# th:if = "${cKYC_PERMANENT_PINCODE} != 'cKYC_PERMANENT_PINCODE' "]
+	private void setcKYC_PERMANENT_PINCODE(Number cKYC_PERMANENT_PINCODE){
+		this.[(${cKYC_PERMANENT_PINCODE})] = cKYC_PERMANENT_PINCODE;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_PASSPORT_NUMBER != null}"]
+	private String [(${cKYC_PASSPORT_NUMBER})];
+	public void set[(${cKYC_PASSPORT_NUMBER})](String cKYC_PASSPORT_NUMBER){
+		this.[(${cKYC_PASSPORT_NUMBER})] = cKYC_PASSPORT_NUMBER;
+	}
+	public String getcKYC_PASSPORT_NUMBER(){
+		return this.[(${cKYC_PASSPORT_NUMBER})];
+	}
+	[# th:if = "${cKYC_PASSPORT_NUMBER} != 'cKYC_PASSPORT_NUMBER' "]
+	private void setcKYC_PASSPORT_NUMBER(String cKYC_PASSPORT_NUMBER){
+		this.[(${cKYC_PASSPORT_NUMBER})] = cKYC_PASSPORT_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_DL_NUMBER != null}"]
+	private String [(${cKYC_DL_NUMBER})];
+	public void set[(${cKYC_DL_NUMBER})](String cKYC_DL_NUMBER){
+		this.[(${cKYC_DL_NUMBER})] = cKYC_DL_NUMBER;
+	}
+	public String getcKYC_DL_NUMBER(){
+		return this.[(${cKYC_DL_NUMBER})];
+	}
+	[# th:if = "${cKYC_DL_NUMBER} != 'cKYC_DL_NUMBER' "]
+	private void setcKYC_DL_NUMBER(String cKYC_DL_NUMBER){
+		this.[(${cKYC_DL_NUMBER})] = cKYC_DL_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_VOTERID_NUMBER != null}"]
+	private String [(${cKYC_VOTERID_NUMBER})];
+	public void set[(${cKYC_VOTERID_NUMBER})](String cKYC_VOTERID_NUMBER){
+		this.[(${cKYC_VOTERID_NUMBER})] = cKYC_VOTERID_NUMBER;
+	}
+	public String getcKYC_VOTERID_NUMBER(){
+		return this.[(${cKYC_VOTERID_NUMBER})];
+	}
+	[# th:if = "${cKYC_VOTERID_NUMBER} != 'cKYC_VOTERID_NUMBER' "]
+	private void setcKYC_VOTERID_NUMBER(String cKYC_VOTERID_NUMBER){
+		this.[(${cKYC_VOTERID_NUMBER})] = cKYC_VOTERID_NUMBER;
+	}
+	[/]
+	[/]
+
+	private String [(${cKYC_Action_trigger})];
+	public void set[(${cKYC_Action_trigger})](String cKYC_Action_trigger){
+		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+	}
+	public String getcKYC_Action_trigger(){
+		return this.[(${cKYC_Action_trigger})];
+	}
+	[# th:if = "${cKYC_Action_trigger} != 'cKYC_Action_trigger' "]
+	private void setcKYC_Action_trigger(String cKYC_Action_trigger){
+		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+	}
+	[/]
 }

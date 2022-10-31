@@ -11,14 +11,24 @@ public class [(${api_name})]Request {
 	public String getoriginator_ID(){
 		return this.[(${originator_ID})];
 	}
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	[/]
 
-	private String [(${Client_customer_ID})];
-	public void set[(${Client_customer_ID})](String Client_customer_ID){
-		this.[(${Client_customer_ID})] = Client_customer_ID;
+	private String [(${client_customer_ID})];
+	public void set[(${client_customer_ID})](String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
 	}
-	public String getClient_customer_ID(){
-		return this.[(${Client_customer_ID})];
+	public String getclient_customer_ID(){
+		return this.[(${client_customer_ID})];
 	}
+	[# th:if = "${client_customer_ID} != 'client_customer_ID' "]
+	private void setclient_customer_ID(String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
+	}
+	[/]
 
 	private String [(${type})];
 	public void set[(${type})](String type){
@@ -27,23 +37,38 @@ public class [(${api_name})]Request {
 	public String gettype(){
 		return this.[(${type})];
 	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
 
-	private Number [(${Number})];
-	public void set[(${Number})](Number Number){
-		this.[(${Number})] = Number;
+	private Number [(${number})];
+	public void set[(${number})](Number number){
+		this.[(${number})] = number;
 	}
-	public Number getNumber(){
-		return this.[(${Number})];
+	public Number getnumber(){
+		return this.[(${number})];
 	}
+	[# th:if = "${number} != 'number' "]
+	private void setnumber(Number number){
+		this.[(${number})] = number;
+	}
+	[/]
 
-	[# th:if = "${Area_Code != null}"]
-	private Number [(${Area_Code})];
-	public void set[(${Area_Code})](Number Area_Code){
-		this.[(${Area_Code})] = Area_Code;
+	[# th:if = "${area_Code != null}"]
+	private Number [(${area_Code})];
+	public void set[(${area_Code})](Number area_Code){
+		this.[(${area_Code})] = area_Code;
 	}
-	public Number getArea_Code(){
-		return this.[(${Area_Code})];
+	public Number getarea_Code(){
+		return this.[(${area_Code})];
 	}
+	[# th:if = "${area_Code} != 'area_Code' "]
+	private void setarea_Code(Number area_Code){
+		this.[(${area_Code})] = area_Code;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${is_preferred != null}"]
@@ -54,6 +79,11 @@ public class [(${api_name})]Request {
 	public String getis_preferred(){
 		return this.[(${is_preferred})];
 	}
+	[# th:if = "${is_preferred} != 'is_preferred' "]
+	private void setis_preferred(String is_preferred){
+		this.[(${is_preferred})] = is_preferred;
+	}
+	[/]
 	[/]
 
 	private String [(${type1})];
@@ -63,6 +93,11 @@ public class [(${api_name})]Request {
 	public String gettype1(){
 		return this.[(${type1})];
 	}
+	[# th:if = "${type1} != 'type1' "]
+	private void settype1(String type1){
+		this.[(${type1})] = type1;
+	}
+	[/]
 
 	private String [(${id})];
 	public void set[(${id})](String id){
@@ -71,6 +106,11 @@ public class [(${api_name})]Request {
 	public String getid(){
 		return this.[(${id})];
 	}
+	[# th:if = "${id} != 'id' "]
+	private void setid(String id){
+		this.[(${id})] = id;
+	}
+	[/]
 
 	[# th:if = "${is_preferred1 != null}"]
 	private String [(${is_preferred1})];
@@ -80,6 +120,11 @@ public class [(${api_name})]Request {
 	public String getis_preferred1(){
 		return this.[(${is_preferred1})];
 	}
+	[# th:if = "${is_preferred1} != 'is_preferred1' "]
+	private void setis_preferred1(String is_preferred1){
+		this.[(${is_preferred1})] = is_preferred1;
+	}
+	[/]
 	[/]
 
 	private String [(${addressType})];
@@ -89,6 +134,11 @@ public class [(${api_name})]Request {
 	public String getaddressType(){
 		return this.[(${addressType})];
 	}
+	[# th:if = "${addressType} != 'addressType' "]
+	private void setaddressType(String addressType){
+		this.[(${addressType})] = addressType;
+	}
+	[/]
 
 	private String [(${ownershipType})];
 	public void set[(${ownershipType})](String ownershipType){
@@ -97,53 +147,83 @@ public class [(${api_name})]Request {
 	public String getownershipType(){
 		return this.[(${ownershipType})];
 	}
-
-	[# th:if = "${Area_type != null}"]
-	private String [(${Area_type})];
-	public void set[(${Area_type})](String Area_type){
-		this.[(${Area_type})] = Area_type;
-	}
-	public String getArea_type(){
-		return this.[(${Area_type})];
+	[# th:if = "${ownershipType} != 'ownershipType' "]
+	private void setownershipType(String ownershipType){
+		this.[(${ownershipType})] = ownershipType;
 	}
 	[/]
 
-	private String [(${Addres_Line_1})];
-	public void set[(${Addres_Line_1})](String Addres_Line_1){
-		this.[(${Addres_Line_1})] = Addres_Line_1;
+	[# th:if = "${area_type != null}"]
+	private String [(${area_type})];
+	public void set[(${area_type})](String area_type){
+		this.[(${area_type})] = area_type;
 	}
-	public String getAddres_Line_1(){
-		return this.[(${Addres_Line_1})];
+	public String getarea_type(){
+		return this.[(${area_type})];
 	}
+	[# th:if = "${area_type} != 'area_type' "]
+	private void setarea_type(String area_type){
+		this.[(${area_type})] = area_type;
+	}
+	[/]
+	[/]
 
-	[# th:if = "${Addres_Line_2 != null}"]
-	private String [(${Addres_Line_2})];
-	public void set[(${Addres_Line_2})](String Addres_Line_2){
-		this.[(${Addres_Line_2})] = Addres_Line_2;
+	private String [(${addres_Line_1})];
+	public void set[(${addres_Line_1})](String addres_Line_1){
+		this.[(${addres_Line_1})] = addres_Line_1;
 	}
-	public String getAddres_Line_2(){
-		return this.[(${Addres_Line_2})];
+	public String getaddres_Line_1(){
+		return this.[(${addres_Line_1})];
+	}
+	[# th:if = "${addres_Line_1} != 'addres_Line_1' "]
+	private void setaddres_Line_1(String addres_Line_1){
+		this.[(${addres_Line_1})] = addres_Line_1;
 	}
 	[/]
 
-	[# th:if = "${Addres_Line_3 != null}"]
-	private String [(${Addres_Line_3})];
-	public void set[(${Addres_Line_3})](String Addres_Line_3){
-		this.[(${Addres_Line_3})] = Addres_Line_3;
+	[# th:if = "${addres_Line_2 != null}"]
+	private String [(${addres_Line_2})];
+	public void set[(${addres_Line_2})](String addres_Line_2){
+		this.[(${addres_Line_2})] = addres_Line_2;
 	}
-	public String getAddres_Line_3(){
-		return this.[(${Addres_Line_3})];
+	public String getaddres_Line_2(){
+		return this.[(${addres_Line_2})];
+	}
+	[# th:if = "${addres_Line_2} != 'addres_Line_2' "]
+	private void setaddres_Line_2(String addres_Line_2){
+		this.[(${addres_Line_2})] = addres_Line_2;
 	}
 	[/]
+	[/]
 
-	[# th:if = "${Geo_Location != null}"]
-	private String [(${Geo_Location})];
-	public void set[(${Geo_Location})](String Geo_Location){
-		this.[(${Geo_Location})] = Geo_Location;
+	[# th:if = "${addres_Line_3 != null}"]
+	private String [(${addres_Line_3})];
+	public void set[(${addres_Line_3})](String addres_Line_3){
+		this.[(${addres_Line_3})] = addres_Line_3;
 	}
-	public String getGeo-Location(){
-		return this.[(${Geo-Location})];
+	public String getaddres_Line_3(){
+		return this.[(${addres_Line_3})];
 	}
+	[# th:if = "${addres_Line_3} != 'addres_Line_3' "]
+	private void setaddres_Line_3(String addres_Line_3){
+		this.[(${addres_Line_3})] = addres_Line_3;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${geo_Location != null}"]
+	private String [(${geo_Location})];
+	public void set[(${geo_Location})](String geo_Location){
+		this.[(${geo_Location})] = geo_Location;
+	}
+	public String getgeo_Location(){
+		return this.[(${geo_Location})];
+	}
+	[# th:if = "${geo_Location} != 'geo_Location' "]
+	private void setgeo_Location(String geo_Location){
+		this.[(${geo_Location})] = geo_Location;
+	}
+	[/]
 	[/]
 
 	private Number [(${pincode})];
@@ -153,6 +233,11 @@ public class [(${api_name})]Request {
 	public Number getpincode(){
 		return this.[(${pincode})];
 	}
+	[# th:if = "${pincode} != 'pincode' "]
+	private void setpincode(Number pincode){
+		this.[(${pincode})] = pincode;
+	}
+	[/]
 
 	private String [(${city})];
 	public void set[(${city})](String city){
@@ -161,6 +246,11 @@ public class [(${api_name})]Request {
 	public String getcity(){
 		return this.[(${city})];
 	}
+	[# th:if = "${city} != 'city' "]
+	private void setcity(String city){
+		this.[(${city})] = city;
+	}
+	[/]
 
 	private String [(${state})];
 	public void set[(${state})](String state){
@@ -169,6 +259,11 @@ public class [(${api_name})]Request {
 	public String getstate(){
 		return this.[(${state})];
 	}
+	[# th:if = "${state} != 'state' "]
+	private void setstate(String state){
+		this.[(${state})] = state;
+	}
+	[/]
 
 	private String [(${country})];
 	public void set[(${country})](String country){
@@ -177,14 +272,24 @@ public class [(${api_name})]Request {
 	public String getcountry(){
 		return this.[(${country})];
 	}
+	[# th:if = "${country} != 'country' "]
+	private void setcountry(String country){
+		this.[(${country})] = country;
+	}
+	[/]
 
-	[# th:if = "${Years_of_stay_in_address != null}"]
-	private String [(${Years_of_stay_in_address})];
-	public void set[(${Years_of_stay_in_address})](String Years_of_stay_in_address){
-		this.[(${Years_of_stay_in_address})] = Years_of_stay_in_address;
+	[# th:if = "${years_of_stay_in_address != null}"]
+	private String [(${years_of_stay_in_address})];
+	public void set[(${years_of_stay_in_address})](String years_of_stay_in_address){
+		this.[(${years_of_stay_in_address})] = years_of_stay_in_address;
 	}
-	public String getYears_of_stay_in_address(){
-		return this.[(${Years_of_stay_in_address})];
+	public String getyears_of_stay_in_address(){
+		return this.[(${years_of_stay_in_address})];
 	}
+	[# th:if = "${years_of_stay_in_address} != 'years_of_stay_in_address' "]
+	private void setyears_of_stay_in_address(String years_of_stay_in_address){
+		this.[(${years_of_stay_in_address})] = years_of_stay_in_address;
+	}
+	[/]
 	[/]
 }

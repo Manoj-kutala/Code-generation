@@ -34,7 +34,8 @@ public class CodeGenerationService {
         final Context context = new Context();
 
         RestTemplate restTemplate = new RestTemplate();
-        List<String> apinames = new ArrayList<String>();
+        List<String> apiNamesWithResponse = new ArrayList<String>();
+        List<String> apiNamesWithoutResponse = new ArrayList<String>();
 
         JSONObject jsonObject = new JSONObject(mappingfile);
 
@@ -58,8 +59,6 @@ public class CodeGenerationService {
                 jsonObj = new JSONObject(api.toString());
                 System.out.println("jsonObj------->" + jsonObj);
 
-
-
                 String api_name="";
 
                 if(jsonObj.has("api_name")){
@@ -68,7 +67,11 @@ public class CodeGenerationService {
                     api_name = (String) jsonObj.get("webhook_name");
                 }
                 System.out.println("api_name-------->"+api_name);
-                apinames.add(api_name);
+                System.out.println((jsonObj.get("response_payload_attributes")).toString().equals("{}"));
+                if((jsonObj.get("response_payload_attributes")).toString().equals("{}"))
+                    apiNamesWithoutResponse.add(api_name);
+                else
+                    apiNamesWithResponse.add(api_name);
 
                 maps = new HashMap<>();
                 check(api_name, key1, key2, p.parse(jsonObj.toString()));
@@ -83,10 +86,12 @@ public class CodeGenerationService {
                 request_file.write(request_text);
                 request_file.close();
 
-                String response_text = textTemplateEngine.process("/"+api_name+"/YubiResponse", context);
-                FileWriter response_file = new FileWriter(outputPath + "/"+api_name+"Response.java");
-                response_file.write(response_text);
-                response_file.close();
+                if(!((jsonObj.get("response_payload_attributes")).toString()).equals("{}")) {
+                    String response_text = textTemplateEngine.process("/" + api_name + "/YubiResponse", context);
+                    FileWriter response_file = new FileWriter(outputPath + "/" + api_name + "Response.java");
+                    response_file.write(response_text);
+                    response_file.close();
+                }
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -94,10 +99,11 @@ public class CodeGenerationService {
         });
 
         final Context context1 = new Context();
-        context1.setVariable("apinames", apinames);
+        context1.setVariable("apiNamesWithResponses", apiNamesWithResponse);
+        context1.setVariable("apiNamesWithoutResponses", apiNamesWithoutResponse);
 
-        String loan_text = textTemplateEngine.process("/loan", context1);
-        FileWriter loan_file = new FileWriter(outputPath + "/Loan.java");
+        String loan_text = textTemplateEngine.process("/YUBILoan", context1);
+        FileWriter loan_file = new FileWriter(outputPath + "/YUBILoan.java");
         loan_file.write(loan_text);
         loan_file.close();
 
@@ -111,15 +117,13 @@ public class CodeGenerationService {
         sendrequest_file.write(sendrequest_text);
         sendrequest_file.close();
 
-
-
         return stub1.func1(request1.newBuilder().setReq(outputfolder).build()).getRes();
 
     }
 
     private void check(String api_name, String key1, String key2, JsonElement jsonElement) {
 
-        String key = "api_name",value =api_name;// "this.getClass().getPackage()";
+        String key = "api_name",value =api_name;
         if (jsonElement.isJsonArray()) {
             for (JsonElement jsonElement1 : jsonElement.getAsJsonArray()) {
                 check(api_name,key1,key2, jsonElement1);
@@ -131,13 +135,10 @@ public class CodeGenerationService {
                 for (Map.Entry<String, JsonElement> entry : entrySet) {
                     String key6 = entry.getKey();
                     if (key6.equals(key2)) {
-//                        list2.add(entry.getValue().toString());
                         value = entry.getValue().getAsString();
                     }
                     if (key6.equals(key1)) {
-//                        list1.add(entry.getValue().toString());
                         key = entry.getValue().getAsString();
-
                     }
 
                     maps.put(key, value);

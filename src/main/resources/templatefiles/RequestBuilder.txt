@@ -1,15 +1,40 @@
 package DCG;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
+import java.util.HashMap;
+import org.springframework.util.*;
+
 
 public class RequestBuilder {
 
-    [# th:each="apiname : ${apinames}"]
-    public HttpEntity<[(${apiname})]Request> build([(${apiname})]Request yubiRequest){
+    [# th:each="apiname : ${apiNamesWithResponses}"]
+    public HttpEntity<[(${apiname})]Request> build[(${apiname})]([(${apiname})]Request yubiRequest){
+        MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
+        headers.add("HeaderName", "value");
+        headers.add("Content-Type", "application/json");
 
-        HttpEntity<[(${apiname})]Request> entity = new HttpEntity<>(yubiRequest);
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+
+        HttpEntity<[(${apiname})]Request> entity = new HttpEntity<[(${apiname})]Request>(yubiRequest, headers);
         return entity;
     }
 
    [/]
+   [# th:each="apiname : ${apiNamesWithoutResponses}"]
+       public HttpEntity<[(${apiname})]Request> build[(${apiname})]([(${apiname})]Request yubiRequest){
+           MultiValueMap<String, String> headers = new LinkedMultiValueMap<String, String>();
+           headers.add("HeaderName", "value");
+           headers.add("Content-Type", "application/json");
+
+           RestTemplate restTemplate = new RestTemplate();
+           restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+
+           HttpEntity<[(${apiname})]Request> entity = new HttpEntity<[(${apiname})]Request>(yubiRequest, headers);
+           return entity;
+       }
+
+      [/]
 }

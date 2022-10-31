@@ -11,11 +11,19 @@ public class SendRequest {
 
     RestTemplate restTemplate = new RestTemplate();
 
-    [# th:each="apiname : ${apinames}"]
-    public ResponseEntity<[(${apiname})]Response> send[(${apiname})](HttpEntity<[(${apiname})]Request> entity) {
 
-        return restTemplate.exchange("http://localhost:8002/api/v1/loans/create", HttpMethod.POST, entity, [(${apiname})]Response.class);
-    }
+   [# th:each="apiname : ${apiNamesWithResponses}"]
+   public ResponseEntity<[(${apiname})]Response> send[(${apiname})](HttpEntity<[(${apiname})]Request> entity) {
+
+     return restTemplate.exchange("http://localhost:8002/api/v1/loans/[(${apiname})]", HttpMethod.POST, entity, [(${apiname})]Response.class);
+   }
+
+   [/]
+   [# th:each="apiname : ${apiNamesWithoutResponses}"]
+   public void send[(${apiname})](HttpEntity<[(${apiname})]Request> entity) {
+
+       restTemplate.exchange("http://localhost:8002/api/v1/loans/[(${apiname})]", HttpMethod.POST, entity, Void.class);
+   }
 
    [/]
 }

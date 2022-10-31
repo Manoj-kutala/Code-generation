@@ -1,0 +1,31 @@
+package DCG;
+
+import org.springframework.http.HttpEntity;
+
+public class YUBILoan {
+
+    [# th:each="apiname : ${apiNamesWithResponses}"]
+    public [(${apiname})]Response create[(${apiname})]([(${apiname})]Request yubiRequest){
+
+        RequestBuilder requestBuilder =  new RequestBuilder();
+        HttpEntity<[(${apiname})]Request> entity = requestBuilder.build[(${apiname})](yubiRequest);
+
+        SendRequest sendRequest = new SendRequest();
+        return sendRequest.send[(${apiname})](entity).getBody();
+   }
+
+   [/]
+   [# th:each="apiname : ${apiNamesWithoutResponses}"]
+   public void create[(${apiname})]([(${apiname})]Request yubiRequest){
+
+        RequestBuilder requestBuilder =  new RequestBuilder();
+        HttpEntity<[(${apiname})]Request> entity = requestBuilder.build[(${apiname})](yubiRequest);
+
+        SendRequest sendRequest = new SendRequest();
+        sendRequest.send[(${apiname})](entity);
+   }
+
+   [/]
+
+}
+
