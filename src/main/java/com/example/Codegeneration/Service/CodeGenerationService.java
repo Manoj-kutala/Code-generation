@@ -87,7 +87,7 @@ public class CodeGenerationService {
                     System.out.println(jsonBlock.get(key));
                     JSONObject jj = (JSONObject) jsonBlock.get(key);
                     System.out.println((jj.get("isArray")).equals(true));
-                    if (jj.get("isArray").equals(true)) {
+                    if (!(key.equals("metadata"))) {
                         maps.put(key, key);
                         isArrayMaps = new HashMap<>();
                         check(api_name, true, p.parse(jj.toString()));
@@ -161,8 +161,7 @@ public class CodeGenerationService {
             }
         } else {
             if (jsonElement.isJsonObject()) {
-                Set<Map.Entry<String, JsonElement>> entrySet = jsonElement
-                        .getAsJsonObject().entrySet();
+                Set<Map.Entry<String, JsonElement>> entrySet = jsonElement.getAsJsonObject().entrySet();
                 for (Map.Entry<String, JsonElement> entry : entrySet) {
                     String key6 = entry.getKey();
                     if (key6.equals(key2)) {
