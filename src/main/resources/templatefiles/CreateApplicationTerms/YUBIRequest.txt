@@ -4,29 +4,44 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	[/]
 
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
 
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	[/]
 
 	private String [(${loan_Type})];
 	public void set[(${loan_Type})](String loan_Type){
@@ -35,6 +50,11 @@ public class [(${api_name})]Request {
 	public String getloan_Type(){
 		return this.[(${loan_Type})];
 	}
+	[# th:if = "${loan_Type} != 'loan_Type' "]
+	private void setloan_Type(String loan_Type){
+		this.[(${loan_Type})] = loan_Type;
+	}
+	[/]
 
 	private String [(${loan_Sub_Type})];
 	public void set[(${loan_Sub_Type})](String loan_Sub_Type){
@@ -43,6 +63,11 @@ public class [(${api_name})]Request {
 	public String getloan_Sub_Type(){
 		return this.[(${loan_Sub_Type})];
 	}
+	[# th:if = "${loan_Sub_Type} != 'loan_Sub_Type' "]
+	private void setloan_Sub_Type(String loan_Sub_Type){
+		this.[(${loan_Sub_Type})] = loan_Sub_Type;
+	}
+	[/]
 
 	private String [(${principal})];
 	public void set[(${principal})](String principal){
@@ -51,6 +76,11 @@ public class [(${api_name})]Request {
 	public String getprincipal(){
 		return this.[(${principal})];
 	}
+	[# th:if = "${principal} != 'principal' "]
+	private void setprincipal(String principal){
+		this.[(${principal})] = principal;
+	}
+	[/]
 
 	private String [(${interest_Rate})];
 	public void set[(${interest_Rate})](String interest_Rate){
@@ -59,6 +89,11 @@ public class [(${api_name})]Request {
 	public String getinterest_Rate(){
 		return this.[(${interest_Rate})];
 	}
+	[# th:if = "${interest_Rate} != 'interest_Rate' "]
+	private void setinterest_Rate(String interest_Rate){
+		this.[(${interest_Rate})] = interest_Rate;
+	}
+	[/]
 
 	[# th:if = "${purpose != null}"]
 	private String [(${purpose})];
@@ -68,6 +103,11 @@ public class [(${api_name})]Request {
 	public String getpurpose(){
 		return this.[(${purpose})];
 	}
+	[# th:if = "${purpose} != 'purpose' "]
+	private void setpurpose(String purpose){
+		this.[(${purpose})] = purpose;
+	}
+	[/]
 	[/]
 
 	private String [(${interest_type})];
@@ -77,6 +117,11 @@ public class [(${api_name})]Request {
 	public String getinterest_type(){
 		return this.[(${interest_type})];
 	}
+	[# th:if = "${interest_type} != 'interest_type' "]
+	private void setinterest_type(String interest_type){
+		this.[(${interest_type})] = interest_type;
+	}
+	[/]
 
 	private String [(${tenure_Of_Loan})];
 	public void set[(${tenure_Of_Loan})](String tenure_Of_Loan){
@@ -85,6 +130,11 @@ public class [(${api_name})]Request {
 	public String gettenure_Of_Loan(){
 		return this.[(${tenure_Of_Loan})];
 	}
+	[# th:if = "${tenure_Of_Loan} != 'tenure_Of_Loan' "]
+	private void settenure_Of_Loan(String tenure_Of_Loan){
+		this.[(${tenure_Of_Loan})] = tenure_Of_Loan;
+	}
+	[/]
 
 	private String [(${repayment_Frequency})];
 	public void set[(${repayment_Frequency})](String repayment_Frequency){
@@ -93,6 +143,11 @@ public class [(${api_name})]Request {
 	public String getrepayment_Frequency(){
 		return this.[(${repayment_Frequency})];
 	}
+	[# th:if = "${repayment_Frequency} != 'repayment_Frequency' "]
+	private void setrepayment_Frequency(String repayment_Frequency){
+		this.[(${repayment_Frequency})] = repayment_Frequency;
+	}
+	[/]
 
 	private String [(${disbursement_Type})];
 	public void set[(${disbursement_Type})](String disbursement_Type){
@@ -101,6 +156,11 @@ public class [(${api_name})]Request {
 	public String getdisbursement_Type(){
 		return this.[(${disbursement_Type})];
 	}
+	[# th:if = "${disbursement_Type} != 'disbursement_Type' "]
+	private void setdisbursement_Type(String disbursement_Type){
+		this.[(${disbursement_Type})] = disbursement_Type;
+	}
+	[/]
 
 	private String [(${number_Of_Repayments})];
 	public void set[(${number_Of_Repayments})](String number_Of_Repayments){
@@ -109,6 +169,11 @@ public class [(${api_name})]Request {
 	public String getnumber_Of_Repayments(){
 		return this.[(${number_Of_Repayments})];
 	}
+	[# th:if = "${number_Of_Repayments} != 'number_Of_Repayments' "]
+	private void setnumber_Of_Repayments(String number_Of_Repayments){
+		this.[(${number_Of_Repayments})] = number_Of_Repayments;
+	}
+	[/]
 
 	[# th:if = "${repayment_Mode != null}"]
 	private String [(${repayment_Mode})];
@@ -118,6 +183,11 @@ public class [(${api_name})]Request {
 	public String getrepayment_Mode(){
 		return this.[(${repayment_Mode})];
 	}
+	[# th:if = "${repayment_Mode} != 'repayment_Mode' "]
+	private void setrepayment_Mode(String repayment_Mode){
+		this.[(${repayment_Mode})] = repayment_Mode;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${loan_cycle != null}"]
@@ -128,52 +198,82 @@ public class [(${api_name})]Request {
 	public String getloan_cycle(){
 		return this.[(${loan_cycle})];
 	}
+	[# th:if = "${loan_cycle} != 'loan_cycle' "]
+	private void setloan_cycle(String loan_cycle){
+		this.[(${loan_cycle})] = loan_cycle;
+	}
+	[/]
 	[/]
 
-	private String [(${EMI_Amount})];
-	public void set[(${EMI_Amount})](String EMI_Amount){
-		this.[(${EMI_Amount})] = EMI_Amount;
+	private String [(${emi_Amount})];
+	public void set[(${emi_Amount})](String emi_Amount){
+		this.[(${emi_Amount})] = emi_Amount;
 	}
-	public String getEMI_Amount(){
-		return this.[(${EMI_Amount})];
+	public String getemi_Amount(){
+		return this.[(${emi_Amount})];
 	}
-
-	private String [(${FIRST_REPAYMENT_DATE})];
-	public void set[(${FIRST_REPAYMENT_DATE})](String FIRST_REPAYMENT_DATE){
-		this.[(${FIRST_REPAYMENT_DATE})] = FIRST_REPAYMENT_DATE;
-	}
-	public String getFIRST_REPAYMENT_DATE(){
-		return this.[(${FIRST_REPAYMENT_DATE})];
-	}
-
-	[# th:if = "${Advance_EMI != null}"]
-	private String [(${Advance_EMI})];
-	public void set[(${Advance_EMI})](String Advance_EMI){
-		this.[(${Advance_EMI})] = Advance_EMI;
-	}
-	public String getAdvance_EMI(){
-		return this.[(${Advance_EMI})];
+	[# th:if = "${emi_Amount} != 'emi_Amount' "]
+	private void setemi_Amount(String emi_Amount){
+		this.[(${emi_Amount})] = emi_Amount;
 	}
 	[/]
 
-	[# th:if = "${Differential_Interest_Start_date != null}"]
-	private Date [(${Differential_Interest_Start_date})];
-	public void set[(${Differential_Interest_Start_date})](Date Differential_Interest_Start_date){
-		this.[(${Differential_Interest_Start_date})] = Differential_Interest_Start_date;
+	private String [(${first_repayment_date})];
+	public void set[(${first_repayment_date})](String first_repayment_date){
+		this.[(${first_repayment_date})] = first_repayment_date;
 	}
-	public Date getDifferential_Interest_Start_date(){
-		return this.[(${Differential_Interest_Start_date})];
+	public String getfirst_repayment_date(){
+		return this.[(${first_repayment_date})];
+	}
+	[# th:if = "${first_repayment_date} != 'first_repayment_date' "]
+	private void setfirst_repayment_date(String first_repayment_date){
+		this.[(${first_repayment_date})] = first_repayment_date;
 	}
 	[/]
 
-	[# th:if = "${Differential_Interest_Amount != null}"]
-	private Float [(${Differential_Interest_Amount})];
-	public void set[(${Differential_Interest_Amount})](Float Differential_Interest_Amount){
-		this.[(${Differential_Interest_Amount})] = Differential_Interest_Amount;
+	[# th:if = "${advance_EMI != null}"]
+	private String [(${advance_EMI})];
+	public void set[(${advance_EMI})](String advance_EMI){
+		this.[(${advance_EMI})] = advance_EMI;
 	}
-	public Float getDifferential_Interest_Amount(){
-		return this.[(${Differential_Interest_Amount})];
+	public String getadvance_EMI(){
+		return this.[(${advance_EMI})];
 	}
+	[# th:if = "${advance_EMI} != 'advance_EMI' "]
+	private void setadvance_EMI(String advance_EMI){
+		this.[(${advance_EMI})] = advance_EMI;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${differential_Interest_Start_date != null}"]
+	private Date [(${differential_Interest_Start_date})];
+	public void set[(${differential_Interest_Start_date})](Date differential_Interest_Start_date){
+		this.[(${differential_Interest_Start_date})] = differential_Interest_Start_date;
+	}
+	public Date getdifferential_Interest_Start_date(){
+		return this.[(${differential_Interest_Start_date})];
+	}
+	[# th:if = "${differential_Interest_Start_date} != 'differential_Interest_Start_date' "]
+	private void setdifferential_Interest_Start_date(Date differential_Interest_Start_date){
+		this.[(${differential_Interest_Start_date})] = differential_Interest_Start_date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${differential_Interest_Amount != null}"]
+	private Float [(${differential_Interest_Amount})];
+	public void set[(${differential_Interest_Amount})](Float differential_Interest_Amount){
+		this.[(${differential_Interest_Amount})] = differential_Interest_Amount;
+	}
+	public Float getdifferential_Interest_Amount(){
+		return this.[(${differential_Interest_Amount})];
+	}
+	[# th:if = "${differential_Interest_Amount} != 'differential_Interest_Amount' "]
+	private void setdifferential_Interest_Amount(Float differential_Interest_Amount){
+		this.[(${differential_Interest_Amount})] = differential_Interest_Amount;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${umrn != null}"]
@@ -184,45 +284,45 @@ public class [(${api_name})]Request {
 	public String getumrn(){
 		return this.[(${umrn})];
 	}
+	[# th:if = "${umrn} != 'umrn' "]
+	private void setumrn(String umrn){
+		this.[(${umrn})] = umrn;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${charge != null}"]
-	private String [(${charge})];
-	public void set[(${charge})](String charge){
-		this.[(${charge})] = charge;
+	[# th:if = "${bank_Disbursal_date != null}"]
+	private String [(${bank_Disbursal_date})];
+	public void set[(${bank_Disbursal_date})](String bank_Disbursal_date){
+		this.[(${bank_Disbursal_date})] = bank_Disbursal_date;
 	}
-	public String getcharge(){
-		return this.[(${charge})];
+	public String getbank_Disbursal_date(){
+		return this.[(${bank_Disbursal_date})];
 	}
+	[# th:if = "${bank_Disbursal_date} != 'bank_Disbursal_date' "]
+	private void setbank_Disbursal_date(String bank_Disbursal_date){
+		this.[(${bank_Disbursal_date})] = bank_Disbursal_date;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${amount != null}"]
-	private String [(${amount})];
-	public void set[(${amount})](String amount){
-		this.[(${amount})] = amount;
+	[# th:if = "${deal_date != null}"]
+	private String [(${deal_date})];
+	public void set[(${deal_date})](String deal_date){
+		this.[(${deal_date})] = deal_date;
 	}
-	public String getamount(){
-		return this.[(${amount})];
+	public String getdeal_date(){
+		return this.[(${deal_date})];
 	}
+	[# th:if = "${deal_date} != 'deal_date' "]
+	private void setdeal_date(String deal_date){
+		this.[(${deal_date})] = deal_date;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Bank_Disbursal_date != null}"]
-	private String [(${Bank_Disbursal_date})];
-	public void set[(${Bank_Disbursal_date})](String Bank_Disbursal_date){
-		this.[(${Bank_Disbursal_date})] = Bank_Disbursal_date;
-	}
-	public String getBank_Disbursal_date(){
-		return this.[(${Bank_Disbursal_date})];
-	}
-	[/]
+	[# th:if = "${Employment != null}"]
+    public CreateApplicationTermsLoantermsCharges[] loantermCharges;
+    [/]
 
-	[# th:if = "${Deal_date != null}"]
-	private String [(${Deal_date})];
-	public void set[(${Deal_date})](String Deal_date){
-		this.[(${Deal_date})] = Deal_date;
-	}
-	public String getDeal_date(){
-		return this.[(${Deal_date})];
-	}
-	[/]
 }

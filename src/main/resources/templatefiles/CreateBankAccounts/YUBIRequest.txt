@@ -4,45 +4,70 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	[/]
 
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
 
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
 	}
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
+	}
+	[/]
 
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	[/]
 
-	private String [(${Account_Holder_type})];
-	public void set[(${Account_Holder_type})](String Account_Holder_type){
-		this.[(${Account_Holder_type})] = Account_Holder_type;
+	private String [(${account_Holder_type})];
+	public void set[(${account_Holder_type})](String account_Holder_type){
+		this.[(${account_Holder_type})] = account_Holder_type;
 	}
-	public String getAccount_Holder_type(){
-		return this.[(${Account_Holder_type})];
+	public String getaccount_Holder_type(){
+		return this.[(${account_Holder_type})];
 	}
+	[# th:if = "${account_Holder_type} != 'account_Holder_type' "]
+	private void setaccount_Holder_type(String account_Holder_type){
+		this.[(${account_Holder_type})] = account_Holder_type;
+	}
+	[/]
 
 	private String [(${account_Holder_Name})];
 	public void set[(${account_Holder_Name})](String account_Holder_Name){
@@ -51,14 +76,24 @@ public class [(${api_name})]Request {
 	public String getaccount_Holder_Name(){
 		return this.[(${account_Holder_Name})];
 	}
+	[# th:if = "${account_Holder_Name} != 'account_Holder_Name' "]
+	private void setaccount_Holder_Name(String account_Holder_Name){
+		this.[(${account_Holder_Name})] = account_Holder_Name;
+	}
+	[/]
 
-	private String [(${Bank_accountType})];
-	public void set[(${Bank_accountType})](String Bank_accountType){
-		this.[(${Bank_accountType})] = Bank_accountType;
+	private String [(${bank_accountType})];
+	public void set[(${bank_accountType})](String bank_accountType){
+		this.[(${bank_accountType})] = bank_accountType;
 	}
-	public String getBank_accountType(){
-		return this.[(${Bank_accountType})];
+	public String getbank_accountType(){
+		return this.[(${bank_accountType})];
 	}
+	[# th:if = "${bank_accountType} != 'bank_accountType' "]
+	private void setbank_accountType(String bank_accountType){
+		this.[(${bank_accountType})] = bank_accountType;
+	}
+	[/]
 
 	private Number [(${account_Number})];
 	public void set[(${account_Number})](Number account_Number){
@@ -67,6 +102,11 @@ public class [(${api_name})]Request {
 	public Number getaccount_Number(){
 		return this.[(${account_Number})];
 	}
+	[# th:if = "${account_Number} != 'account_Number' "]
+	private void setaccount_Number(Number account_Number){
+		this.[(${account_Number})] = account_Number;
+	}
+	[/]
 
 	[# th:if = "${vpa != null}"]
 	private String [(${vpa})];
@@ -76,6 +116,11 @@ public class [(${api_name})]Request {
 	public String getvpa(){
 		return this.[(${vpa})];
 	}
+	[# th:if = "${vpa} != 'vpa' "]
+	private void setvpa(String vpa){
+		this.[(${vpa})] = vpa;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${bank_Name != null}"]
@@ -86,6 +131,11 @@ public class [(${api_name})]Request {
 	public String getbank_Name(){
 		return this.[(${bank_Name})];
 	}
+	[# th:if = "${bank_Name} != 'bank_Name' "]
+	private void setbank_Name(String bank_Name){
+		this.[(${bank_Name})] = bank_Name;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${branch_Name != null}"]
@@ -96,6 +146,11 @@ public class [(${api_name})]Request {
 	public String getbranch_Name(){
 		return this.[(${branch_Name})];
 	}
+	[# th:if = "${branch_Name} != 'branch_Name' "]
+	private void setbranch_Name(String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
+	}
+	[/]
 	[/]
 
 	private String [(${branch_IFSC})];
@@ -105,6 +160,11 @@ public class [(${api_name})]Request {
 	public String getbranch_IFSC(){
 		return this.[(${branch_IFSC})];
 	}
+	[# th:if = "${branch_IFSC} != 'branch_IFSC' "]
+	private void setbranch_IFSC(String branch_IFSC){
+		this.[(${branch_IFSC})] = branch_IFSC;
+	}
+	[/]
 
 	[# th:if = "${date_Of_Opening != null}"]
 	private Date [(${date_Of_Opening})];
@@ -114,16 +174,26 @@ public class [(${api_name})]Request {
 	public Date getdate_Of_Opening(){
 		return this.[(${date_Of_Opening})];
 	}
+	[# th:if = "${date_Of_Opening} != 'date_Of_Opening' "]
+	private void setdate_Of_Opening(Date date_Of_Opening){
+		this.[(${date_Of_Opening})] = date_Of_Opening;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Status != null}"]
-	private String [(${Status})];
-	public void set[(${Status})](String Status){
-		this.[(${Status})] = Status;
+	[# th:if = "${status != null}"]
+	private String [(${status})];
+	public void set[(${status})](String status){
+		this.[(${status})] = status;
 	}
-	public String getStatus(){
-		return this.[(${Status})];
+	public String getstatus(){
+		return this.[(${status})];
 	}
+	[# th:if = "${status} != 'status' "]
+	private void setstatus(String status){
+		this.[(${status})] = status;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${amount != null}"]
@@ -134,6 +204,11 @@ public class [(${api_name})]Request {
 	public Float getamount(){
 		return this.[(${amount})];
 	}
+	[# th:if = "${amount} != 'amount' "]
+	private void setamount(Float amount){
+		this.[(${amount})] = amount;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${account_Number1 != null}"]
@@ -144,5 +219,10 @@ public class [(${api_name})]Request {
 	public Number getaccount_Number1(){
 		return this.[(${account_Number1})];
 	}
+	[# th:if = "${account_Number1} != 'account_Number1' "]
+	private void setaccount_Number1(Number account_Number1){
+		this.[(${account_Number1})] = account_Number1;
+	}
+	[/]
 	[/]
 }

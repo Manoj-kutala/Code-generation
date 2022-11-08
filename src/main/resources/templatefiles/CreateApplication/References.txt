@@ -1,0 +1,68 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationReferences {
+
+	[# th:if = "${name != null}"]
+	private String [(${name})];
+	public void set[(${name})](String name){
+		this.[(${name})] = name;
+	}
+	public String getname(){
+		return this.[(${name})];
+	}
+	[# th:if = "${name} != 'name' "]
+	private void setname(String name){
+		this.[(${name})] = name;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${mobile != null}"]
+	private Number [(${mobile})];
+	public void set[(${mobile})](Number mobile){
+		this.[(${mobile})] = mobile;
+	}
+	public Number getmobile(){
+		return this.[(${mobile})];
+	}
+	[# th:if = "${mobile} != 'mobile' "]
+	private void setmobile(Number mobile){
+		this.[(${mobile})] = mobile;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${email != null}"]
+	private String [(${email})];
+	public void set[(${email})](String email){
+		this.[(${email})] = email;
+	}
+	public String getemail(){
+		return this.[(${email})];
+	}
+	[# th:if = "${email} != 'email' "]
+	private void setemail(String email){
+		this.[(${email})] = email;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${relationship_with_borrower1 != null}"]
+	private String [(${relationship_with_borrower1})];
+	public void set[(${relationship_with_borrower1})](String relationship_with_borrower1){
+		this.[(${relationship_with_borrower1})] = relationship_with_borrower1;
+	}
+	public String getrelationship_with_borrower1(){
+		return this.[(${relationship_with_borrower1})];
+	}
+	[# th:if = "${relationship_with_borrower1} != 'relationship_with_borrower1' "]
+	private void setrelationship_with_borrower1(String relationship_with_borrower1){
+		this.[(${relationship_with_borrower1})] = relationship_with_borrower1;
+	}
+	[/]
+	[/]
+
+
+}

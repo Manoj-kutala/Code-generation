@@ -1,0 +1,130 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateRepaymentScheduleRepayments {
+
+	private Date [(${installment_due_date})];
+	public void set[(${installment_due_date})](Date installment_due_date){
+		this.[(${installment_due_date})] = installment_due_date;
+	}
+	public Date getinstallment_due_date(){
+		return this.[(${installment_due_date})];
+	}
+	[# th:if = "${installment_due_date} != 'installment_due_date' "]
+	private void setinstallment_due_date(Date installment_due_date){
+		this.[(${installment_due_date})] = installment_due_date;
+	}
+	[/]
+
+	private Float [(${installment_amount})];
+	public void set[(${installment_amount})](Float installment_amount){
+		this.[(${installment_amount})] = installment_amount;
+	}
+	public Float getinstallment_amount(){
+		return this.[(${installment_amount})];
+	}
+	[# th:if = "${installment_amount} != 'installment_amount' "]
+	private void setinstallment_amount(Float installment_amount){
+		this.[(${installment_amount})] = installment_amount;
+	}
+	[/]
+
+	private Number [(${installment_number})];
+	public void set[(${installment_number})](Number installment_number){
+		this.[(${installment_number})] = installment_number;
+	}
+	public Number getinstallment_number(){
+		return this.[(${installment_number})];
+	}
+	[# th:if = "${installment_number} != 'installment_number' "]
+	private void setinstallment_number(Number installment_number){
+		this.[(${installment_number})] = installment_number;
+	}
+	[/]
+
+	private Float [(${principal})];
+	public void set[(${principal})](Float principal){
+		this.[(${principal})] = principal;
+	}
+	public Float getprincipal(){
+		return this.[(${principal})];
+	}
+	[# th:if = "${principal} != 'principal' "]
+	private void setprincipal(Float principal){
+		this.[(${principal})] = principal;
+	}
+	[/]
+
+	private Float [(${interest})];
+	public void set[(${interest})](Float interest){
+		this.[(${interest})] = interest;
+	}
+	public Float getinterest(){
+		return this.[(${interest})];
+	}
+	[# th:if = "${interest} != 'interest' "]
+	private void setinterest(Float interest){
+		this.[(${interest})] = interest;
+	}
+	[/]
+
+	private Float [(${principal_outstanding})];
+	public void set[(${principal_outstanding})](Float principal_outstanding){
+		this.[(${principal_outstanding})] = principal_outstanding;
+	}
+	public Float getprincipal_outstanding(){
+		return this.[(${principal_outstanding})];
+	}
+	[# th:if = "${principal_outstanding} != 'principal_outstanding' "]
+	private void setprincipal_outstanding(Float principal_outstanding){
+		this.[(${principal_outstanding})] = principal_outstanding;
+	}
+	[/]
+
+	[# th:if = "${revised_Active_Investor_Rate != null}"]
+	private Float [(${revised_Active_Investor_Rate})];
+	public void set[(${revised_Active_Investor_Rate})](Float revised_Active_Investor_Rate){
+		this.[(${revised_Active_Investor_Rate})] = revised_Active_Investor_Rate;
+	}
+	public Float getrevised_Active_Investor_Rate(){
+		return this.[(${revised_Active_Investor_Rate})];
+	}
+	[# th:if = "${revised_Active_Investor_Rate} != 'revised_Active_Investor_Rate' "]
+	private void setrevised_Active_Investor_Rate(Float revised_Active_Investor_Rate){
+		this.[(${revised_Active_Investor_Rate})] = revised_Active_Investor_Rate;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${revised_End_Borrower_Rate != null}"]
+	private Float [(${revised_End_Borrower_Rate})];
+	public void set[(${revised_End_Borrower_Rate})](Float revised_End_Borrower_Rate){
+		this.[(${revised_End_Borrower_Rate})] = revised_End_Borrower_Rate;
+	}
+	public Float getrevised_End_Borrower_Rate(){
+		return this.[(${revised_End_Borrower_Rate})];
+	}
+	[# th:if = "${revised_End_Borrower_Rate} != 'revised_End_Borrower_Rate' "]
+	private void setrevised_End_Borrower_Rate(Float revised_End_Borrower_Rate){
+		this.[(${revised_End_Borrower_Rate})] = revised_End_Borrower_Rate;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${revised_Number_Of_Total_Installments != null}"]
+	private Number [(${revised_Number_Of_Total_Installments})];
+	public void set[(${revised_Number_Of_Total_Installments})](Number revised_Number_Of_Total_Installments){
+		this.[(${revised_Number_Of_Total_Installments})] = revised_Number_Of_Total_Installments;
+	}
+	public Number getrevised_Number_Of_Total_Installments(){
+		return this.[(${revised_Number_Of_Total_Installments})];
+	}
+	[# th:if = "${revised_Number_Of_Total_Installments} != 'revised_Number_Of_Total_Installments' "]
+	private void setrevised_Number_Of_Total_Installments(Number revised_Number_Of_Total_Installments){
+		this.[(${revised_Number_Of_Total_Installments})] = revised_Number_Of_Total_Installments;
+	}
+	[/]
+	[/]
+
+}

@@ -1,16 +1,20 @@
 package DCG;
-
 import java.util.Date;
 
 public class [(${api_name})]Response {
 
-	[# th:if = "${Yubi_Asset_ID != null}"]
-	private String Yubi_Asset_ID;
-	public void setYubi_Asset_ID(String Yubi_Asset_ID){
-		this.Yubi_Asset_ID = Yubi_Asset_ID;
+	[# th:if = "${yubi_Asset_ID != null}"]
+	private String yubi_Asset_ID;
+	public void setyubi_Asset_ID(String yubi_Asset_ID){
+		this.yubi_Asset_ID = yubi_Asset_ID;
 	}
-	public String get[(${Yubi_Asset_ID})](){
-		return this.Yubi_Asset_ID;
+	public String get[(${yubi_Asset_ID})](){
+		return this.yubi_Asset_ID;
 	}
+	[# th:if = "${yubi_Asset_ID != '[(${yubi_Asset_ID})]' }"]
+	private void set[(${yubi_Asset_ID})](String yubi_Asset_ID){
+		this.yubi_Asset_ID = yubi_Asset_ID;
+	}
+	[/]
 	[/]
 }

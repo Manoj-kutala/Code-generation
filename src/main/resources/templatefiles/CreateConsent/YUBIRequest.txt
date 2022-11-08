@@ -11,56 +11,91 @@ public class [(${api_name})]Request {
 	public String getoriginator_ID(){
 		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_customer_ID})];
-	public void set[(${Client_customer_ID})](String Client_customer_ID){
-		this.[(${Client_customer_ID})] = Client_customer_ID;
-	}
-	public String getClient_customer_ID(){
-		return this.[(${Client_customer_ID})];
-	}
-
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
-	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
-	}
-
-	private String [(${Consent_Date})];
-	public void set[(${Consent_Date})](String Consent_Date){
-		this.[(${Consent_Date})] = Consent_Date;
-	}
-	public String getConsent_Date(){
-		return this.[(${Consent_Date})];
-	}
-
-	private String [(${Consent_for})];
-	public void set[(${Consent_for})](String Consent_for){
-		this.[(${Consent_for})] = Consent_for;
-	}
-	public String getConsent_for(){
-		return this.[(${Consent_for})];
-	}
-
-	[# th:if = "${I_P_Address != null}"]
-	private String [(${I_P_Address})];
-	public void set[(${I_P_Address})](String I_P_Address){
-		this.[(${I_P_Address})] = I_P_Address;
-	}
-	public String getI_P_Address(){
-		return this.[(${I_P_Address})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	[# th:if = "${Remarks != null}"]
-	private String [(${Remarks})];
-	public void set[(${Remarks})](String Remarks){
-		this.[(${Remarks})] = Remarks;
+	private String [(${client_customer_ID})];
+	public void set[(${client_customer_ID})](String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
 	}
-	public String getRemarks(){
-		return this.[(${Remarks})];
+	public String getclient_customer_ID(){
+		return this.[(${client_customer_ID})];
 	}
+	[# th:if = "${client_customer_ID} != 'client_customer_ID' "]
+	private void setclient_customer_ID(String client_customer_ID){
+		this.[(${client_customer_ID})] = client_customer_ID;
+	}
+	[/]
+
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
+	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
+
+	private String [(${consent_Date})];
+	public void set[(${consent_Date})](String consent_Date){
+		this.[(${consent_Date})] = consent_Date;
+	}
+	public String getconsent_Date(){
+		return this.[(${consent_Date})];
+	}
+	[# th:if = "${consent_Date} != 'consent_Date' "]
+	private void setconsent_Date(String consent_Date){
+		this.[(${consent_Date})] = consent_Date;
+	}
+	[/]
+
+	private String [(${consent_for})];
+	public void set[(${consent_for})](String consent_for){
+		this.[(${consent_for})] = consent_for;
+	}
+	public String getconsent_for(){
+		return this.[(${consent_for})];
+	}
+	[# th:if = "${consent_for} != 'consent_for' "]
+	private void setconsent_for(String consent_for){
+		this.[(${consent_for})] = consent_for;
+	}
+	[/]
+
+	[# th:if = "${ip_Address != null}"]
+	private String [(${ip_Address})];
+	public void set[(${ip_Address})](String ip_Address){
+		this.[(${ip_Address})] = ip_Address;
+	}
+	public String getip_Address(){
+		return this.[(${ip_Address})];
+	}
+	[# th:if = "${ip_Address} != 'ip_Address' "]
+	private void setip_Address(String ip_Address){
+		this.[(${ip_Address})] = ip_Address;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${remarks != null}"]
+	private String [(${remarks})];
+	public void set[(${remarks})](String remarks){
+		this.[(${remarks})] = remarks;
+	}
+	public String getremarks(){
+		return this.[(${remarks})];
+	}
+	[# th:if = "${remarks} != 'remarks' "]
+	private void setremarks(String remarks){
+		this.[(${remarks})] = remarks;
+	}
+	[/]
 	[/]
 }

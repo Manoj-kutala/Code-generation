@@ -1,64 +1,93 @@
 package DCG;
-
 import java.util.Date;
 
 public class [(${api_name})]Response {
 
-	private String Client_customer_ID;
-	public void setClient_customer_ID(String Client_customer_ID){
-		this.Client_customer_ID = Client_customer_ID;
+	private String client_customer_ID;
+	public void setclient_customer_ID(String client_customer_ID){
+		this.client_customer_ID = client_customer_ID;
 	}
-	public String get[(${Client_customer_ID})](){
-		return this.Client_customer_ID;
+	public String get[(${client_customer_ID})](){
+		return this.client_customer_ID;
 	}
-
-	[# th:if = "${Yubi_Borrower_ID != null}"]
-	private String Yubi_Borrower_ID;
-	public void setYubi_Borrower_ID(String Yubi_Borrower_ID){
-		this.Yubi_Borrower_ID = Yubi_Borrower_ID;
-	}
-	public String get[(${Yubi_Borrower_ID})](){
-		return this.Yubi_Borrower_ID;
+	[# th:if = "${client_customer_ID != '[(${client_customer_ID})]' }"]
+	private void set[(${client_customer_ID})](String client_customer_ID){
+		this.client_customer_ID = client_customer_ID;
 	}
 	[/]
 
-	[# th:if = "${Yubi_Product_Borrower_ID != null}"]
-	private String Yubi_Product_Borrower_ID;
-	public void setYubi_Product_Borrower_ID(String Yubi_Product_Borrower_ID){
-		this.Yubi_Product_Borrower_ID = Yubi_Product_Borrower_ID;
+	[# th:if = "${yubi_Borrower_ID != null}"]
+	private String yubi_Borrower_ID;
+	public void setyubi_Borrower_ID(String yubi_Borrower_ID){
+		this.yubi_Borrower_ID = yubi_Borrower_ID;
 	}
-	public String get[(${Yubi_Product_Borrower_ID})](){
-		return this.Yubi_Product_Borrower_ID;
+	public String get[(${yubi_Borrower_ID})](){
+		return this.yubi_Borrower_ID;
 	}
-	[/]
-
-	[# th:if = "${Yubi_Application_Id != null}"]
-	private String Yubi_Application_Id;
-	public void setYubi_Application_Id(String Yubi_Application_Id){
-		this.Yubi_Application_Id = Yubi_Application_Id;
-	}
-	public String get[(${Yubi_Application_Id})](){
-		return this.Yubi_Application_Id;
+	[# th:if = "${yubi_Borrower_ID != '[(${yubi_Borrower_ID})]' }"]
+	private void set[(${yubi_Borrower_ID})](String yubi_Borrower_ID){
+		this.yubi_Borrower_ID = yubi_Borrower_ID;
 	}
 	[/]
-
-	[# th:if = "${Yubi_Product_Application_Id != null}"]
-	private String Yubi_Product_Application_Id;
-	public void setYubi_Product_Application_Id(String Yubi_Product_Application_Id){
-		this.Yubi_Product_Application_Id = Yubi_Product_Application_Id;
-	}
-	public String get[(${Yubi_Product_Application_Id})](){
-		return this.Yubi_Product_Application_Id;
-	}
 	[/]
 
-	[# th:if = "${Client_Application_ID != null}"]
-	private String Client_Application_ID;
-	public void setClient_Application_ID(String Client_Application_ID){
-		this.Client_Application_ID = Client_Application_ID;
+	[# th:if = "${yubi_Product_Borrower_ID != null}"]
+	private String yubi_Product_Borrower_ID;
+	public void setyubi_Product_Borrower_ID(String yubi_Product_Borrower_ID){
+		this.yubi_Product_Borrower_ID = yubi_Product_Borrower_ID;
 	}
-	public String get[(${Client_Application_ID})](){
-		return this.Client_Application_ID;
+	public String get[(${yubi_Product_Borrower_ID})](){
+		return this.yubi_Product_Borrower_ID;
 	}
+	[# th:if = "${yubi_Product_Borrower_ID != '[(${yubi_Product_Borrower_ID})]' }"]
+	private void set[(${yubi_Product_Borrower_ID})](String yubi_Product_Borrower_ID){
+		this.yubi_Product_Borrower_ID = yubi_Product_Borrower_ID;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${yubi_Application_Id != null}"]
+	private String yubi_Application_Id;
+	public void setyubi_Application_Id(String yubi_Application_Id){
+		this.yubi_Application_Id = yubi_Application_Id;
+	}
+	public String get[(${yubi_Application_Id})](){
+		return this.yubi_Application_Id;
+	}
+	[# th:if = "${yubi_Application_Id != '[(${yubi_Application_Id})]' }"]
+	private void set[(${yubi_Application_Id})](String yubi_Application_Id){
+		this.yubi_Application_Id = yubi_Application_Id;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${yubi_Product_Application_Id != null}"]
+	private String yubi_Product_Application_Id;
+	public void setyubi_Product_Application_Id(String yubi_Product_Application_Id){
+		this.yubi_Product_Application_Id = yubi_Product_Application_Id;
+	}
+	public String get[(${yubi_Product_Application_Id})](){
+		return this.yubi_Product_Application_Id;
+	}
+	[# th:if = "${yubi_Product_Application_Id != '[(${yubi_Product_Application_Id})]' }"]
+	private void set[(${yubi_Product_Application_Id})](String yubi_Product_Application_Id){
+		this.yubi_Product_Application_Id = yubi_Product_Application_Id;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${client_Application_ID != null}"]
+	private String client_Application_ID;
+	public void setclient_Application_ID(String client_Application_ID){
+		this.client_Application_ID = client_Application_ID;
+	}
+	public String get[(${client_Application_ID})](){
+		return this.client_Application_ID;
+	}
+	[# th:if = "${client_Application_ID != '[(${client_Application_ID})]' }"]
+	private void set[(${client_Application_ID})](String client_Application_ID){
+		this.client_Application_ID = client_Application_ID;
+	}
+	[/]
 	[/]
 }

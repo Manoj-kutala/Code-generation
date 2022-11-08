@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.codehaus.jettison.json.JSONException;
-import org.json.simple.parser.ParseException;
 import java.io.*;
 
 @RestController
@@ -23,7 +21,7 @@ public class RequestGenerator {
 
 
     @PostMapping("/generate")
-    public String createRequest(@RequestBody Payload payload) throws JSONException, ParseException, IOException {
+    public String createRequest(@RequestBody Payload payload) throws IOException {
 
         String originatorname = payload.getOriginator_name();
         System.out.println(originatorname);

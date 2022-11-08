@@ -43,46 +43,6 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-	private String [(${identifier_Type})];
-	public void set[(${identifier_Type})](String identifier_Type){
-		this.[(${identifier_Type})] = identifier_Type;
-	}
-	public String getidentifier_Type(){
-		return this.[(${identifier_Type})];
-	}
-	[# th:if = "${identifier_Type} != 'identifier_Type' "]
-	private void setidentifier_Type(String identifier_Type){
-		this.[(${identifier_Type})] = identifier_Type;
-	}
-	[/]
-
-	private String [(${identifier})];
-	public void set[(${identifier})](String identifier){
-		this.[(${identifier})] = identifier;
-	}
-	public String getidentifier(){
-		return this.[(${identifier})];
-	}
-	[# th:if = "${identifier} != 'identifier' "]
-	private void setidentifier(String identifier){
-		this.[(${identifier})] = identifier;
-	}
-	[/]
-
-	[# th:if = "${issuing_country != null}"]
-	private String [(${issuing_country})];
-	public void set[(${issuing_country})](String issuing_country){
-		this.[(${issuing_country})] = issuing_country;
-	}
-	public String getissuing_country(){
-		return this.[(${issuing_country})];
-	}
-	[# th:if = "${issuing_country} != 'issuing_country' "]
-	private void setissuing_country(String issuing_country){
-		this.[(${issuing_country})] = issuing_country;
-	}
-	[/]
-	[/]
 
 	private String [(${first_name})];
 	public void set[(${first_name})](String first_name){
@@ -456,169 +416,15 @@ public class [(${api_name})]Request {
 	}
 	[/]
 	[/]
-
-	[# th:if = "${frequency != null}"]
-	private String [(${frequency})];
-	public void set[(${frequency})](String frequency){
-		this.[(${frequency})] = frequency;
-	}
-	public String getfrequency(){
-		return this.[(${frequency})];
-	}
-	[# th:if = "${frequency} != 'frequency' "]
-	private void setfrequency(String frequency){
-		this.[(${frequency})] = frequency;
-	}
-	[/]
+    [# th:if = "${identity != null}"]
+	public CreateLeadIidentity[] identity;
 	[/]
 
-	[# th:if = "${type != null}"]
-	private String [(${type})];
-	public void set[(${type})](String type){
-		this.[(${type})] = type;
-	}
-	public String gettype(){
-		return this.[(${type})];
-	}
-	[# th:if = "${type} != 'type' "]
-	private void settype(String type){
-		this.[(${type})] = type;
-	}
-	[/]
-	[/]
+	[# th:if = "${IncomeDetails != null}"]
+    public CreateLeadIIncomeDetails[] incomeDetails;
+   	[/]
 
-	[# th:if = "${value != null}"]
-	private String [(${value})];
-	public void set[(${value})](String value){
-		this.[(${value})] = value;
-	}
-	public String getvalue(){
-		return this.[(${value})];
-	}
-	[# th:if = "${value} != 'value' "]
-	private void setvalue(String value){
-		this.[(${value})] = value;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${employer_name != null}"]
-	private String [(${employer_name})];
-	public void set[(${employer_name})](String employer_name){
-		this.[(${employer_name})] = employer_name;
-	}
-	public String getemployer_name(){
-		return this.[(${employer_name})];
-	}
-	[# th:if = "${employer_name} != 'employer_name' "]
-	private void setemployer_name(String employer_name){
-		this.[(${employer_name})] = employer_name;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${employed_since != null}"]
-	private String [(${employed_since})];
-	public void set[(${employed_since})](String employed_since){
-		this.[(${employed_since})] = employed_since;
-	}
-	public String getemployed_since(){
-		return this.[(${employed_since})];
-	}
-	[# th:if = "${employed_since} != 'employed_since' "]
-	private void setemployed_since(String employed_since){
-		this.[(${employed_since})] = employed_since;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${job_title != null}"]
-	private String [(${job_title})];
-	public void set[(${job_title})](String job_title){
-		this.[(${job_title})] = job_title;
-	}
-	public String getjob_title(){
-		return this.[(${job_title})];
-	}
-	[# th:if = "${job_title} != 'job_title' "]
-	private void setjob_title(String job_title){
-		this.[(${job_title})] = job_title;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${designation != null}"]
-	private String [(${designation})];
-	public void set[(${designation})](String designation){
-		this.[(${designation})] = designation;
-	}
-	public String getdesignation(){
-		return this.[(${designation})];
-	}
-	[# th:if = "${designation} != 'designation' "]
-	private void setdesignation(String designation){
-		this.[(${designation})] = designation;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${indsutry != null}"]
-	private String [(${indsutry})];
-	public void set[(${indsutry})](String indsutry){
-		this.[(${indsutry})] = indsutry;
-	}
-	public String getindsutry(){
-		return this.[(${indsutry})];
-	}
-	[# th:if = "${indsutry} != 'indsutry' "]
-	private void setindsutry(String indsutry){
-		this.[(${indsutry})] = indsutry;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${sector != null}"]
-	private String [(${sector})];
-	public void set[(${sector})](String sector){
-		this.[(${sector})] = sector;
-	}
-	public String getsector(){
-		return this.[(${sector})];
-	}
-	[# th:if = "${sector} != 'sector' "]
-	private void setsector(String sector){
-		this.[(${sector})] = sector;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${work_experience != null}"]
-	private String [(${work_experience})];
-	public void set[(${work_experience})](String work_experience){
-		this.[(${work_experience})] = work_experience;
-	}
-	public String getwork_experience(){
-		return this.[(${work_experience})];
-	}
-	[# th:if = "${work_experience} != 'work_experience' "]
-	private void setwork_experience(String work_experience){
-		this.[(${work_experience})] = work_experience;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${is_current_employment != null}"]
-	private String [(${is_current_employment})];
-	public void set[(${is_current_employment})](String is_current_employment){
-		this.[(${is_current_employment})] = is_current_employment;
-	}
-	public String getis_current_employment(){
-		return this.[(${is_current_employment})];
-	}
-	[# th:if = "${is_current_employment} != 'is_current_employment' "]
-	private void setis_current_employment(String is_current_employment){
-		this.[(${is_current_employment})] = is_current_employment;
-	}
-	[/]
-	[/]
+   	[# th:if = "${Employment != null}"]
+    public CreateLeadIEmployment[] employment;
+   	[/]
 }

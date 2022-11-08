@@ -4,81 +4,55 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
-	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
-	}
-
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
-	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
-	}
-
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
-	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
-	}
-
-	private String [(${type})];
-	public void set[(${type})](String type){
-		this.[(${type})] = type;
-	}
-	public String gettype(){
-		return this.[(${type})];
-	}
-
-	[# th:if = "${Insurer_Name != null}"]
-	private String [(${Insurer_Name})];
-	public void set[(${Insurer_Name})](String Insurer_Name){
-		this.[(${Insurer_Name})] = Insurer_Name;
-	}
-	public String getInsurer_Name(){
-		return this.[(${Insurer_Name})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	private Float [(${Insured_Amount})];
-	public void set[(${Insured_Amount})](Float Insured_Amount){
-		this.[(${Insured_Amount})] = Insured_Amount;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public Float getInsured_Amount(){
-		return this.[(${Insured_Amount})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
-
-	[# th:if = "${premium_Amount != null}"]
-	private Float [(${premium_Amount})];
-	public void set[(${premium_Amount})](Float premium_Amount){
-		this.[(${premium_Amount})] = premium_Amount;
-	}
-	public Float getpremium_Amount(){
-		return this.[(${premium_Amount})];
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
 	[/]
 
-	[# th:if = "${Policy_number != null}"]
-	private Number [(${Policy_number})];
-	public void set[(${Policy_number})](Number Policy_number){
-		this.[(${Policy_number})] = Policy_number;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public Number getPolicy_number(){
-		return this.[(${Policy_number})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
+	}
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
+	}
+	[/]
+
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
+	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
 	[/]
 
@@ -90,6 +64,11 @@ public class [(${api_name})]Request {
 	public String getname(){
 		return this.[(${name})];
 	}
+	[# th:if = "${name} != 'name' "]
+	private void setname(String name){
+		this.[(${name})] = name;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${date_Of_Birth != null}"]
@@ -100,6 +79,11 @@ public class [(${api_name})]Request {
 	public Date getdate_Of_Birth(){
 		return this.[(${date_Of_Birth})];
 	}
+	[# th:if = "${date_Of_Birth} != 'date_Of_Birth' "]
+	private void setdate_Of_Birth(Date date_Of_Birth){
+		this.[(${date_Of_Birth})] = date_Of_Birth;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${relationship != null}"]
@@ -110,5 +94,15 @@ public class [(${api_name})]Request {
 	public String getrelationship(){
 		return this.[(${relationship})];
 	}
+	[# th:if = "${relationship} != 'relationship' "]
+	private void setrelationship(String relationship){
+		this.[(${relationship})] = relationship;
+	}
 	[/]
+	[/]
+
+	[# th:if = "${Insurance != null}"]
+    public CreateInsuranceInsurance[] insurance;
+    [/]
+
 }

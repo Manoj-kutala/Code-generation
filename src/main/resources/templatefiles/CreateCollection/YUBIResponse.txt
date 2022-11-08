@@ -1,14 +1,18 @@
 package DCG;
-
 import java.util.Date;
 
 public class [(${api_name})]Response {
 
-	private String Yubi_Payment_Id;
-	public void setYubi_Payment_Id(String Yubi_Payment_Id){
-		this.Yubi_Payment_Id = Yubi_Payment_Id;
+	private String yubi_Payment_Id;
+	public void setyubi_Payment_Id(String yubi_Payment_Id){
+		this.yubi_Payment_Id = yubi_Payment_Id;
 	}
-	public String get[(${Yubi_Payment_Id})](){
-		return this.Yubi_Payment_Id;
+	public String get[(${yubi_Payment_Id})](){
+		return this.yubi_Payment_Id;
 	}
+	[# th:if = "${yubi_Payment_Id != '[(${yubi_Payment_Id})]' }"]
+	private void set[(${yubi_Payment_Id})](String yubi_Payment_Id){
+		this.yubi_Payment_Id = yubi_Payment_Id;
+	}
+	[/]
 }

@@ -4,73 +4,55 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
-	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
-	}
-
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
-	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
-	}
-
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
-	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
-	}
-
-	private String [(${linked_loan_id})];
-	public void set[(${linked_loan_id})](String linked_loan_id){
-		this.[(${linked_loan_id})] = linked_loan_id;
-	}
-	public String getlinked_loan_id(){
-		return this.[(${linked_loan_id})];
-	}
-
-	[# th:if = "${fore_closure != null}"]
-	private Boolean [(${fore_closure})];
-	public void set[(${fore_closure})](Boolean fore_closure){
-		this.[(${fore_closure})] = fore_closure;
-	}
-	public Boolean getfore_closure(){
-		return this.[(${fore_closure})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	[# th:if = "${principal != null}"]
-	private Number [(${principal})];
-	public void set[(${principal})](Number principal){
-		this.[(${principal})] = principal;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public Number getprincipal(){
-		return this.[(${principal})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
+	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
 	[/]
 
-	[# th:if = "${interest != null}"]
-	private Number [(${interest})];
-	public void set[(${interest})](Number interest){
-		this.[(${interest})] = interest;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public Number getinterest(){
-		return this.[(${interest})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
+	}
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
+	}
+	[/]
+
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
+	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
 	[/]
 
@@ -82,6 +64,11 @@ public class [(${api_name})]Request {
 	public String gettype(){
 		return this.[(${type})];
 	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${amount != null}"]
@@ -92,5 +79,14 @@ public class [(${api_name})]Request {
 	public Float getamount(){
 		return this.[(${amount})];
 	}
+	[# th:if = "${amount} != 'amount' "]
+	private void setamount(Float amount){
+		this.[(${amount})] = amount;
+	}
 	[/]
+	[/]
+
+    [# th:if = "${top_up != null}"]
+    public CreateTopupApplicationtop_up[] top_up;
+    [/]
 }

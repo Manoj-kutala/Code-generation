@@ -11,46 +11,38 @@ public class [(${api_name})]Request {
 	public Date getdate_Of_Creation(){
 		return this.[(${date_Of_Creation})];
 	}
+	[# th:if = "${date_Of_Creation} != 'date_Of_Creation' "]
+	private void setdate_Of_Creation(Date date_Of_Creation){
+		this.[(${date_Of_Creation})] = date_Of_Creation;
+	}
+	[/]
 
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	[/]
 
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
 
-	private String [(${Type})];
-	public void set[(${Type})](String Type){
-		this.[(${Type})] = Type;
-	}
-	public String getType(){
-		return this.[(${Type})];
-	}
-
-	private String [(${Client_Customer_id})];
-	public void set[(${Client_Customer_id})](String Client_Customer_id){
-		this.[(${Client_Customer_id})] = Client_Customer_id;
-	}
-	public String getClient_Customer_id(){
-		return this.[(${Client_Customer_id})];
-	}
-
-	private String [(${Relationship_with_borrower})];
-	public void set[(${Relationship_with_borrower})](String Relationship_with_borrower){
-		this.[(${Relationship_with_borrower})] = Relationship_with_borrower;
-	}
-	public String getRelationship_with_borrower(){
-		return this.[(${Relationship_with_borrower})];
-	}
 
 	[# th:if = "${key != null}"]
 	private String [(${key})];
@@ -60,75 +52,64 @@ public class [(${api_name})]Request {
 	public String getkey(){
 		return this.[(${key})];
 	}
+	[# th:if = "${key} != 'key' "]
+	private void setkey(String key){
+		this.[(${key})] = key;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Value != null}"]
-	private String [(${Value})];
-	public void set[(${Value})](String Value){
-		this.[(${Value})] = Value;
+	[# th:if = "${value != null}"]
+	private String [(${value})];
+	public void set[(${value})](String value){
+		this.[(${value})] = value;
 	}
-	public String getValue(){
-		return this.[(${Value})];
+	public String getvalue(){
+		return this.[(${value})];
 	}
+	[# th:if = "${value} != 'value' "]
+	private void setvalue(String value){
+		this.[(${value})] = value;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Name != null}"]
-	private String [(${Name})];
-	public void set[(${Name})](String Name){
-		this.[(${Name})] = Name;
+	[# th:if = "${branch_Code != null}"]
+	private String [(${branch_Code})];
+	public void set[(${branch_Code})](String branch_Code){
+		this.[(${branch_Code})] = branch_Code;
 	}
-	public String getName(){
-		return this.[(${Name})];
+	public String getbranch_Code(){
+		return this.[(${branch_Code})];
 	}
+	[# th:if = "${branch_Code} != 'branch_Code' "]
+	private void setbranch_Code(String branch_Code){
+		this.[(${branch_Code})] = branch_Code;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Mobile != null}"]
-	private Number [(${Mobile})];
-	public void set[(${Mobile})](Number Mobile){
-		this.[(${Mobile})] = Mobile;
+	[# th:if = "${branch_Name != null}"]
+	private String [(${branch_Name})];
+	public void set[(${branch_Name})](String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
 	}
-	public Number getMobile(){
-		return this.[(${Mobile})];
+	public String getbranch_Name(){
+		return this.[(${branch_Name})];
 	}
+	[# th:if = "${branch_Name} != 'branch_Name' "]
+	private void setbranch_Name(String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${Email != null}"]
-	private String [(${Email})];
-	public void set[(${Email})](String Email){
-		this.[(${Email})] = Email;
-	}
-	public String getEmail(){
-		return this.[(${Email})];
-	}
-	[/]
+	[# th:if = "${Applicants != null}"]
+    public CreateApplicationApplicants[] applicants;
+   	[/]
 
-	[# th:if = "${Relationship_with_borrower1 != null}"]
-	private String [(${Relationship_with_borrower1})];
-	public void set[(${Relationship_with_borrower1})](String Relationship_with_borrower1){
-		this.[(${Relationship_with_borrower1})] = Relationship_with_borrower1;
-	}
-	public String getRelationship_with_borrower1(){
-		return this.[(${Relationship_with_borrower1})];
-	}
-	[/]
+   	[# th:if = "${References != null}"]
+    public CreateApplicationReferences[] references;
+    [/]
 
-	[# th:if = "${Branch_Code != null}"]
-	private String [(${Branch_Code})];
-	public void set[(${Branch_Code})](String Branch_Code){
-		this.[(${Branch_Code})] = Branch_Code;
-	}
-	public String getBranch_Code(){
-		return this.[(${Branch_Code})];
-	}
-	[/]
-
-	[# th:if = "${Branch_Name != null}"]
-	private String [(${Branch_Name})];
-	public void set[(${Branch_Name})](String Branch_Name){
-		this.[(${Branch_Name})] = Branch_Name;
-	}
-	public String getBranch_Name(){
-		return this.[(${Branch_Name})];
-	}
-	[/]
 }

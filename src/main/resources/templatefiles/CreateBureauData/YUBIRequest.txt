@@ -4,105 +4,160 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
-	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
-	}
-
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
-	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
-	}
-
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
-	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
-	}
-
-	[# th:if = "${Bureau_Type != null}"]
-	private String [(${Bureau_Type})];
-	public void set[(${Bureau_Type})](String Bureau_Type){
-		this.[(${Bureau_Type})] = Bureau_Type;
-	}
-	public String getBureau_Type(){
-		return this.[(${Bureau_Type})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	[# th:if = "${Bureau_Name != null}"]
-	private String [(${Bureau_Name})];
-	public void set[(${Bureau_Name})](String Bureau_Name){
-		this.[(${Bureau_Name})] = Bureau_Name;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getBureau_Name(){
-		return this.[(${Bureau_Name})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
-	[/]
-
-	[# th:if = "${Bureau_Score != null}"]
-	private Number [(${Bureau_Score})];
-	public void set[(${Bureau_Score})](Number Bureau_Score){
-		this.[(${Bureau_Score})] = Bureau_Score;
-	}
-	public Number getBureau_Score(){
-		return this.[(${Bureau_Score})];
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
 	[/]
 
-	[# th:if = "${Bureau_Vintage != null}"]
-	private Number [(${Bureau_Vintage})];
-	public void set[(${Bureau_Vintage})](Number Bureau_Vintage){
-		this.[(${Bureau_Vintage})] = Bureau_Vintage;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public Number getBureau_Vintage(){
-		return this.[(${Bureau_Vintage})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
 	}
-	[/]
-
-	[# th:if = "${Partner_score_on_the_customer != null}"]
-	private Number [(${Partner_score_on_the_customer})];
-	public void set[(${Partner_score_on_the_customer})](Number Partner_score_on_the_customer){
-		this.[(${Partner_score_on_the_customer})] = Partner_score_on_the_customer;
-	}
-	public Number getPartner_score_on_the_customer(){
-		return this.[(${Partner_score_on_the_customer})];
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
 	[/]
 
-	[# th:if = "${Key != null}"]
-	private String [(${Key})];
-	public void set[(${Key})](String Key){
-		this.[(${Key})] = Key;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getKey(){
-		return this.[(${Key})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
+	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
 	[/]
 
-	[# th:if = "${Value != null}"]
-	private String [(${Value})];
-	public void set[(${Value})](String Value){
-		this.[(${Value})] = Value;
+	[# th:if = "${bureau_Type != null}"]
+	private String [(${bureau_Type})];
+	public void set[(${bureau_Type})](String bureau_Type){
+		this.[(${bureau_Type})] = bureau_Type;
 	}
-	public String getValue(){
-		return this.[(${Value})];
+	public String getbureau_Type(){
+		return this.[(${bureau_Type})];
 	}
+	[# th:if = "${bureau_Type} != 'bureau_Type' "]
+	private void setbureau_Type(String bureau_Type){
+		this.[(${bureau_Type})] = bureau_Type;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${bureau_Name != null}"]
+	private String [(${bureau_Name})];
+	public void set[(${bureau_Name})](String bureau_Name){
+		this.[(${bureau_Name})] = bureau_Name;
+	}
+	public String getbureau_Name(){
+		return this.[(${bureau_Name})];
+	}
+	[# th:if = "${bureau_Name} != 'bureau_Name' "]
+	private void setbureau_Name(String bureau_Name){
+		this.[(${bureau_Name})] = bureau_Name;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${bureau_Score != null}"]
+	private Number [(${bureau_Score})];
+	public void set[(${bureau_Score})](Number bureau_Score){
+		this.[(${bureau_Score})] = bureau_Score;
+	}
+	public Number getbureau_Score(){
+		return this.[(${bureau_Score})];
+	}
+	[# th:if = "${bureau_Score} != 'bureau_Score' "]
+	private void setbureau_Score(Number bureau_Score){
+		this.[(${bureau_Score})] = bureau_Score;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${bureau_Vintage != null}"]
+	private Number [(${bureau_Vintage})];
+	public void set[(${bureau_Vintage})](Number bureau_Vintage){
+		this.[(${bureau_Vintage})] = bureau_Vintage;
+	}
+	public Number getbureau_Vintage(){
+		return this.[(${bureau_Vintage})];
+	}
+	[# th:if = "${bureau_Vintage} != 'bureau_Vintage' "]
+	private void setbureau_Vintage(Number bureau_Vintage){
+		this.[(${bureau_Vintage})] = bureau_Vintage;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${partner_score_on_the_customer != null}"]
+	private Number [(${partner_score_on_the_customer})];
+	public void set[(${partner_score_on_the_customer})](Number partner_score_on_the_customer){
+		this.[(${partner_score_on_the_customer})] = partner_score_on_the_customer;
+	}
+	public Number getpartner_score_on_the_customer(){
+		return this.[(${partner_score_on_the_customer})];
+	}
+	[# th:if = "${partner_score_on_the_customer} != 'partner_score_on_the_customer' "]
+	private void setpartner_score_on_the_customer(Number partner_score_on_the_customer){
+		this.[(${partner_score_on_the_customer})] = partner_score_on_the_customer;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${key != null}"]
+	private String [(${key})];
+	public void set[(${key})](String key){
+		this.[(${key})] = key;
+	}
+	public String getkey(){
+		return this.[(${key})];
+	}
+	[# th:if = "${key} != 'key' "]
+	private void setkey(String key){
+		this.[(${key})] = key;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${value != null}"]
+	private String [(${value})];
+	public void set[(${value})](String value){
+		this.[(${value})] = value;
+	}
+	public String getvalue(){
+		return this.[(${value})];
+	}
+	[# th:if = "${value} != 'value' "]
+	private void setvalue(String value){
+		this.[(${value})] = value;
+	}
+	[/]
 	[/]
 }

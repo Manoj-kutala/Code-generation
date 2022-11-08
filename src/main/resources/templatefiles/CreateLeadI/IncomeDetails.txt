@@ -1,0 +1,53 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateLeadIIncomeDetails {
+
+    [# th:if = "${frequency != null}"]
+	private String [(${frequency})];
+	public void set[(${frequency})](String frequency){
+		this.[(${frequency})] = frequency;
+	}
+	public String getfrequency(){
+		return this.[(${frequency})];
+	}
+	[# th:if = "${frequency} != 'frequency' "]
+	private void setfrequency(String frequency){
+		this.[(${frequency})] = frequency;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${type != null}"]
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${value != null}"]
+	private String [(${value})];
+	public void set[(${value})](String value){
+		this.[(${value})] = value;
+	}
+	public String getvalue(){
+		return this.[(${value})];
+	}
+	[# th:if = "${value} != 'value' "]
+	private void setvalue(String value){
+		this.[(${value})] = value;
+	}
+	[/]
+	[/]
+
+
+}

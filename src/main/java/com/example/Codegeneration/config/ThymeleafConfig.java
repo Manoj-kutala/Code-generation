@@ -11,7 +11,6 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
-//import com.example.thymeleaf.demo.Payload;
 
 @Configuration
 public class ThymeleafConfig implements ApplicationContextAware, EnvironmentAware {
@@ -24,7 +23,6 @@ public class ThymeleafConfig implements ApplicationContextAware, EnvironmentAwar
     }
 
     private ITemplateResolver textTemplateResolver() {
-//        Payload payload = null;
         final ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setPrefix("templatefiles/");
         templateResolver.setSuffix(".txt");

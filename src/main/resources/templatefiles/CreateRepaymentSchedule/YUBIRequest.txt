@@ -4,99 +4,36 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	[# th:if = "${LOAN_ID != null}"]
-	private String [(${LOAN_ID})];
-	public void set[(${LOAN_ID})](String LOAN_ID){
-		this.[(${LOAN_ID})] = LOAN_ID;
+	[# th:if = "${loan_ID != null}"]
+	private String [(${loan_ID})];
+	public void set[(${loan_ID})](String loan_ID){
+		this.[(${loan_ID})] = loan_ID;
 	}
-	public String getLOAN_ID(){
-		return this.[(${LOAN_ID})];
+	public String getloan_ID(){
+		return this.[(${loan_ID})];
+	}
+	[# th:if = "${loan_ID} != 'loan_ID' "]
+	private void setloan_ID(String loan_ID){
+		this.[(${loan_ID})] = loan_ID;
+	}
+	[/]
+	[/]
+
+	private String [(${application_ID})];
+	public void set[(${application_ID})](String application_ID){
+		this.[(${application_ID})] = application_ID;
+	}
+	public String getapplication_ID(){
+		return this.[(${application_ID})];
+	}
+	[# th:if = "${application_ID} != 'application_ID' "]
+	private void setapplication_ID(String application_ID){
+		this.[(${application_ID})] = application_ID;
 	}
 	[/]
 
-	private String [(${Application_ID})];
-	public void set[(${Application_ID})](String Application_ID){
-		this.[(${Application_ID})] = Application_ID;
-	}
-	public String getApplication_ID(){
-		return this.[(${Application_ID})];
-	}
+   	[# th:if = "${Repayments != null}"]
+    public CreateRepaymentScheduleRepayments[] repayments;
+   	[/]
 
-	private Date [(${INSTALLMENT_DUE_DATE})];
-	public void set[(${INSTALLMENT_DUE_DATE})](Date INSTALLMENT_DUE_DATE){
-		this.[(${INSTALLMENT_DUE_DATE})] = INSTALLMENT_DUE_DATE;
-	}
-	public Date getINSTALLMENT_DUE_DATE(){
-		return this.[(${INSTALLMENT_DUE_DATE })];
-	}
-
-	private Float [(${INSTALLMENT_AMOUNT})];
-	public void set[(${INSTALLMENT_AMOUNT })](Float INSTALLMENT_AMOUNT){
-		this.[(${INSTALLMENT_AMOUNT})] = INSTALLMENT_AMOUNT;
-	}
-	public Float getINSTALLMENT_AMOUNT(){
-		return this.[(${INSTALLMENT_AMOUNT})];
-	}
-
-	private Number [(${INSTALLMENT_NUMBER})];
-	public void set[(${INSTALLMENT_NUMBER})](Number INSTALLMENT_NUMBER){
-		this.[(${INSTALLMENT_NUMBER})] = INSTALLMENT_NUMBER;
-	}
-	public Number getINSTALLMENT_NUMBER(){
-		return this.[(${INSTALLMENT_NUMBER})];
-	}
-
-	private Float [(${PRINCIPAL})];
-	public void set[(${PRINCIPAL})](Float PRINCIPAL){
-		this.[(${PRINCIPAL})] = PRINCIPAL;
-	}
-	public Float getPRINCIPAL(){
-		return this.[(${PRINCIPAL})];
-	}
-
-	private Float [(${INTEREST})];
-	public void set[(${INTEREST})](Float INTEREST){
-		this.[(${INTEREST})] = INTEREST;
-	}
-	public Float getINTEREST(){
-		return this.[(${INTEREST})];
-	}
-
-	private Float [(${PRINCIPAL_OUTSTANDING})];
-	public void set[(${PRINCIPAL_OUTSTANDING})](Float PRINCIPAL_OUTSTANDING){
-		this.[(${PRINCIPAL_OUTSTANDING})] = PRINCIPAL_OUTSTANDING;
-	}
-	public Float getPRINCIPAL_OUTSTANDING(){
-		return this.[(${PRINCIPAL_OUTSTANDING})];
-	}
-
-	[# th:if = "${Revised_Active_Investor_Rate != null}"]
-	private Float [(${Revised_Active_Investor_Rate})];
-	public void set[(${Revised_Active_Investor_Rate})](Float Revised_Active_Investor_Rate){
-		this.[(${Revised_Active_Investor_Rate})] = Revised_Active_Investor_Rate;
-	}
-	public Float getRevised_Active_Investor_Rate(){
-		return this.[(${Revised_Active_Investor_Rate})];
-	}
-	[/]
-
-	[# th:if = "${Revised_End_Borrower_Rate != null}"]
-	private Float [(${Revised_End_Borrower_Rate})];
-	public void set[(${Revised_End_Borrower_Rate})](Float Revised_End_Borrower_Rate){
-		this.[(${Revised_End_Borrower_Rate})] = Revised_End_Borrower_Rate;
-	}
-	public Float getRevised_End_Borrower_Rate(){
-		return this.[(${Revised_End_Borrower_Rate})];
-	}
-	[/]
-
-	[# th:if = "${Revised_Number_Of_Total_Installments != null}"]
-	private Number [(${Revised_Number_Of_Total_Installments})];
-	public void set[(${Revised_Number_Of_Total_Installments})](Number Revised_Number_Of_Total_Installments){
-		this.[(${Revised_Number_Of_Total_Installments})] = Revised_Number_Of_Total_Installments;
-	}
-	public Number getRevised_Number_Of_Total_Installments(){
-		return this.[(${Revised_Number_Of_Total_Installments})];
-	}
-	[/]
 }

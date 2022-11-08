@@ -1,0 +1,68 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateTopupApplicationtop_up {
+
+
+	private String [(${linked_loan_id})];
+	public void set[(${linked_loan_id})](String linked_loan_id){
+		this.[(${linked_loan_id})] = linked_loan_id;
+	}
+	public String getlinked_loan_id(){
+		return this.[(${linked_loan_id})];
+	}
+	[# th:if = "${linked_loan_id} != 'linked_loan_id' "]
+	private void setlinked_loan_id(String linked_loan_id){
+		this.[(${linked_loan_id})] = linked_loan_id;
+	}
+	[/]
+
+	[# th:if = "${fore_closure != null}"]
+	private Boolean [(${fore_closure})];
+	public void set[(${fore_closure})](Boolean fore_closure){
+		this.[(${fore_closure})] = fore_closure;
+	}
+	public Boolean getfore_closure(){
+		return this.[(${fore_closure})];
+	}
+	[# th:if = "${fore_closure} != 'fore_closure' "]
+	private void setfore_closure(Boolean fore_closure){
+		this.[(${fore_closure})] = fore_closure;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${principal != null}"]
+	private Number [(${principal})];
+	public void set[(${principal})](Number principal){
+		this.[(${principal})] = principal;
+	}
+	public Number getprincipal(){
+		return this.[(${principal})];
+	}
+	[# th:if = "${principal} != 'principal' "]
+	private void setprincipal(Number principal){
+		this.[(${principal})] = principal;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${interest != null}"]
+	private Number [(${interest})];
+	public void set[(${interest})](Number interest){
+		this.[(${interest})] = interest;
+	}
+	public Number getinterest(){
+		return this.[(${interest})];
+	}
+	[# th:if = "${interest} != 'interest' "]
+	private void setinterest(Number interest){
+		this.[(${interest})] = interest;
+	}
+	[/]
+	[/]
+
+
+
+}

@@ -1,0 +1,35 @@
+package DCG;
+
+import java.util.Date;
+
+public class PostBorrowerResponseemail {
+
+
+	private String [(${type1})];
+	public void set[(${type1})](String type1){
+		this.[(${type1})] = type1;
+	}
+	public String gettype1(){
+		return this.[(${type1})];
+	}
+	[# th:if = "${type1} != 'type1' "]
+	private void settype1(String type1){
+		this.[(${type1})] = type1;
+	}
+	[/]
+
+	private String [(${id})];
+	public void set[(${id})](String id){
+		this.[(${id})] = id;
+	}
+	public String getid(){
+		return this.[(${id})];
+	}
+	[# th:if = "${id} != 'id' "]
+	private void setid(String id){
+		this.[(${id})] = id;
+	}
+	[/]
+
+
+}

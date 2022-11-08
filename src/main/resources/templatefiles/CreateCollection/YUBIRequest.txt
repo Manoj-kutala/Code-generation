@@ -1,210 +1,67 @@
 package DCG;
+
 import java.util.Date;
+
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
-
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
-	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
-	}
-
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
-	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
-	}
-
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
-	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
-	}
-
-	private String [(${ID})];
-	public void set[(${ID})](String ID){
-		this.[(${ID})] = ID;
-	}
-	public String getID(){
-		return this.[(${ID})];
-	}
-
-	[# th:if = "${Installment_Due_date != null}"]
-	private Date [(${Installment_Due_date})];
-	public void set[(${Installment_Due_date})](Date Installment_Due_date){
-		this.[(${Installment_Due_date})] = Installment_Due_date;
-	}
-	public Date getInstallment_Due_date(){
-		return this.[(${Installment_Due_date})];
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
 	[/]
 
-	[# th:if = "${Installment_Number != null}"]
-	private Number [(${Installment_Number})];
-	public void set[(${Installment_Number})](Number Installment_Number){
-		this.[(${Installment_Number})] = Installment_Number;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public Number getInstallment_Number(){
-		return this.[(${Installment_Number})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
-	[/]
-
-	private Float [(${Principal})];
-	public void set[(${Principal})](Float Principal){
-		this.[(${Principal})] = Principal;
-	}
-	public Float getPrincipal(){
-		return this.[(${Principal})];
-	}
-
-	private Float [(${Interest})];
-	public void set[(${Interest})](Float Interest){
-		this.[(${Interest})] = Interest;
-	}
-	public Float getInterest(){
-		return this.[(${Interest})];
-	}
-
-	[# th:if = "${Overdue_Interest != null}"]
-	private Float [(${Overdue_Interest})];
-	public void set[(${Overdue_Interest})](Float Overdue_Interest){
-		this.[(${Overdue_Interest})] = Overdue_Interest;
-	}
-	public Float getOverdue_Interest(){
-		return this.[(${Overdue_Interest})];
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
 	[/]
 
-	private Float [(${Total_Amount})];
-	public void set[(${Total_Amount})](Float Total_Amount){
-		this.[(${Total_Amount})] = Total_Amount;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public Float getTotal_Amount(){
-		return this.[(${Total_Amount})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
-
-	private String [(${UTR_number})];
-	public void set[(${UTR_number})](String UTR_number){
-		this.[(${UTR_number})] = UTR_number;
-	}
-	public String getUTR_number(){
-		return this.[(${UTR_number})];
-	}
-
-	[# th:if = "${Reference_number != null}"]
-	private Number [(${Reference_number})];
-	public void set[(${Reference_number})](Number Reference_number){
-		this.[(${Reference_number})] = Reference_number;
-	}
-	public Number getReference_number(){
-		return this.[(${Reference_number})];
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
 	[/]
 
-	private Date [(${Customer_paid_Date})];
-	public void set[(${Customer_paid_Date})](Date Customer_paid_Date){
-		this.[(${Customer_paid_Date})] = Customer_paid_Date;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public Date getCustomer_paid_Date(){
-		return this.[(${Customer_paid_Date})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
 	}
-
-	[# th:if = "${Settlement_date != null}"]
-	private Date [(${Settlement_date})];
-	public void set[(${Settlement_date})](Date Settlement_date){
-		this.[(${Settlement_date})] = Settlement_date;
-	}
-	public Date getSettlement_date(){
-		return this.[(${Settlement_date})];
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
 	[/]
 
-	private String [(${payment_type})];
-	public void set[(${payment_type})](String payment_type){
-		this.[(${payment_type})] = payment_type;
-	}
-	public String getpayment_type(){
-		return this.[(${payment_type})];
-	}
+   	[# th:if = "${Collection != null}"]
+    public CreateCollectionCollection[] collection;
+   	[/]
 
-	[# th:if = "${Principal_waiver != null}"]
-	private Float [(${Principal_waiver})];
-	public void set[(${Principal_waiver})](Float Principal_waiver){
-		this.[(${Principal_waiver})] = Principal_waiver;
-	}
-	public Float getPrincipal_waiver(){
-		return this.[(${Principal_waiver})];
-	}
-	[/]
+   	[# th:if = "${CollectionCharges != null}"]
+    public CreateCollectionCollectionCharges[] collectionCharges;
+   	[/]
 
-	[# th:if = "${Interest_waiver != null}"]
-	private Float [(${Interest_waiver})];
-	public void set[(${Interest_waiver})](Float Interest_waiver){
-		this.[(${Interest_waiver})] = Interest_waiver;
-	}
-	public Float getInterest_waiver(){
-		return this.[(${Interest_waiver})];
-	}
-	[/]
-
-	private String [(${EMI_closed})];
-	public void set[(${EMI_closed})](String EMI_closed){
-		this.[(${EMI_closed})] = EMI_closed;
-	}
-	public String getEMI_closed(){
-		return this.[(${EMI_closed})];
-	}
-
-	[# th:if = "${Opening_Principal_outstanding != null}"]
-	private Float [(${Opening_Principal_outstanding})];
-	public void set[(${Opening_Principal_outstanding})](Float Opening_Principal_outstanding){
-		this.[(${Opening_Principal_outstanding})] = Opening_Principal_outstanding;
-	}
-	public Float getOpening_Principal_outstanding(){
-		return this.[(${Opening_Principal_outstanding})];
-	}
-	[/]
-
-	[# th:if = "${Opening_Advance_outstanding != null}"]
-	private Float [(${Opening_Advance_outstanding})];
-	public void set[(${Opening_Advance_outstanding})](Float Opening_Advance_outstanding){
-		this.[(${Opening_Advance_outstanding})] = Opening_Advance_outstanding;
-	}
-	public Float getOpening_Advance_outstanding(){
-		return this.[(${Opening_Advance_outstanding})];
-	}
-	[/]
-
-	[# th:if = "${type != null}"]
-	private String [(${type})];
-	public void set[(${type})](String type){
-		this.[(${type})] = type;
-	}
-	public String gettype(){
-		return this.[(${type})];
-	}
-	[/]
-
-	[# th:if = "${Amount != null}"]
-	private Float [(${Amount})];
-	public void set[(${Amount})](Float Amount){
-		this.[(${Amount})] = Amount;
-	}
-	public Float getAmount(){
-		return this.[(${Amount})];
-	}
-	[/]
 }

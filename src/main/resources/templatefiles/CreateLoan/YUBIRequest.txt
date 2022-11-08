@@ -4,43 +4,68 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	[/]
 
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
 
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	[/]
 
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
 	}
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
+	}
+	[/]
 
-	private String [(${Loan_Booked_Date})];
-	public void set[(${Loan_Booked_Date})](String Loan_Booked_Date){
-		this.[(${Loan_Booked_Date})] = Loan_Booked_Date;
+	private String [(${loan_Booked_Date})];
+	public void set[(${loan_Booked_Date})](String loan_Booked_Date){
+		this.[(${loan_Booked_Date})] = loan_Booked_Date;
 	}
-	public String getLoan_Booked_Date(){
-		return this.[(${Loan_Booked_Date})];
+	public String getloan_Booked_Date(){
+		return this.[(${loan_Booked_Date})];
 	}
+	[# th:if = "${loan_Booked_Date} != 'loan_Booked_Date' "]
+	private void setloan_Booked_Date(String loan_Booked_Date){
+		this.[(${loan_Booked_Date})] = loan_Booked_Date;
+	}
+	[/]
 }

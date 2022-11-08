@@ -103,13 +103,6 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>4.2</version>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>com.example</groupId>-->
-<!--			<artifactId>sample</artifactId>-->
-<!--			<version>0.0.1-SNAPSHOT</version>-->
-<!--			<scope>system</scope>-->
-<!--			<systemPath>${project.basedir}/src/main/lib/Config-service-0.0.1-SNAPSHOT.jar</systemPath>-->
-<!--		</dependency>-->
 
 	</dependencies>
 

@@ -1,0 +1,168 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateDocumentdocuments {
+
+	[# th:if = "${source != null}"]
+	private String [(${source})];
+	public void set[(${source})](String source){
+		this.[(${source})] = source;
+	}
+	public String getsource(){
+		return this.[(${source})];
+	}
+	[# th:if = "${source} != 'source' "]
+	private void setsource(String source){
+		this.[(${source})] = source;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${sourceType != null}"]
+	private String [(${sourceType})];
+	public void set[(${sourceType})](String sourceType){
+		this.[(${sourceType})] = sourceType;
+	}
+	public String getsourceType(){
+		return this.[(${sourceType})];
+	}
+	[# th:if = "${sourceType} != 'sourceType' "]
+	private void setsourceType(String sourceType){
+		this.[(${sourceType})] = sourceType;
+	}
+	[/]
+	[/]
+
+	private String [(${doc_id})];
+	public void set[(${doc_id})](String doc_id){
+		this.[(${doc_id})] = doc_id;
+	}
+	public String getdoc_id(){
+		return this.[(${doc_id})];
+	}
+	[# th:if = "${doc_id} != 'doc_id' "]
+	private void setdoc_id(String doc_id){
+		this.[(${doc_id})] = doc_id;
+	}
+	[/]
+
+	[# th:if = "${format != null}"]
+	private String [(${format})];
+	public void set[(${format})](String format){
+		this.[(${format})] = format;
+	}
+	public String getformat(){
+		return this.[(${format})];
+	}
+	[# th:if = "${format} != 'format' "]
+	private void setformat(String format){
+		this.[(${format})] = format;
+	}
+	[/]
+	[/]
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
+
+	private String [(${url})];
+	public void set[(${url})](String url){
+		this.[(${url})] = url;
+	}
+	public String geturl(){
+		return this.[(${url})];
+	}
+	[# th:if = "${url} != 'url' "]
+	private void seturl(String url){
+		this.[(${url})] = url;
+	}
+	[/]
+
+	[# th:if = "${data != null}"]
+	private String [(${data})];
+	public void set[(${data})](String data){
+		this.[(${data})] = data;
+	}
+	public String getdata(){
+		return this.[(${data})];
+	}
+	[# th:if = "${data} != 'data' "]
+	private void setdata(String data){
+		this.[(${data})] = data;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${issue_Date != null}"]
+	private String [(${issue_Date})];
+	public void set[(${issue_Date})](String issue_Date){
+		this.[(${issue_Date})] = issue_Date;
+	}
+	public String getissue_Date(){
+		return this.[(${issue_Date})];
+	}
+	[# th:if = "${issue_Date} != 'issue_Date' "]
+	private void setissue_Date(String issue_Date){
+		this.[(${issue_Date})] = issue_Date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${expiry_Date != null}"]
+	private Date [(${expiry_Date})];
+	public void set[(${expiry_Date})](Date expiry_Date){
+		this.[(${expiry_Date})] = expiry_Date;
+	}
+	public Date getexpiry_Date(){
+		return this.[(${expiry_Date})];
+	}
+	[# th:if = "${expiry_Date} != 'expiry_Date' "]
+	private void setexpiry_Date(Date expiry_Date){
+		this.[(${expiry_Date})] = expiry_Date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${issuing_Authority != null}"]
+	private String [(${issuing_Authority})];
+	public void set[(${issuing_Authority})](String issuing_Authority){
+		this.[(${issuing_Authority})] = issuing_Authority;
+	}
+	public String getissuing_Authority(){
+		return this.[(${issuing_Authority})];
+	}
+	[# th:if = "${issuing_Authority} != 'issuing_Authority' "]
+	private void setissuing_Authority(String issuing_Authority){
+		this.[(${issuing_Authority})] = issuing_Authority;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${password != null}"]
+	private String [(${password})];
+	public void set[(${password})](String password){
+		this.[(${password})] = password;
+	}
+	public String getpassword(){
+		return this.[(${password})];
+	}
+	[# th:if = "${password} != 'password' "]
+	private void setpassword(String password){
+		this.[(${password})] = password;
+	}
+	[/]
+	[/]
+
+
+
+}

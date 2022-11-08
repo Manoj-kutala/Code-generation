@@ -1,0 +1,38 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationTermsLoantermsCharges {
+
+	[# th:if = "${charge != null}"]
+	private String [(${charge})];
+	public void set[(${charge})](String charge){
+		this.[(${charge})] = charge;
+	}
+	public String getcharge(){
+		return this.[(${charge})];
+	}
+	[# th:if = "${charge} != 'charge' "]
+	private void setcharge(String charge){
+		this.[(${charge})] = charge;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private String [(${amount})];
+	public void set[(${amount})](String amount){
+		this.[(${amount})] = amount;
+	}
+	public String getamount(){
+		return this.[(${amount})];
+	}
+	[# th:if = "${amount} != 'amount' "]
+	private void setamount(String amount){
+		this.[(${amount})] = amount;
+	}
+	[/]
+	[/]
+
+
+}

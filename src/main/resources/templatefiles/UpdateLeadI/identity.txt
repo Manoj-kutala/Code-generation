@@ -1,0 +1,50 @@
+package DCG;
+
+import java.util.Date;
+
+public class UpdateLeadIidentity {
+
+    private String [(${identifier_Type})];
+	public void set[(${identifier_Type})](String identifier_Type){
+		this.[(${identifier_Type})] = identifier_Type;
+	}
+	public String getidentifier_Type(){
+		return this.[(${identifier_Type})];
+	}
+	[# th:if = "${identifier_Type} != 'identifier_Type' "]
+	private void setidentifier_Type(String identifier_Type){
+		this.[(${identifier_Type})] = identifier_Type;
+	}
+	[/]
+
+	private String [(${identifier})];
+	public void set[(${identifier})](String identifier){
+		this.[(${identifier})] = identifier;
+	}
+	public String getidentifier(){
+		return this.[(${identifier})];
+	}
+	[# th:if = "${identifier} != 'identifier' "]
+	private void setidentifier(String identifier){
+		this.[(${identifier})] = identifier;
+	}
+	[/]
+
+	[# th:if = "${issuing_country != null}"]
+	private String [(${issuing_country})];
+	public void set[(${issuing_country})](String issuing_country){
+		this.[(${issuing_country})] = issuing_country;
+	}
+	public String getissuing_country(){
+		return this.[(${issuing_country})];
+	}
+	[# th:if = "${issuing_country} != 'issuing_country' "]
+	private void setissuing_country(String issuing_country){
+		this.[(${issuing_country})] = issuing_country;
+	}
+	[/]
+	[/]
+
+
+
+}

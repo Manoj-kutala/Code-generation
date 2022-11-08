@@ -150,16 +150,17 @@ public class [(${api_name})]Request {
 	[/]
 	[/]
 
-	private String [(${cKYC_Action_trigger})];
-	public void set[(${cKYC_Action_trigger})](String cKYC_Action_trigger){
-		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
-	}
-	public String getcKYC_Action_trigger(){
-		return this.[(${cKYC_Action_trigger})];
-	}
-	[# th:if = "${cKYC_Action_trigger} != 'cKYC_Action_trigger' "]
-	private void setcKYC_Action_trigger(String cKYC_Action_trigger){
-		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
-	}
-	[/]
+    private String [(${cKYC_Action_trigger})];
+    public void set[(${cKYC_Action_trigger})](String cKYC_Action_trigger){
+   		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+   	}
+   	public String getcKYC_Action_trigger(){
+   		return this.[(${cKYC_Action_trigger})];
+    }
+   	[# th:if = "${cKYC_Action_trigger} != 'cKYC_Action_trigger' "]
+   	private void setcKYC_Action_trigger(String cKYC_Action_trigger){
+   		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+   	}
+    [/]
+
 }

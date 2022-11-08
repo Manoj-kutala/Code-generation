@@ -1,0 +1,175 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateContactaddress {
+
+
+	private String [(${addressType})];
+	public void set[(${addressType})](String addressType){
+		this.[(${addressType})] = addressType;
+	}
+	public String getaddressType(){
+		return this.[(${addressType})];
+	}
+	[# th:if = "${addressType} != 'addressType' "]
+	private void setaddressType(String addressType){
+		this.[(${addressType})] = addressType;
+	}
+	[/]
+
+	private String [(${ownershipType})];
+	public void set[(${ownershipType})](String ownershipType){
+		this.[(${ownershipType})] = ownershipType;
+	}
+	public String getownershipType(){
+		return this.[(${ownershipType})];
+	}
+	[# th:if = "${ownershipType} != 'ownershipType' "]
+	private void setownershipType(String ownershipType){
+		this.[(${ownershipType})] = ownershipType;
+	}
+	[/]
+
+	[# th:if = "${area_type != null}"]
+	private String [(${area_type})];
+	public void set[(${area_type})](String area_type){
+		this.[(${area_type})] = area_type;
+	}
+	public String getarea_type(){
+		return this.[(${area_type})];
+	}
+	[# th:if = "${area_type} != 'area_type' "]
+	private void setarea_type(String area_type){
+		this.[(${area_type})] = area_type;
+	}
+	[/]
+	[/]
+
+	private String [(${addres_Line_1})];
+	public void set[(${addres_Line_1})](String addres_Line_1){
+		this.[(${addres_Line_1})] = addres_Line_1;
+	}
+	public String getaddres_Line_1(){
+		return this.[(${addres_Line_1})];
+	}
+	[# th:if = "${addres_Line_1} != 'addres_Line_1' "]
+	private void setaddres_Line_1(String addres_Line_1){
+		this.[(${addres_Line_1})] = addres_Line_1;
+	}
+	[/]
+
+	[# th:if = "${addres_Line_2 != null}"]
+	private String [(${addres_Line_2})];
+	public void set[(${addres_Line_2})](String addres_Line_2){
+		this.[(${addres_Line_2})] = addres_Line_2;
+	}
+	public String getaddres_Line_2(){
+		return this.[(${addres_Line_2})];
+	}
+	[# th:if = "${addres_Line_2} != 'addres_Line_2' "]
+	private void setaddres_Line_2(String addres_Line_2){
+		this.[(${addres_Line_2})] = addres_Line_2;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${addres_Line_3 != null}"]
+	private String [(${addres_Line_3})];
+	public void set[(${addres_Line_3})](String addres_Line_3){
+		this.[(${addres_Line_3})] = addres_Line_3;
+	}
+	public String getaddres_Line_3(){
+		return this.[(${addres_Line_3})];
+	}
+	[# th:if = "${addres_Line_3} != 'addres_Line_3' "]
+	private void setaddres_Line_3(String addres_Line_3){
+		this.[(${addres_Line_3})] = addres_Line_3;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${geo_Location != null}"]
+	private String [(${geo_Location})];
+	public void set[(${geo_Location})](String geo_Location){
+		this.[(${geo_Location})] = geo_Location;
+	}
+	public String getgeo_Location(){
+		return this.[(${geo_Location})];
+	}
+	[# th:if = "${geo_Location} != 'geo_Location' "]
+	private void setgeo_Location(String geo_Location){
+		this.[(${geo_Location})] = geo_Location;
+	}
+	[/]
+	[/]
+
+    private Number [(${pincode})];
+	public void set[(${pincode})](Number pincode){
+		this.[(${pincode})] = pincode;
+	}
+	public Number getpincode(){
+		return this.[(${pincode})];
+	}
+	[# th:if = "${pincode} != 'pincode' "]
+	private void setpincode(Number pincode){
+		this.[(${pincode})] = pincode;
+	}
+	[/]
+
+	private String [(${city})];
+	public void set[(${city})](String city){
+		this.[(${city})] = city;
+	}
+	public String getcity(){
+		return this.[(${city})];
+	}
+	[# th:if = "${city} != 'city' "]
+	private void setcity(String city){
+		this.[(${city})] = city;
+	}
+	[/]
+
+	private String [(${state})];
+	public void set[(${state})](String state){
+		this.[(${state})] = state;
+	}
+	public String getstate(){
+		return this.[(${state})];
+	}
+	[# th:if = "${state} != 'state' "]
+	private void setstate(String state){
+		this.[(${state})] = state;
+	}
+	[/]
+
+	private String [(${country})];
+	public void set[(${country})](String country){
+		this.[(${country})] = country;
+	}
+	public String getcountry(){
+		return this.[(${country})];
+	}
+	[# th:if = "${country} != 'country' "]
+	private void setcountry(String country){
+		this.[(${country})] = country;
+	}
+	[/]
+
+	[# th:if = "${years_of_stay_in_address != null}"]
+	private String [(${years_of_stay_in_address})];
+	public void set[(${years_of_stay_in_address})](String years_of_stay_in_address){
+		this.[(${years_of_stay_in_address})] = years_of_stay_in_address;
+	}
+	public String getyears_of_stay_in_address(){
+		return this.[(${years_of_stay_in_address})];
+	}
+	[# th:if = "${years_of_stay_in_address} != 'years_of_stay_in_address' "]
+	private void setyears_of_stay_in_address(String years_of_stay_in_address){
+		this.[(${years_of_stay_in_address})] = years_of_stay_in_address;
+	}
+	[/]
+	[/]
+
+
+}

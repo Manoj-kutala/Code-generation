@@ -1,0 +1,65 @@
+package DCG;
+
+import java.util.Date;
+
+public class PostBorrowerResponsephone {
+
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
+
+	private Number [(${number})];
+	public void set[(${number})](Number number){
+		this.[(${number})] = number;
+	}
+	public Number getnumber(){
+		return this.[(${number})];
+	}
+	[# th:if = "${number} != 'number' "]
+	private void setnumber(Number number){
+		this.[(${number})] = number;
+	}
+	[/]
+
+	[# th:if = "${area_Code != null}"]
+	private Number [(${area_Code})];
+	public void set[(${area_Code})](Number area_Code){
+		this.[(${area_Code})] = area_Code;
+	}
+	public Number getarea_Code(){
+		return this.[(${area_Code})];
+	}
+	[# th:if = "${area_Code} != 'area_Code' "]
+	private void setarea_Code(Number area_Code){
+		this.[(${area_Code})] = area_Code;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${is_preferred != null}"]
+	private String [(${is_preferred})];
+	public void set[(${is_preferred})](String is_preferred){
+		this.[(${is_preferred})] = is_preferred;
+	}
+	public String getis_preferred(){
+		return this.[(${is_preferred})];
+	}
+	[# th:if = "${is_preferred} != 'is_preferred' "]
+	private void setis_preferred(String is_preferred){
+		this.[(${is_preferred})] = is_preferred;
+	}
+	[/]
+	[/]
+
+
+}

@@ -1,0 +1,128 @@
+package DCG;
+
+import java.util.Date;
+
+public class UpdateLeadIEmployment {
+
+    [# th:if = "${employer_name != null}"]
+	private String [(${employer_name})];
+	public void set[(${employer_name})](String employer_name){
+		this.[(${employer_name})] = employer_name;
+	}
+	public String getemployer_name(){
+		return this.[(${employer_name})];
+	}
+	[# th:if = "${employer_name} != 'employer_name' "]
+	private void setemployer_name(String employer_name){
+		this.[(${employer_name})] = employer_name;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${employed_since != null}"]
+	private String [(${employed_since})];
+	public void set[(${employed_since})](String employed_since){
+		this.[(${employed_since})] = employed_since;
+	}
+	public String getemployed_since(){
+		return this.[(${employed_since})];
+	}
+	[# th:if = "${employed_since} != 'employed_since' "]
+	private void setemployed_since(String employed_since){
+		this.[(${employed_since})] = employed_since;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${job_title != null}"]
+	private String [(${job_title})];
+	public void set[(${job_title})](String job_title){
+		this.[(${job_title})] = job_title;
+	}
+	public String getjob_title(){
+		return this.[(${job_title})];
+	}
+	[# th:if = "${job_title} != 'job_title' "]
+	private void setjob_title(String job_title){
+		this.[(${job_title})] = job_title;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${designation != null}"]
+	private String [(${designation})];
+	public void set[(${designation})](String designation){
+		this.[(${designation})] = designation;
+	}
+	public String getdesignation(){
+		return this.[(${designation})];
+	}
+	[# th:if = "${designation} != 'designation' "]
+	private void setdesignation(String designation){
+		this.[(${designation})] = designation;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${indsutry != null}"]
+	private String [(${indsutry})];
+	public void set[(${indsutry})](String indsutry){
+		this.[(${indsutry})] = indsutry;
+	}
+	public String getindsutry(){
+		return this.[(${indsutry})];
+	}
+	[# th:if = "${indsutry} != 'indsutry' "]
+	private void setindsutry(String indsutry){
+		this.[(${indsutry})] = indsutry;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${sector != null}"]
+	private String [(${sector})];
+	public void set[(${sector})](String sector){
+		this.[(${sector})] = sector;
+	}
+	public String getsector(){
+		return this.[(${sector})];
+	}
+	[# th:if = "${sector} != 'sector' "]
+	private void setsector(String sector){
+		this.[(${sector})] = sector;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${work_experience != null}"]
+	private String [(${work_experience})];
+	public void set[(${work_experience})](String work_experience){
+		this.[(${work_experience})] = work_experience;
+	}
+	public String getwork_experience(){
+		return this.[(${work_experience})];
+	}
+	[# th:if = "${work_experience} != 'work_experience' "]
+	private void setwork_experience(String work_experience){
+		this.[(${work_experience})] = work_experience;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${is_current_employment != null}"]
+	private String [(${is_current_employment})];
+	public void set[(${is_current_employment})](String is_current_employment){
+		this.[(${is_current_employment})] = is_current_employment;
+	}
+	public String getis_current_employment(){
+		return this.[(${is_current_employment})];
+	}
+	[# th:if = "${is_current_employment} != 'is_current_employment' "]
+	private void setis_current_employment(String is_current_employment){
+		this.[(${is_current_employment})] = is_current_employment;
+	}
+	[/]
+	[/]
+
+
+}

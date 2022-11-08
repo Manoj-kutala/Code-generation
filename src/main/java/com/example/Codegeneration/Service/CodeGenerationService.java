@@ -28,6 +28,10 @@ public class CodeGenerationService {
     private TemplateEngine textTemplateEngine;
 
     static HashMap<String, String> maps = new HashMap<>();
+    static HashMap<String, String> isArrayMaps = new HashMap<>();
+
+    final String key2 = "originatorFieldName";
+    final String key1 = "dataFieldName";
 
     public String generateCodeFiles(String mappingfile,String outputfolder, String outputPath) throws IOException {
 
@@ -48,33 +52,58 @@ public class CodeGenerationService {
 
 
 
-        String key2 = "originatorFieldName";
-        String key1 = "yubiFieldName";
+
         JsonParser p = new JsonParser();
 
 
         apiList.forEach(api -> {
-            JSONObject jsonObj = null;
             try {
-                jsonObj = new JSONObject(api.toString());
+                JSONObject jsonObj = new JSONObject(api.toString());
                 System.out.println("jsonObj------->" + jsonObj);
 
-                String api_name="";
+                String api_name = "";
 
-                if(jsonObj.has("api_name")){
+                if (jsonObj.has("api_name")) {
                     api_name = (String) jsonObj.get("api_name");
                 } else if (jsonObj.has("webhook_name")) {
                     api_name = (String) jsonObj.get("webhook_name");
                 }
-                System.out.println("api_name-------->"+api_name);
-                System.out.println((jsonObj.get("response_payload_attributes")).toString().equals("{}"));
-                if((jsonObj.get("response_payload_attributes")).toString().equals("{}"))
+                System.out.println("api_name-------->" + api_name);
+                if(!(jsonObj.has("response_payload_attributes")))
+                    apiNamesWithoutResponse.add(api_name);
+                else if ((jsonObj.get("response_payload_attributes")).toString().equals("{}"))
                     apiNamesWithoutResponse.add(api_name);
                 else
                     apiNamesWithResponse.add(api_name);
 
+
                 maps = new HashMap<>();
-                check(api_name, key1, key2, p.parse(jsonObj.toString()));
+                maps.put("api_name",api_name);
+                JSONObject jsonBlock = jsonObj.getJSONObject("request_payload_attributes");
+                Iterator<String> keys = jsonBlock.keys();
+                while (keys.hasNext()) {
+                    String key = keys.next();
+                    System.out.println(key + "++++++++++");
+                    System.out.println(jsonBlock.get(key));
+                    JSONObject jj = (JSONObject) jsonBlock.get(key);
+                    System.out.println((jj.get("isArray")).equals(true));
+                    if (jj.get("isArray").equals(true)) {
+                        maps.put(key, key);
+                        isArrayMaps = new HashMap<>();
+                        check(api_name, true, p.parse(jj.toString()));
+                        final Context context2 = new Context();
+                        isArrayMaps.forEach((k, v) -> context2.setVariable(k, v));
+                        String request_text1 = textTemplateEngine.process("/" + api_name + "/"+key, context2);
+                        FileWriter request_file1 = new FileWriter(outputPath + "/" + api_name + key+".java");
+                        request_file1.write(request_text1);
+                        request_file1.close();
+                    } else {
+                        check(api_name, false, p.parse(jj.toString()));
+                    }
+                }
+                if(apiNamesWithResponse.contains(api_name))
+                    check(api_name,false,p.parse((jsonObj.getJSONObject("response_payload_attributes")).toString()));
+
                 System.out.println(maps);
 
                 System.out.println("*********\n");
@@ -86,15 +115,17 @@ public class CodeGenerationService {
                 request_file.write(request_text);
                 request_file.close();
 
-                if(!((jsonObj.get("response_payload_attributes")).toString()).equals("{}")) {
+                if(apiNamesWithResponse.contains(api_name)) {
                     String response_text = textTemplateEngine.process("/" + api_name + "/YubiResponse", context);
                     FileWriter response_file = new FileWriter(outputPath + "/" + api_name + "Response.java");
                     response_file.write(response_text);
                     response_file.close();
                 }
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+
+                System.out.println("\n\n");
+            } catch (IOException e){
+                System.out.println(e);
             }
         });
 
@@ -121,12 +152,12 @@ public class CodeGenerationService {
 
     }
 
-    private void check(String api_name, String key1, String key2, JsonElement jsonElement) {
+    private void check(String api_name,Boolean isArray, JsonElement jsonElement) {
 
-        String key = "api_name",value =api_name;
+        String key = "",value ="";
         if (jsonElement.isJsonArray()) {
             for (JsonElement jsonElement1 : jsonElement.getAsJsonArray()) {
-                check(api_name,key1,key2, jsonElement1);
+                check(api_name,isArray, jsonElement1);
             }
         } else {
             if (jsonElement.isJsonObject()) {
@@ -141,8 +172,12 @@ public class CodeGenerationService {
                         key = entry.getValue().getAsString();
                     }
 
-                    maps.put(key, value);
-                    check(api_name,key1, key2, entry.getValue());
+                    if(isArray)
+                        isArrayMaps.put(key, value);
+                    else
+                        maps.put(key, value);
+
+                    check(api_name,isArray,entry.getValue());
 
                 }
             }

@@ -1,0 +1,47 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationApplicants {
+
+        private String [(${type})];
+    	public void set[(${type})](String type){
+    		this.[(${type})] = type;
+    	}
+    	public String gettype(){
+    		return this.[(${type})];
+    	}
+    	[# th:if = "${type} != 'type' "]
+    	private void settype(String type){
+    		this.[(${type})] = type;
+    	}
+    	[/]
+
+    	private String [(${client_Customer_id})];
+    	public void set[(${client_Customer_id})](String client_Customer_id){
+    		this.[(${client_Customer_id})] = client_Customer_id;
+    	}
+    	public String getclient_Customer_id(){
+    		return this.[(${client_Customer_id})];
+    	}
+    	[# th:if = "${client_Customer_id} != 'client_Customer_id' "]
+    	private void setclient_Customer_id(String client_Customer_id){
+    		this.[(${client_Customer_id})] = client_Customer_id;
+    	}
+    	[/]
+
+    	private String [(${relationship_with_borrower})];
+    	public void set[(${relationship_with_borrower})](String relationship_with_borrower){
+    		this.[(${relationship_with_borrower})] = relationship_with_borrower;
+    	}
+    	public String getrelationship_with_borrower(){
+    		return this.[(${relationship_with_borrower})];
+    	}
+    	[# th:if = "${relationship_with_borrower} != 'relationship_with_borrower' "]
+    	private void setrelationship_with_borrower(String relationship_with_borrower){
+    		this.[(${relationship_with_borrower})] = relationship_with_borrower;
+    	}
+    	[/]
+
+
+}

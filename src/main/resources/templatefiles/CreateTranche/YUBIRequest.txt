@@ -4,37 +4,57 @@ import java.util.Date;
 
 public class [(${api_name})]Request {
 
-	private String [(${Originator_ID})];
-	public void set[(${Originator_ID})](String Originator_ID){
-		this.[(${Originator_ID})] = Originator_ID;
+	private String [(${originator_ID})];
+	public void set[(${originator_ID})](String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
 	}
-	public String getOriginator_ID(){
-		return this.[(${Originator_ID})];
+	public String getoriginator_ID(){
+		return this.[(${originator_ID})];
 	}
+	[# th:if = "${originator_ID} != 'originator_ID' "]
+	private void setoriginator_ID(String originator_ID){
+		this.[(${originator_ID})] = originator_ID;
+	}
+	[/]
 
-	private String [(${Client_Application_ID})];
-	public void set[(${Client_Application_ID})](String Client_Application_ID){
-		this.[(${Client_Application_ID})] = Client_Application_ID;
+	private String [(${client_Application_ID})];
+	public void set[(${client_Application_ID})](String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
 	}
-	public String getClient_Application_ID(){
-		return this.[(${Client_Application_ID})];
+	public String getclient_Application_ID(){
+		return this.[(${client_Application_ID})];
 	}
+	[# th:if = "${client_Application_ID} != 'client_Application_ID' "]
+	private void setclient_Application_ID(String client_Application_ID){
+		this.[(${client_Application_ID})] = client_Application_ID;
+	}
+	[/]
 
-	private String [(${Client_Loan_ID})];
-	public void set[(${Client_Loan_ID})](String Client_Loan_ID){
-		this.[(${Client_Loan_ID})] = Client_Loan_ID;
+	private String [(${client_Loan_ID})];
+	public void set[(${client_Loan_ID})](String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
 	}
-	public String getClient_Loan_ID(){
-		return this.[(${Client_Loan_ID})];
+	public String getclient_Loan_ID(){
+		return this.[(${client_Loan_ID})];
 	}
+	[# th:if = "${client_Loan_ID} != 'client_Loan_ID' "]
+	private void setclient_Loan_ID(String client_Loan_ID){
+		this.[(${client_Loan_ID})] = client_Loan_ID;
+	}
+	[/]
 
-	private String [(${Engagement_ID})];
-	public void set[(${Engagement_ID})](String Engagement_ID){
-		this.[(${Engagement_ID})] = Engagement_ID;
+	private String [(${engagement_ID})];
+	public void set[(${engagement_ID})](String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
 	}
-	public String getEngagement_ID(){
-		return this.[(${Engagement_ID})];
+	public String getengagement_ID(){
+		return this.[(${engagement_ID})];
 	}
+	[# th:if = "${engagement_ID} != 'engagement_ID' "]
+	private void setengagement_ID(String engagement_ID){
+		this.[(${engagement_ID})] = engagement_ID;
+	}
+	[/]
 
 	private Number [(${tranche_Number})];
 	public void set[(${tranche_Number})](Number tranche_Number){
@@ -43,6 +63,11 @@ public class [(${api_name})]Request {
 	public Number gettranche_Number(){
 		return this.[(${tranche_Number})];
 	}
+	[# th:if = "${tranche_Number} != 'tranche_Number' "]
+	private void settranche_Number(Number tranche_Number){
+		this.[(${tranche_Number})] = tranche_Number;
+	}
+	[/]
 
 	private Float [(${tranche_Principal})];
 	public void set[(${tranche_Principal})](Float tranche_Principal){
@@ -51,6 +76,11 @@ public class [(${api_name})]Request {
 	public Float gettranche_Principal(){
 		return this.[(${tranche_Principal})];
 	}
+	[# th:if = "${tranche_Principal} != 'tranche_Principal' "]
+	private void settranche_Principal(Float tranche_Principal){
+		this.[(${tranche_Principal})] = tranche_Principal;
+	}
+	[/]
 
 	[# th:if = "${number_Of_Tranches != null}"]
 	private Number [(${number_Of_Tranches})];
@@ -60,6 +90,11 @@ public class [(${api_name})]Request {
 	public Number getnumber_Of_Tranches(){
 		return this.[(${number_Of_Tranches})];
 	}
+	[# th:if = "${number_Of_Tranches} != 'number_Of_Tranches' "]
+	private void setnumber_Of_Tranches(Number number_Of_Tranches){
+		this.[(${number_Of_Tranches})] = number_Of_Tranches;
+	}
+	[/]
 	[/]
 
 	[# th:if = "${balance_loan_Principal != null}"]
@@ -70,25 +105,15 @@ public class [(${api_name})]Request {
 	public Float getbalance_loan_Principal(){
 		return this.[(${balance_loan_Principal})];
 	}
+	[# th:if = "${balance_loan_Principal} != 'balance_loan_Principal' "]
+	private void setbalance_loan_Principal(Float balance_loan_Principal){
+		this.[(${balance_loan_Principal})] = balance_loan_Principal;
+	}
+	[/]
 	[/]
 
-	[# th:if = "${charge != null}"]
-	private String [(${charge})];
-	public void set[(${charge})](String charge){
-		this.[(${charge})] = charge;
-	}
-	public String getcharge(){
-		return this.[(${charge})];
-	}
-	[/]
+	[# th:if = "${TrancheCharges != null}"]
+    public CreateTrancheTrancheCharges[] trancheCharges;
+    [/]
 
-	[# th:if = "${amount != null}"]
-	private String [(${amount})];
-	public void set[(${amount})](String amount){
-		this.[(${amount})] = amount;
-	}
-	public String getamount(){
-		return this.[(${amount})];
-	}
-	[/]
 }

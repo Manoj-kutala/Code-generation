@@ -1,0 +1,80 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateInsuranceInsurance {
+
+
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
+
+	[# th:if = "${insurer_Name != null}"]
+	private String [(${insurer_Name})];
+	public void set[(${insurer_Name})](String insurer_Name){
+		this.[(${insurer_Name})] = insurer_Name;
+	}
+	public String getinsurer_Name(){
+		return this.[(${insurer_Name})];
+	}
+	[# th:if = "${insurer_Name} != 'insurer_Name' "]
+	private void setinsurer_Name(String insurer_Name){
+		this.[(${insurer_Name})] = insurer_Name;
+	}
+	[/]
+	[/]
+
+	private Float [(${insured_Amount})];
+	public void set[(${insured_Amount})](Float insured_Amount){
+		this.[(${insured_Amount})] = insured_Amount;
+	}
+	public Float getinsured_Amount(){
+		return this.[(${insured_Amount})];
+	}
+	[# th:if = "${insured_Amount} != 'insured_Amount' "]
+	private void setinsured_Amount(Float insured_Amount){
+		this.[(${insured_Amount})] = insured_Amount;
+	}
+	[/]
+
+	[# th:if = "${premium_Amount != null}"]
+	private Float [(${premium_Amount})];
+	public void set[(${premium_Amount})](Float premium_Amount){
+		this.[(${premium_Amount})] = premium_Amount;
+	}
+	public Float getpremium_Amount(){
+		return this.[(${premium_Amount})];
+	}
+	[# th:if = "${premium_Amount} != 'premium_Amount' "]
+	private void setpremium_Amount(Float premium_Amount){
+		this.[(${premium_Amount})] = premium_Amount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${policy_number != null}"]
+	private Number [(${policy_number})];
+	public void set[(${policy_number})](Number policy_number){
+		this.[(${policy_number})] = policy_number;
+	}
+	public Number getpolicy_number(){
+		return this.[(${policy_number})];
+	}
+	[# th:if = "${policy_number} != 'policy_number' "]
+	private void setpolicy_number(Number policy_number){
+		this.[(${policy_number})] = policy_number;
+	}
+	[/]
+	[/]
+
+
+}

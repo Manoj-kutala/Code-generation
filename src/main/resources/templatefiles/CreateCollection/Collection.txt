@@ -1,0 +1,247 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateCollectionCollection {
+
+	private String [(${id})];
+	public void set[(${id})](String id){
+		this.[(${id})] = id;
+	}
+	public String getid(){
+		return this.[(${id})];
+	}
+	[# th:if = "${id} != 'id' "]
+	private void setid(String id){
+		this.[(${id})] = id;
+	}
+	[/]
+
+	[# th:if = "${installment_Due_date != null}"]
+	private Date [(${installment_Due_date})];
+	public void set[(${installment_Due_date})](Date installment_Due_date){
+		this.[(${installment_Due_date})] = installment_Due_date;
+	}
+	public Date getinstallment_Due_date(){
+		return this.[(${installment_Due_date})];
+	}
+	[# th:if = "${installment_Due_date} != 'installment_Due_date' "]
+	private void setinstallment_Due_date(Date installment_Due_date){
+		this.[(${installment_Due_date})] = installment_Due_date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${installment_Number != null}"]
+	private Number [(${installment_Number})];
+	public void set[(${installment_Number})](Number installment_Number){
+		this.[(${installment_Number})] = installment_Number;
+	}
+	public Number getinstallment_Number(){
+		return this.[(${installment_Number})];
+	}
+	[# th:if = "${installment_Number} != 'installment_Number' "]
+	private void setinstallment_Number(Number installment_Number){
+		this.[(${installment_Number})] = installment_Number;
+	}
+	[/]
+	[/]
+
+	private Float [(${principal})];
+	public void set[(${principal})](Float principal){
+		this.[(${principal})] = principal;
+	}
+	public Float getprincipal(){
+		return this.[(${principal})];
+	}
+	[# th:if = "${principal} != 'principal' "]
+	private void setprincipal(Float principal){
+		this.[(${principal})] = principal;
+	}
+	[/]
+
+	private Float [(${interest})];
+	public void set[(${interest})](Float interest){
+		this.[(${interest})] = interest;
+	}
+	public Float getinterest(){
+		return this.[(${interest})];
+	}
+	[# th:if = "${interest} != 'interest' "]
+	private void setinterest(Float interest){
+		this.[(${interest})] = interest;
+	}
+	[/]
+
+	[# th:if = "${overdue_Interest != null}"]
+	private Float [(${overdue_Interest})];
+	public void set[(${overdue_Interest})](Float overdue_Interest){
+		this.[(${overdue_Interest})] = overdue_Interest;
+	}
+	public Float getoverdue_Interest(){
+		return this.[(${overdue_Interest})];
+	}
+	[# th:if = "${overdue_Interest} != 'overdue_Interest' "]
+	private void setoverdue_Interest(Float overdue_Interest){
+		this.[(${overdue_Interest})] = overdue_Interest;
+	}
+	[/]
+	[/]
+
+	private Float [(${total_Amount})];
+	public void set[(${total_Amount})](Float total_Amount){
+		this.[(${total_Amount})] = total_Amount;
+	}
+	public Float gettotal_Amount(){
+		return this.[(${total_Amount})];
+	}
+	[# th:if = "${total_Amount} != 'total_Amount' "]
+	private void settotal_Amount(Float total_Amount){
+		this.[(${total_Amount})] = total_Amount;
+	}
+	[/]
+
+	private String [(${utr_number})];
+	public void set[(${utr_number})](String utr_number){
+		this.[(${utr_number})] = utr_number;
+	}
+	public String getutr_number(){
+		return this.[(${utr_number})];
+	}
+	[# th:if = "${utr_number} != 'utr_number' "]
+	private void setutr_number(String utr_number){
+		this.[(${utr_number})] = utr_number;
+	}
+	[/]
+
+	[# th:if = "${reference_number != null}"]
+	private Number [(${reference_number})];
+	public void set[(${reference_number})](Number reference_number){
+		this.[(${reference_number})] = reference_number;
+	}
+	public Number getreference_number(){
+		return this.[(${reference_number})];
+	}
+	[# th:if = "${reference_number} != 'reference_number' "]
+	private void setreference_number(Number reference_number){
+		this.[(${reference_number})] = reference_number;
+	}
+	[/]
+	[/]
+
+	private Date [(${customer_paid_Date})];
+	public void set[(${customer_paid_Date})](Date customer_paid_Date){
+		this.[(${customer_paid_Date})] = customer_paid_Date;
+	}
+	public Date getcustomer_paid_Date(){
+		return this.[(${customer_paid_Date})];
+	}
+	[# th:if = "${customer_paid_Date} != 'customer_paid_Date' "]
+	private void setcustomer_paid_Date(Date customer_paid_Date){
+		this.[(${customer_paid_Date})] = customer_paid_Date;
+	}
+	[/]
+
+	[# th:if = "${settlement_date != null}"]
+	private Date [(${settlement_date})];
+	public void set[(${settlement_date})](Date settlement_date){
+		this.[(${settlement_date})] = settlement_date;
+	}
+	public Date getsettlement_date(){
+		return this.[(${settlement_date})];
+	}
+	[# th:if = "${settlement_date} != 'settlement_date' "]
+	private void setsettlement_date(Date settlement_date){
+		this.[(${settlement_date})] = settlement_date;
+	}
+	[/]
+	[/]
+
+	private String [(${payment_type})];
+	public void set[(${payment_type})](String payment_type){
+		this.[(${payment_type})] = payment_type;
+	}
+	public String getpayment_type(){
+		return this.[(${payment_type})];
+	}
+	[# th:if = "${payment_type} != 'payment_type' "]
+	private void setpayment_type(String payment_type){
+		this.[(${payment_type})] = payment_type;
+	}
+	[/]
+
+	[# th:if = "${principal_waiver != null}"]
+	private Float [(${principal_waiver})];
+	public void set[(${principal_waiver})](Float principal_waiver){
+		this.[(${principal_waiver})] = principal_waiver;
+	}
+	public Float getprincipal_waiver(){
+		return this.[(${principal_waiver})];
+	}
+	[# th:if = "${principal_waiver} != 'principal_waiver' "]
+	private void setprincipal_waiver(Float principal_waiver){
+		this.[(${principal_waiver})] = principal_waiver;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${interest_waiver != null}"]
+	private Float [(${interest_waiver})];
+	public void set[(${interest_waiver})](Float interest_waiver){
+		this.[(${interest_waiver})] = interest_waiver;
+	}
+	public Float getinterest_waiver(){
+		return this.[(${interest_waiver})];
+	}
+	[# th:if = "${interest_waiver} != 'interest_waiver' "]
+	private void setinterest_waiver(Float interest_waiver){
+		this.[(${interest_waiver})] = interest_waiver;
+	}
+	[/]
+	[/]
+
+	private String [(${emi_closed})];
+	public void set[(${emi_closed})](String emi_closed){
+		this.[(${emi_closed})] = emi_closed;
+	}
+	public String getemi_closed(){
+		return this.[(${emi_closed})];
+	}
+	[# th:if = "${emi_closed} != 'emi_closed' "]
+	private void setemi_closed(String emi_closed){
+		this.[(${emi_closed})] = emi_closed;
+	}
+	[/]
+
+	[# th:if = "${opening_Principal_outstanding != null}"]
+	private Float [(${opening_Principal_outstanding})];
+	public void set[(${opening_Principal_outstanding})](Float opening_Principal_outstanding){
+		this.[(${opening_Principal_outstanding})] = opening_Principal_outstanding;
+	}
+	public Float getopening_Principal_outstanding(){
+		return this.[(${opening_Principal_outstanding})];
+	}
+	[# th:if = "${opening_Principal_outstanding} != 'opening_Principal_outstanding' "]
+	private void setopening_Principal_outstanding(Float opening_Principal_outstanding){
+		this.[(${opening_Principal_outstanding})] = opening_Principal_outstanding;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${opening_Advance_outstanding != null}"]
+	private Float [(${opening_Advance_outstanding})];
+	public void set[(${opening_Advance_outstanding})](Float opening_Advance_outstanding){
+		this.[(${opening_Advance_outstanding})] = opening_Advance_outstanding;
+	}
+	public Float getopening_Advance_outstanding(){
+		return this.[(${opening_Advance_outstanding})];
+	}
+	[# th:if = "${opening_Advance_outstanding} != 'opening_Advance_outstanding' "]
+	private void setopening_Advance_outstanding(Float opening_Advance_outstanding){
+		this.[(${opening_Advance_outstanding})] = opening_Advance_outstanding;
+	}
+	[/]
+	[/]
+
+
+}
