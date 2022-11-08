@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateApplicationReferences {
+public class CreateApplicationreferences {
 
 	[# th:if = "${name != null}"]
 	private String [(${name})];

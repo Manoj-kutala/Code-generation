@@ -56,37 +56,13 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-	[# th:if = "${type != null}"]
-	private String [(${type})];
-	public void set[(${type})](String type){
-		this.[(${type})] = type;
-	}
-	public String gettype(){
-		return this.[(${type})];
-	}
-	[# th:if = "${type} != 'type' "]
-	private void settype(String type){
-		this.[(${type})] = type;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${amount != null}"]
-	private Float [(${amount})];
-	public void set[(${amount})](Float amount){
-		this.[(${amount})] = amount;
-	}
-	public Float getamount(){
-		return this.[(${amount})];
-	}
-	[# th:if = "${amount} != 'amount' "]
-	private void setamount(Float amount){
-		this.[(${amount})] = amount;
-	}
-	[/]
-	[/]
 
     [# th:if = "${top_up != null}"]
     public CreateTopupApplicationtop_up[] top_up;
     [/]
+
+    [# th:if = "${top_upCharges != null}"]
+    public CreateTopupApplicationtop_upCharges top_upCharges;
+    [/]
+
 }

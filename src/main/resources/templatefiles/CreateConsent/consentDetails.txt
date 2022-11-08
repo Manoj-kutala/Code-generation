@@ -1,0 +1,62 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateConsentconsentDetails {
+
+	private String [(${consent_Date})];
+	public void set[(${consent_Date})](String consent_Date){
+		this.[(${consent_Date})] = consent_Date;
+	}
+	public String getconsent_Date(){
+		return this.[(${consent_Date})];
+	}
+	[# th:if = "${consent_Date} != 'consent_Date' "]
+	private void setconsent_Date(String consent_Date){
+		this.[(${consent_Date})] = consent_Date;
+	}
+	[/]
+
+	private String [(${consent_for})];
+	public void set[(${consent_for})](String consent_for){
+		this.[(${consent_for})] = consent_for;
+	}
+	public String getconsent_for(){
+		return this.[(${consent_for})];
+	}
+	[# th:if = "${consent_for} != 'consent_for' "]
+	private void setconsent_for(String consent_for){
+		this.[(${consent_for})] = consent_for;
+	}
+	[/]
+
+	[# th:if = "${ip_Address != null}"]
+	private String [(${ip_Address})];
+	public void set[(${ip_Address})](String ip_Address){
+		this.[(${ip_Address})] = ip_Address;
+	}
+	public String getip_Address(){
+		return this.[(${ip_Address})];
+	}
+	[# th:if = "${ip_Address} != 'ip_Address' "]
+	private void setip_Address(String ip_Address){
+		this.[(${ip_Address})] = ip_Address;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${remarks != null}"]
+	private String [(${remarks})];
+	public void set[(${remarks})](String remarks){
+		this.[(${remarks})] = remarks;
+	}
+	public String getremarks(){
+		return this.[(${remarks})];
+	}
+	[# th:if = "${remarks} != 'remarks' "]
+	private void setremarks(String remarks){
+		this.[(${remarks})] = remarks;
+	}
+	[/]
+	[/]
+}

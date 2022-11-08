@@ -1,0 +1,37 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationorigination {
+
+	[# th:if = "${branch_Code != null}"]
+	private String [(${branch_Code})];
+	public void set[(${branch_Code})](String branch_Code){
+		this.[(${branch_Code})] = branch_Code;
+	}
+	public String getbranch_Code(){
+		return this.[(${branch_Code})];
+	}
+	[# th:if = "${branch_Code} != 'branch_Code' "]
+	private void setbranch_Code(String branch_Code){
+		this.[(${branch_Code})] = branch_Code;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${branch_Name != null}"]
+	private String [(${branch_Name})];
+	public void set[(${branch_Name})](String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
+	}
+	public String getbranch_Name(){
+		return this.[(${branch_Name})];
+	}
+	[# th:if = "${branch_Name} != 'branch_Name' "]
+	private void setbranch_Name(String branch_Name){
+		this.[(${branch_Name})] = branch_Name;
+	}
+	[/]
+	[/]
+
+}

@@ -1,0 +1,157 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateBankStatementsDatabankStatements {
+
+	[# th:if = "${bank_account_type_for_assesment != null}"]
+	private String [(${bank_account_type_for_assesment})];
+	public void set[(${bank_account_type_for_assesment})](String bank_account_type_for_assesment){
+		this.[(${bank_account_type_for_assesment})] = bank_account_type_for_assesment;
+	}
+	public String getbank_account_type_for_assesment(){
+		return this.[(${bank_account_type_for_assesment})];
+	}
+	[# th:if = "${bank_account_type_for_assesment} != 'bank_account_type_for_assesment' "]
+	private void setbank_account_type_for_assesment(String bank_account_type_for_assesment){
+		this.[(${bank_account_type_for_assesment})] = bank_account_type_for_assesment;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_inward_chq_returns_savingsaccount != null}"]
+	private Number [(${no_of_inward_chq_returns_savingsaccount})];
+	public void set[(${no_of_inward_chq_returns_savingsaccount})](Number no_of_inward_chq_returns_savingsaccount){
+		this.[(${no_of_inward_chq_returns_savingsaccount})] = no_of_inward_chq_returns_savingsaccount;
+	}
+	public Number getno_of_inward_chq_returns_savingsaccount(){
+		return this.[(${no_of_inward_chq_returns_savingsaccount})];
+	}
+	[# th:if = "${no_of_inward_chq_returns_savingsaccount} != 'no_of_inward_chq_returns_savingsaccount' "]
+	private void setno_of_inward_chq_returns_savingsaccount(Number no_of_inward_chq_returns_savingsaccount){
+		this.[(${no_of_inward_chq_returns_savingsaccount})] = no_of_inward_chq_returns_savingsaccount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_outward_chq_returns_savingsaccount != null}"]
+	private Number [(${no_of_outward_chq_returns_savingsaccount})];
+	public void set[(${no_of_outward_chq_returns_savingsaccount})](Number no_of_outward_chq_returns_savingsaccount){
+		this.[(${no_of_outward_chq_returns_savingsaccount})] = no_of_outward_chq_returns_savingsaccount;
+	}
+	public Number getno_of_outward_chq_returns_savingsaccount(){
+		return this.[(${no_of_outward_chq_returns_savingsaccount})];
+	}
+	[# th:if = "${no_of_outward_chq_returns_savingsaccount} != 'no_of_outward_chq_returns_savingsaccount' "]
+	private void setno_of_outward_chq_returns_savingsaccount(Number no_of_outward_chq_returns_savingsaccount){
+		this.[(${no_of_outward_chq_returns_savingsaccount})] = no_of_outward_chq_returns_savingsaccount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_inward_chq_returns_currentaccount != null}"]
+	private Number [(${no_of_inward_chq_returns_currentaccount})];
+	public void set[(${no_of_inward_chq_returns_currentaccount})](Number no_of_inward_chq_returns_currentaccount){
+		this.[(${no_of_inward_chq_returns_currentaccount})] = no_of_inward_chq_returns_currentaccount;
+	}
+	public Number getno_of_inward_chq_returns_currentaccount(){
+		return this.[(${no_of_inward_chq_returns_currentaccount})];
+	}
+	[# th:if = "${no_of_inward_chq_returns_currentaccount} != 'no_of_inward_chq_returns_currentaccount' "]
+	private void setno_of_inward_chq_returns_currentaccount(Number no_of_inward_chq_returns_currentaccount){
+		this.[(${no_of_inward_chq_returns_currentaccount})] = no_of_inward_chq_returns_currentaccount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_outward_chq_returns_currentaccount != null}"]
+	private Number [(${no_of_outward_chq_returns_currentaccount})];
+	public void set[(${no_of_outward_chq_returns_currentaccount})](Number no_of_outward_chq_returns_currentaccount){
+		this.[(${no_of_outward_chq_returns_currentaccount})] = no_of_outward_chq_returns_currentaccount;
+	}
+	public Number getno_of_outward_chq_returns_currentaccount(){
+		return this.[(${no_of_outward_chq_returns_currentaccount})];
+	}
+	[# th:if = "${no_of_outward_chq_returns_currentaccount} != 'no_of_outward_chq_returns_currentaccount' "]
+	private void setno_of_outward_chq_returns_currentaccount(Number no_of_outward_chq_returns_currentaccount){
+		this.[(${no_of_outward_chq_returns_currentaccount})] = no_of_outward_chq_returns_currentaccount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_bank_transactions != null}"]
+	private Number [(${no_of_bank_transactions})];
+	public void set[(${no_of_bank_transactions})](Number no_of_bank_transactions){
+		this.[(${no_of_bank_transactions})] = no_of_bank_transactions;
+	}
+	public Number getno_of_bank_transactions(){
+		return this.[(${no_of_bank_transactions})];
+	}
+	[# th:if = "${no_of_bank_transactions} != 'no_of_bank_transactions' "]
+	private void setno_of_bank_transactions(Number no_of_bank_transactions){
+		this.[(${no_of_bank_transactions})] = no_of_bank_transactions;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_inward_transactions != null}"]
+	private Number [(${no_of_inward_transactions})];
+	public void set[(${no_of_inward_transactions})](Number no_of_inward_transactions){
+		this.[(${no_of_inward_transactions})] = no_of_inward_transactions;
+	}
+	public Number getno_of_inward_transactions(){
+		return this.[(${no_of_inward_transactions})];
+	}
+	[# th:if = "${no_of_inward_transactions} != 'no_of_inward_transactions' "]
+	private void setno_of_inward_transactions(Number no_of_inward_transactions){
+		this.[(${no_of_inward_transactions})] = no_of_inward_transactions;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${credit_Summation != null}"]
+	private String [(${credit_Summation})];
+	public void set[(${credit_Summation})](String credit_Summation){
+		this.[(${credit_Summation})] = credit_Summation;
+	}
+	public String getcredit_Summation(){
+		return this.[(${credit_Summation})];
+	}
+	[# th:if = "${credit_Summation} != 'credit_Summation' "]
+	private void setcredit_Summation(String credit_Summation){
+		this.[(${credit_Summation})] = credit_Summation;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${abb != null}"]
+	private Number [(${abb})];
+	public void set[(${abb})](Number abb){
+		this.[(${abb})] = abb;
+	}
+	public Number getabb(){
+		return this.[(${abb})];
+	}
+	[# th:if = "${abb} != 'abb' "]
+	private void setabb(Number abb){
+		this.[(${abb})] = abb;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${abd != null}"]
+	private Number [(${abd})];
+	public void set[(${abd})](Number abd){
+		this.[(${abd})] = abd;
+	}
+	public Number getabd(){
+		return this.[(${abd})];
+	}
+	[# th:if = "${abd} != 'abd' "]
+	private void setabd(Number abd){
+		this.[(${abd})] = abd;
+	}
+	[/]
+	[/]
+
+}

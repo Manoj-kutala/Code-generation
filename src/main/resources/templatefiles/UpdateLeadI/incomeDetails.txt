@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateLeadIIncomeDetails {
+public class UpdateLeadIincomeDetails {
 
     [# th:if = "${frequency != null}"]
 	private String [(${frequency})];

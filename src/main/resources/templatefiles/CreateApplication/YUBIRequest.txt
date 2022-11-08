@@ -43,73 +43,20 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-
-	[# th:if = "${key != null}"]
-	private String [(${key})];
-	public void set[(${key})](String key){
-		this.[(${key})] = key;
-	}
-	public String getkey(){
-		return this.[(${key})];
-	}
-	[# th:if = "${key} != 'key' "]
-	private void setkey(String key){
-		this.[(${key})] = key;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${value != null}"]
-	private String [(${value})];
-	public void set[(${value})](String value){
-		this.[(${value})] = value;
-	}
-	public String getvalue(){
-		return this.[(${value})];
-	}
-	[# th:if = "${value} != 'value' "]
-	private void setvalue(String value){
-		this.[(${value})] = value;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${branch_Code != null}"]
-	private String [(${branch_Code})];
-	public void set[(${branch_Code})](String branch_Code){
-		this.[(${branch_Code})] = branch_Code;
-	}
-	public String getbranch_Code(){
-		return this.[(${branch_Code})];
-	}
-	[# th:if = "${branch_Code} != 'branch_Code' "]
-	private void setbranch_Code(String branch_Code){
-		this.[(${branch_Code})] = branch_Code;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${branch_Name != null}"]
-	private String [(${branch_Name})];
-	public void set[(${branch_Name})](String branch_Name){
-		this.[(${branch_Name})] = branch_Name;
-	}
-	public String getbranch_Name(){
-		return this.[(${branch_Name})];
-	}
-	[# th:if = "${branch_Name} != 'branch_Name' "]
-	private void setbranch_Name(String branch_Name){
-		this.[(${branch_Name})] = branch_Name;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${Applicants != null}"]
-    public CreateApplicationApplicants[] applicants;
+	[# th:if = "${applicants != null}"]
+    public CreateApplicationapplicants[] applicants;
    	[/]
 
-   	[# th:if = "${References != null}"]
-    public CreateApplicationReferences[] references;
+   	[# th:if = "${references != null}"]
+    public CreateApplicationreferences references;
+    [/]
+
+    [# th:if = "${ratios != null}"]
+    public CreateApplicationratios ratios;
+    [/]
+
+    [# th:if = "${origination != null}"]
+    public CreateApplicationorigination origination;
     [/]
 
 }

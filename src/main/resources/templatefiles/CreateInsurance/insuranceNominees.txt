@@ -1,0 +1,52 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateInsuranceinsuranceNominees {
+
+	[# th:if = "${name != null}"]
+	private String [(${name})];
+	public void set[(${name})](String name){
+		this.[(${name})] = name;
+	}
+	public String getname(){
+		return this.[(${name})];
+	}
+	[# th:if = "${name} != 'name' "]
+	private void setname(String name){
+		this.[(${name})] = name;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${date_Of_Birth != null}"]
+	private Date [(${date_Of_Birth})];
+	public void set[(${date_Of_Birth})](Date date_Of_Birth){
+		this.[(${date_Of_Birth})] = date_Of_Birth;
+	}
+	public Date getdate_Of_Birth(){
+		return this.[(${date_Of_Birth})];
+	}
+	[# th:if = "${date_Of_Birth} != 'date_Of_Birth' "]
+	private void setdate_Of_Birth(Date date_Of_Birth){
+		this.[(${date_Of_Birth})] = date_Of_Birth;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${relationship != null}"]
+	private String [(${relationship})];
+	public void set[(${relationship})](String relationship){
+		this.[(${relationship})] = relationship;
+	}
+	public String getrelationship(){
+		return this.[(${relationship})];
+	}
+	[# th:if = "${relationship} != 'relationship' "]
+	private void setrelationship(String relationship){
+		this.[(${relationship})] = relationship;
+	}
+	[/]
+	[/]
+
+}

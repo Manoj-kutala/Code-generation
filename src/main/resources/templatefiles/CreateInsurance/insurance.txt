@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateInsuranceInsurance {
+public class CreateInsuranceinsurance {
 
 
 	private String [(${type})];

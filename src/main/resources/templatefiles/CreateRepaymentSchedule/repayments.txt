@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateRepaymentScheduleRepayments {
+public class CreateRepaymentSchedulerepayments {
 
 	private Date [(${installment_due_date})];
 	public void set[(${installment_due_date})](Date installment_due_date){

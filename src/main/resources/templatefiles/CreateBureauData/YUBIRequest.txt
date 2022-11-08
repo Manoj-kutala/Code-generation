@@ -56,108 +56,11 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-	[# th:if = "${bureau_Type != null}"]
-	private String [(${bureau_Type})];
-	public void set[(${bureau_Type})](String bureau_Type){
-		this.[(${bureau_Type})] = bureau_Type;
-	}
-	public String getbureau_Type(){
-		return this.[(${bureau_Type})];
-	}
-	[# th:if = "${bureau_Type} != 'bureau_Type' "]
-	private void setbureau_Type(String bureau_Type){
-		this.[(${bureau_Type})] = bureau_Type;
-	}
-	[/]
-	[/]
+    [# th:if = "${bureau != null}"]
+    public CreateBureauDatabureau bureau;
+    [/]
 
-	[# th:if = "${bureau_Name != null}"]
-	private String [(${bureau_Name})];
-	public void set[(${bureau_Name})](String bureau_Name){
-		this.[(${bureau_Name})] = bureau_Name;
-	}
-	public String getbureau_Name(){
-		return this.[(${bureau_Name})];
-	}
-	[# th:if = "${bureau_Name} != 'bureau_Name' "]
-	private void setbureau_Name(String bureau_Name){
-		this.[(${bureau_Name})] = bureau_Name;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${bureau_Score != null}"]
-	private Number [(${bureau_Score})];
-	public void set[(${bureau_Score})](Number bureau_Score){
-		this.[(${bureau_Score})] = bureau_Score;
-	}
-	public Number getbureau_Score(){
-		return this.[(${bureau_Score})];
-	}
-	[# th:if = "${bureau_Score} != 'bureau_Score' "]
-	private void setbureau_Score(Number bureau_Score){
-		this.[(${bureau_Score})] = bureau_Score;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${bureau_Vintage != null}"]
-	private Number [(${bureau_Vintage})];
-	public void set[(${bureau_Vintage})](Number bureau_Vintage){
-		this.[(${bureau_Vintage})] = bureau_Vintage;
-	}
-	public Number getbureau_Vintage(){
-		return this.[(${bureau_Vintage})];
-	}
-	[# th:if = "${bureau_Vintage} != 'bureau_Vintage' "]
-	private void setbureau_Vintage(Number bureau_Vintage){
-		this.[(${bureau_Vintage})] = bureau_Vintage;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${partner_score_on_the_customer != null}"]
-	private Number [(${partner_score_on_the_customer})];
-	public void set[(${partner_score_on_the_customer})](Number partner_score_on_the_customer){
-		this.[(${partner_score_on_the_customer})] = partner_score_on_the_customer;
-	}
-	public Number getpartner_score_on_the_customer(){
-		return this.[(${partner_score_on_the_customer})];
-	}
-	[# th:if = "${partner_score_on_the_customer} != 'partner_score_on_the_customer' "]
-	private void setpartner_score_on_the_customer(Number partner_score_on_the_customer){
-		this.[(${partner_score_on_the_customer})] = partner_score_on_the_customer;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${key != null}"]
-	private String [(${key})];
-	public void set[(${key})](String key){
-		this.[(${key})] = key;
-	}
-	public String getkey(){
-		return this.[(${key})];
-	}
-	[# th:if = "${key} != 'key' "]
-	private void setkey(String key){
-		this.[(${key})] = key;
-	}
-	[/]
-	[/]
-
-	[# th:if = "${value != null}"]
-	private String [(${value})];
-	public void set[(${value})](String value){
-		this.[(${value})] = value;
-	}
-	public String getvalue(){
-		return this.[(${value})];
-	}
-	[# th:if = "${value} != 'value' "]
-	private void setvalue(String value){
-		this.[(${value})] = value;
-	}
-	[/]
-	[/]
+    [# th:if = "${extensions != null}"]
+    public CreateBureauDataextensions extensions;
+    [/]
 }

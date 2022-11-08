@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class UpdateLeadIIncomeDetails {
+public class CreateLeadIincomeDetails {
 
     [# th:if = "${frequency != null}"]
 	private String [(${frequency})];
@@ -48,6 +48,5 @@ public class UpdateLeadIIncomeDetails {
 	}
 	[/]
 	[/]
-
 
 }

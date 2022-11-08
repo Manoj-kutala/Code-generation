@@ -56,12 +56,12 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-   	[# th:if = "${Collection != null}"]
-    public CreateCollectionCollection[] collection;
+   	[# th:if = "${collection != null}"]
+    public CreateCollectioncollection[] collection;
    	[/]
 
-   	[# th:if = "${CollectionCharges != null}"]
-    public CreateCollectionCollectionCharges[] collectionCharges;
+   	[# th:if = "${collectionCharges != null}"]
+    public CreateCollectioncollectionCharges[] collectionCharges;
    	[/]
 
 }

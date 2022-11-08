@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateCollectionCollection {
+public class CreateCollectioncollection {
 
 	private String [(${id})];
 	public void set[(${id})](String id){

@@ -1,0 +1,39 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateDocumentzip {
+
+
+	[# th:if = "${url1 != null}"]
+	private String [(${url1})];
+	public void set[(${url1})](String url1){
+		this.[(${url1})] = url1;
+	}
+	public String geturl1(){
+		return this.[(${url1})];
+	}
+	[# th:if = "${url1} != 'url1' "]
+	private void seturl1(String url1){
+		this.[(${url1})] = url1;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${data1 != null}"]
+	private String [(${data1})];
+	public void set[(${data1})](String data1){
+		this.[(${data1})] = data1;
+	}
+	public String getdata1(){
+		return this.[(${data1})];
+	}
+	[# th:if = "${data1} != 'data1' "]
+	private void setdata1(String data1){
+		this.[(${data1})] = data1;
+	}
+	[/]
+	[/]
+
+
+}

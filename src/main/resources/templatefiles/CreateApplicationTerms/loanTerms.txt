@@ -1,0 +1,257 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationTermsloanTerms {
+
+
+	private String [(${loan_Type})];
+	public void set[(${loan_Type})](String loan_Type){
+		this.[(${loan_Type})] = loan_Type;
+	}
+	public String getloan_Type(){
+		return this.[(${loan_Type})];
+	}
+	[# th:if = "${loan_Type} != 'loan_Type' "]
+	private void setloan_Type(String loan_Type){
+		this.[(${loan_Type})] = loan_Type;
+	}
+	[/]
+
+	private String [(${loan_Sub_Type})];
+	public void set[(${loan_Sub_Type})](String loan_Sub_Type){
+		this.[(${loan_Sub_Type})] = loan_Sub_Type;
+	}
+	public String getloan_Sub_Type(){
+		return this.[(${loan_Sub_Type})];
+	}
+	[# th:if = "${loan_Sub_Type} != 'loan_Sub_Type' "]
+	private void setloan_Sub_Type(String loan_Sub_Type){
+		this.[(${loan_Sub_Type})] = loan_Sub_Type;
+	}
+	[/]
+
+	private String [(${principal})];
+	public void set[(${principal})](String principal){
+		this.[(${principal})] = principal;
+	}
+	public String getprincipal(){
+		return this.[(${principal})];
+	}
+	[# th:if = "${principal} != 'principal' "]
+	private void setprincipal(String principal){
+		this.[(${principal})] = principal;
+	}
+	[/]
+
+	private String [(${interest_Rate})];
+	public void set[(${interest_Rate})](String interest_Rate){
+		this.[(${interest_Rate})] = interest_Rate;
+	}
+	public String getinterest_Rate(){
+		return this.[(${interest_Rate})];
+	}
+	[# th:if = "${interest_Rate} != 'interest_Rate' "]
+	private void setinterest_Rate(String interest_Rate){
+		this.[(${interest_Rate})] = interest_Rate;
+	}
+	[/]
+
+	[# th:if = "${purpose != null}"]
+	private String [(${purpose})];
+	public void set[(${purpose})](String purpose){
+		this.[(${purpose})] = purpose;
+	}
+	public String getpurpose(){
+		return this.[(${purpose})];
+	}
+	[# th:if = "${purpose} != 'purpose' "]
+	private void setpurpose(String purpose){
+		this.[(${purpose})] = purpose;
+	}
+	[/]
+	[/]
+
+	private String [(${interest_type})];
+	public void set[(${interest_type})](String interest_type){
+		this.[(${interest_type})] = interest_type;
+	}
+	public String getinterest_type(){
+		return this.[(${interest_type})];
+	}
+	[# th:if = "${interest_type} != 'interest_type' "]
+	private void setinterest_type(String interest_type){
+		this.[(${interest_type})] = interest_type;
+	}
+	[/]
+
+	private String [(${tenure_Of_Loan})];
+	public void set[(${tenure_Of_Loan})](String tenure_Of_Loan){
+		this.[(${tenure_Of_Loan})] = tenure_Of_Loan;
+	}
+	public String gettenure_Of_Loan(){
+		return this.[(${tenure_Of_Loan})];
+	}
+	[# th:if = "${tenure_Of_Loan} != 'tenure_Of_Loan' "]
+	private void settenure_Of_Loan(String tenure_Of_Loan){
+		this.[(${tenure_Of_Loan})] = tenure_Of_Loan;
+	}
+	[/]
+
+	private String [(${repayment_Frequency})];
+	public void set[(${repayment_Frequency})](String repayment_Frequency){
+		this.[(${repayment_Frequency})] = repayment_Frequency;
+	}
+	public String getrepayment_Frequency(){
+		return this.[(${repayment_Frequency})];
+	}
+	[# th:if = "${repayment_Frequency} != 'repayment_Frequency' "]
+	private void setrepayment_Frequency(String repayment_Frequency){
+		this.[(${repayment_Frequency})] = repayment_Frequency;
+	}
+	[/]
+
+	private String [(${disbursement_Type})];
+	public void set[(${disbursement_Type})](String disbursement_Type){
+		this.[(${disbursement_Type})] = disbursement_Type;
+	}
+	public String getdisbursement_Type(){
+		return this.[(${disbursement_Type})];
+	}
+	[# th:if = "${disbursement_Type} != 'disbursement_Type' "]
+	private void setdisbursement_Type(String disbursement_Type){
+		this.[(${disbursement_Type})] = disbursement_Type;
+	}
+	[/]
+
+	private String [(${number_Of_Repayments})];
+	public void set[(${number_Of_Repayments})](String number_Of_Repayments){
+		this.[(${number_Of_Repayments})] = number_Of_Repayments;
+	}
+	public String getnumber_Of_Repayments(){
+		return this.[(${number_Of_Repayments})];
+	}
+	[# th:if = "${number_Of_Repayments} != 'number_Of_Repayments' "]
+	private void setnumber_Of_Repayments(String number_Of_Repayments){
+		this.[(${number_Of_Repayments})] = number_Of_Repayments;
+	}
+	[/]
+
+	[# th:if = "${repayment_Mode != null}"]
+	private String [(${repayment_Mode})];
+	public void set[(${repayment_Mode})](String repayment_Mode){
+		this.[(${repayment_Mode})] = repayment_Mode;
+	}
+	public String getrepayment_Mode(){
+		return this.[(${repayment_Mode})];
+	}
+	[# th:if = "${repayment_Mode} != 'repayment_Mode' "]
+	private void setrepayment_Mode(String repayment_Mode){
+		this.[(${repayment_Mode})] = repayment_Mode;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${loan_cycle != null}"]
+	private String [(${loan_cycle})];
+	public void set[(${loan_cycle})](String loan_cycle){
+		this.[(${loan_cycle})] = loan_cycle;
+	}
+	public String getloan_cycle(){
+		return this.[(${loan_cycle})];
+	}
+	[# th:if = "${loan_cycle} != 'loan_cycle' "]
+	private void setloan_cycle(String loan_cycle){
+		this.[(${loan_cycle})] = loan_cycle;
+	}
+	[/]
+	[/]
+
+	private String [(${emi_Amount})];
+	public void set[(${emi_Amount})](String emi_Amount){
+		this.[(${emi_Amount})] = emi_Amount;
+	}
+	public String getemi_Amount(){
+		return this.[(${emi_Amount})];
+	}
+	[# th:if = "${emi_Amount} != 'emi_Amount' "]
+	private void setemi_Amount(String emi_Amount){
+		this.[(${emi_Amount})] = emi_Amount;
+	}
+	[/]
+
+	private String [(${first_repayment_date})];
+	public void set[(${first_repayment_date})](String first_repayment_date){
+		this.[(${first_repayment_date})] = first_repayment_date;
+	}
+	public String getfirst_repayment_date(){
+		return this.[(${first_repayment_date})];
+	}
+	[# th:if = "${first_repayment_date} != 'first_repayment_date' "]
+	private void setfirst_repayment_date(String first_repayment_date){
+		this.[(${first_repayment_date})] = first_repayment_date;
+	}
+	[/]
+
+	[# th:if = "${advance_EMI != null}"]
+	private String [(${advance_EMI})];
+	public void set[(${advance_EMI})](String advance_EMI){
+		this.[(${advance_EMI})] = advance_EMI;
+	}
+	public String getadvance_EMI(){
+		return this.[(${advance_EMI})];
+	}
+	[# th:if = "${advance_EMI} != 'advance_EMI' "]
+	private void setadvance_EMI(String advance_EMI){
+		this.[(${advance_EMI})] = advance_EMI;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${differential_Interest_Start_date != null}"]
+	private Date [(${differential_Interest_Start_date})];
+	public void set[(${differential_Interest_Start_date})](Date differential_Interest_Start_date){
+		this.[(${differential_Interest_Start_date})] = differential_Interest_Start_date;
+	}
+	public Date getdifferential_Interest_Start_date(){
+		return this.[(${differential_Interest_Start_date})];
+	}
+	[# th:if = "${differential_Interest_Start_date} != 'differential_Interest_Start_date' "]
+	private void setdifferential_Interest_Start_date(Date differential_Interest_Start_date){
+		this.[(${differential_Interest_Start_date})] = differential_Interest_Start_date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${differential_Interest_Amount != null}"]
+	private Float [(${differential_Interest_Amount})];
+	public void set[(${differential_Interest_Amount})](Float differential_Interest_Amount){
+		this.[(${differential_Interest_Amount})] = differential_Interest_Amount;
+	}
+	public Float getdifferential_Interest_Amount(){
+		return this.[(${differential_Interest_Amount})];
+	}
+	[# th:if = "${differential_Interest_Amount} != 'differential_Interest_Amount' "]
+	private void setdifferential_Interest_Amount(Float differential_Interest_Amount){
+		this.[(${differential_Interest_Amount})] = differential_Interest_Amount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${umrn != null}"]
+	private String [(${umrn})];
+	public void set[(${umrn})](String umrn){
+		this.[(${umrn})] = umrn;
+	}
+	public String getumrn(){
+		return this.[(${umrn})];
+	}
+	[# th:if = "${umrn} != 'umrn' "]
+	private void setumrn(String umrn){
+		this.[(${umrn})] = umrn;
+	}
+	[/]
+	[/]
+
+
+}

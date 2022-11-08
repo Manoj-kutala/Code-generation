@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateTrancheTrancheCharges {
+public class CreateTranchetrancheCharges {
 
 
 	[# th:if = "${charge != null}"]

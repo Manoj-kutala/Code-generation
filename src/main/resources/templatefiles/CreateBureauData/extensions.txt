@@ -1,0 +1,38 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateBureauDataextensions {
+
+
+	[# th:if = "${key != null}"]
+	private String [(${key})];
+	public void set[(${key})](String key){
+		this.[(${key})] = key;
+	}
+	public String getkey(){
+		return this.[(${key})];
+	}
+	[# th:if = "${key} != 'key' "]
+	private void setkey(String key){
+		this.[(${key})] = key;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${value != null}"]
+	private String [(${value})];
+	public void set[(${value})](String value){
+		this.[(${value})] = value;
+	}
+	public String getvalue(){
+		return this.[(${value})];
+	}
+	[# th:if = "${value} != 'value' "]
+	private void setvalue(String value){
+		this.[(${value})] = value;
+	}
+	[/]
+	[/]
+
+}

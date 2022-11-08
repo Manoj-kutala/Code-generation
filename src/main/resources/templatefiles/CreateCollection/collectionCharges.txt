@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateCollectionCollectionCharges {
+public class CreateCollectioncollectionCharges {
 
 
 	[# th:if = "${type != null}"]

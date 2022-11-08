@@ -1,0 +1,82 @@
+package DCG;
+
+import java.util.Date;
+
+public class UpdateLeadIincome {
+
+	[# th:if = "${total_Experience != null}"]
+	private String [(${total_Experience})];
+	public void set[(${total_Experience})](String total_Experience){
+		this.[(${total_Experience})] = total_Experience;
+	}
+	public String gettotal_Experience(){
+		return this.[(${total_Experience})];
+	}
+	[# th:if = "${total_Experience} != 'total_Experience' "]
+	private void settotal_Experience(String total_Experience){
+		this.[(${total_Experience})] = total_Experience;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${occupation != null}"]
+	private String [(${occupation})];
+	public void set[(${occupation})](String occupation){
+		this.[(${occupation})] = occupation;
+	}
+	public String getoccupation(){
+		return this.[(${occupation})];
+	}
+	[# th:if = "${occupation} != 'occupation' "]
+	private void setoccupation(String occupation){
+		this.[(${occupation})] = occupation;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${industry != null}"]
+	private String [(${industry})];
+	public void set[(${industry})](String industry){
+		this.[(${industry})] = industry;
+	}
+	public String getindustry(){
+		return this.[(${industry})];
+	}
+	[# th:if = "${industry} != 'industry' "]
+	private void setindustry(String industry){
+		this.[(${industry})] = industry;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${currency != null}"]
+	private String [(${currency})];
+	public void set[(${currency})](String currency){
+		this.[(${currency})] = currency;
+	}
+	public String getcurrency(){
+		return this.[(${currency})];
+	}
+	[# th:if = "${currency} != 'currency' "]
+	private void setcurrency(String currency){
+		this.[(${currency})] = currency;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${payment_type != null}"]
+	private String [(${payment_type})];
+	public void set[(${payment_type})](String payment_type){
+		this.[(${payment_type})] = payment_type;
+	}
+	public String getpayment_type(){
+		return this.[(${payment_type})];
+	}
+	[# th:if = "${payment_type} != 'payment_type' "]
+	private void setpayment_type(String payment_type){
+		this.[(${payment_type})] = payment_type;
+	}
+	[/]
+	[/]
+
+}

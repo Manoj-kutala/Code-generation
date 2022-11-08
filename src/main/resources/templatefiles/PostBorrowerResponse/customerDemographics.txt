@@ -1,0 +1,50 @@
+package DCG;
+
+import java.util.Date;
+
+public class PostBorrowerResponsecustomerDemographics {
+
+	private String [(${firstName})];
+	public void set[(${first_Name})](String firstName){
+		this.[(${firstName})] = firstName;
+	}
+	public String getfirstName(){
+		return this.[(${firstName})];
+	}
+	[# th:if = "${firstName} != 'firstName' "]
+	private void setfirstName(String firstName){
+		this.[(${firstName})] = firstName;
+	}
+	[/]
+
+	[# th:if = "${middle_name != null}"]
+	private String [(${middle_name})];
+	public void set[(${middle_name})](String middle_name){
+		this.[(${middle_name})] = middle_name;
+	}
+	public String getmiddle_name(){
+		return this.[(${middle_name})];
+	}
+	[# th:if = "${middle_name} != 'middle_name' "]
+	private void setmiddle_name(String middle_name){
+		this.[(${middle_name})] = middle_name;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${last_name != null}"]
+	private String [(${last_name})];
+	public void set[(${last_name})](String last_name){
+		this.[(${last_name})] = last_name;
+	}
+	public String getlast_name(){
+		return this.[(${last_name})];
+	}
+	[# th:if = "${last_name} != 'last_name' "]
+	private void setlast_name(String last_name){
+		this.[(${last_name})] = last_name;
+	}
+	[/]
+	[/]
+
+}

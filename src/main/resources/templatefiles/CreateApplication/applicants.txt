@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class CreateApplicationApplicants {
+public class CreateApplicationapplicants {
 
         private String [(${type})];
     	public void set[(${type})](String type){

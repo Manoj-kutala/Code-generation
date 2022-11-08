@@ -20,6 +20,7 @@ public class RequestGenerator {
     private CodeGenerationService codeGenerationService;
 
 
+
     @PostMapping("/generate")
     public String createRequest(@RequestBody Payload payload) throws IOException {
 
@@ -34,7 +35,7 @@ public class RequestGenerator {
         if (bool) {
             System.out.println("Folder is created successfully");
         } else {
-            System.out.println("Error Found!");
+            System.out.println("Folder "+outputfolder+" already Exists!");
         }
 
         String outputPath = outputfolder + "/DCG";
@@ -43,7 +44,7 @@ public class RequestGenerator {
         if (bool) {
             System.out.println("Folder is created successfully");
         } else {
-            System.out.println("Error Found!");
+            System.out.println("Folder "+outputPath+" already Exists!");
         }
 
 

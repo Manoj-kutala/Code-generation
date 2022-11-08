@@ -2,7 +2,7 @@ package DCG;
 
 import java.util.Date;
 
-public class UpdateLeadIEmployment {
+public class UpdateLeadIemployment {
 
     [# th:if = "${employer_name != null}"]
 	private String [(${employer_name})];

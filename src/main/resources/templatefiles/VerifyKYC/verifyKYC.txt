@@ -1,0 +1,140 @@
+package DCG;
+
+import java.util.Date;
+
+public class VerifyKYCverifyKYC {
+
+	[# th:if = "${cKYC_ID != null}"]
+	private String [(${cKYC_ID})];
+	public void set[(${cKYC_ID})](String cKYC_ID){
+		this.[(${cKYC_ID})] = cKYC_ID;
+	}
+	public String getcKYC_ID(){
+		return this.[(${cKYC_ID})];
+	}
+	[# th:if = "${cKYC_ID} != 'cKYC_ID' "]
+	private void setcKYC_ID(String cKYC_ID){
+		this.[(${cKYC_ID})] = cKYC_ID;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_DATE_OF_birth != null}"]
+	private Date [(${cKYC_DATE_OF_birth})];
+	public void set[(${cKYC_DATE_OF_birth})](Date cKYC_DATE_OF_birth){
+		this.[(${cKYC_DATE_OF_birth})] = cKYC_DATE_OF_birth;
+	}
+	public Date getcKYC_DATE_OF_birth(){
+		return this.[(${cKYC_DATE_OF_birth})];
+	}
+	[# th:if = "${cKYC_DATE_OF_birth} != 'cKYC_DATE_OF_birth' "]
+	private void setcKYC_DATE_OF_birth(Date cKYC_DATE_OF_birth){
+		this.[(${cKYC_DATE_OF_birth})] = cKYC_DATE_OF_birth;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_PAN_NUMBER != null}"]
+	private String [(${cKYC_PAN_NUMBER})];
+	public void set[(${cKYC_PAN_NUMBER})](String cKYC_PAN_NUMBER){
+		this.[(${cKYC_PAN_NUMBER})] = cKYC_PAN_NUMBER;
+	}
+	public String getcKYC_PAN_NUMBER(){
+		return this.[(${cKYC_PAN_NUMBER})];
+	}
+	[# th:if = "${cKYC_PAN_NUMBER} != 'cKYC_PAN_NUMBER' "]
+	private void setcKYC_PAN_NUMBER(String cKYC_PAN_NUMBER){
+		this.[(${cKYC_PAN_NUMBER})] = cKYC_PAN_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_MOBILE_NUMBER != null}"]
+	private Number [(${cKYC_MOBILE_NUMBER})];
+	public void set[(${cKYC_MOBILE_NUMBER})](Number cKYC_MOBILE_NUMBER){
+		this.[(${cKYC_MOBILE_NUMBER})] = cKYC_MOBILE_NUMBER;
+	}
+	public Number getcKYC_MOBILE_NUMBER(){
+		return this.[(${cKYC_MOBILE_NUMBER})];
+	}
+	[# th:if = "${cKYC_MOBILE_NUMBER} != 'cKYC_MOBILE_NUMBER' "]
+	private void setcKYC_MOBILE_NUMBER(Number cKYC_MOBILE_NUMBER){
+		this.[(${cKYC_MOBILE_NUMBER})] = cKYC_MOBILE_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_PERMANENT_PINCODE != null}"]
+	private Number [(${cKYC_PERMANENT_PINCODE})];
+	public void set[(${cKYC_PERMANENT_PINCODE})](Number cKYC_PERMANENT_PINCODE){
+		this.[(${cKYC_PERMANENT_PINCODE})] = cKYC_PERMANENT_PINCODE;
+	}
+	public Number getcKYC_PERMANENT_PINCODE(){
+		return this.[(${cKYC_PERMANENT_PINCODE})];
+	}
+	[# th:if = "${cKYC_PERMANENT_PINCODE} != 'cKYC_PERMANENT_PINCODE' "]
+	private void setcKYC_PERMANENT_PINCODE(Number cKYC_PERMANENT_PINCODE){
+		this.[(${cKYC_PERMANENT_PINCODE})] = cKYC_PERMANENT_PINCODE;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_PASSPORT_NUMBER != null}"]
+	private String [(${cKYC_PASSPORT_NUMBER})];
+	public void set[(${cKYC_PASSPORT_NUMBER})](String cKYC_PASSPORT_NUMBER){
+		this.[(${cKYC_PASSPORT_NUMBER})] = cKYC_PASSPORT_NUMBER;
+	}
+	public String getcKYC_PASSPORT_NUMBER(){
+		return this.[(${cKYC_PASSPORT_NUMBER})];
+	}
+	[# th:if = "${cKYC_PASSPORT_NUMBER} != 'cKYC_PASSPORT_NUMBER' "]
+	private void setcKYC_PASSPORT_NUMBER(String cKYC_PASSPORT_NUMBER){
+		this.[(${cKYC_PASSPORT_NUMBER})] = cKYC_PASSPORT_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_DL_NUMBER != null}"]
+	private String [(${cKYC_DL_NUMBER})];
+	public void set[(${cKYC_DL_NUMBER})](String cKYC_DL_NUMBER){
+		this.[(${cKYC_DL_NUMBER})] = cKYC_DL_NUMBER;
+	}
+	public String getcKYC_DL_NUMBER(){
+		return this.[(${cKYC_DL_NUMBER})];
+	}
+	[# th:if = "${cKYC_DL_NUMBER} != 'cKYC_DL_NUMBER' "]
+	private void setcKYC_DL_NUMBER(String cKYC_DL_NUMBER){
+		this.[(${cKYC_DL_NUMBER})] = cKYC_DL_NUMBER;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${cKYC_VOTERID_NUMBER != null}"]
+	private String [(${cKYC_VOTERID_NUMBER})];
+	public void set[(${cKYC_VOTERID_NUMBER})](String cKYC_VOTERID_NUMBER){
+		this.[(${cKYC_VOTERID_NUMBER})] = cKYC_VOTERID_NUMBER;
+	}
+	public String getcKYC_VOTERID_NUMBER(){
+		return this.[(${cKYC_VOTERID_NUMBER})];
+	}
+	[# th:if = "${cKYC_VOTERID_NUMBER} != 'cKYC_VOTERID_NUMBER' "]
+	private void setcKYC_VOTERID_NUMBER(String cKYC_VOTERID_NUMBER){
+		this.[(${cKYC_VOTERID_NUMBER})] = cKYC_VOTERID_NUMBER;
+	}
+	[/]
+	[/]
+
+    private String [(${cKYC_Action_trigger})];
+    public void set[(${cKYC_Action_trigger})](String cKYC_Action_trigger){
+   		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+   	}
+   	public String getcKYC_Action_trigger(){
+   		return this.[(${cKYC_Action_trigger})];
+    }
+   	[# th:if = "${cKYC_Action_trigger} != 'cKYC_Action_trigger' "]
+   	private void setcKYC_Action_trigger(String cKYC_Action_trigger){
+   		this.[(${cKYC_Action_trigger})] = cKYC_Action_trigger;
+   	}
+    [/]
+
+}

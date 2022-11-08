@@ -1,0 +1,53 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateBankAccountsaccountPennytest {
+
+	[# th:if = "${status != null}"]
+	private String [(${status})];
+	public void set[(${status})](String status){
+		this.[(${status})] = status;
+	}
+	public String getstatus(){
+		return this.[(${status})];
+	}
+	[# th:if = "${status} != 'status' "]
+	private void setstatus(String status){
+		this.[(${status})] = status;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private Float [(${amount})];
+	public void set[(${amount})](Float amount){
+		this.[(${amount})] = amount;
+	}
+	public Float getamount(){
+		return this.[(${amount})];
+	}
+	[# th:if = "${amount} != 'amount' "]
+	private void setamount(Float amount){
+		this.[(${amount})] = amount;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${account_Number1 != null}"]
+	private Number [(${account_Number1})];
+	public void set[(${account_Number1})](Number account_Number1){
+		this.[(${account_Number1})] = account_Number1;
+	}
+	public Number getaccount_Number1(){
+		return this.[(${account_Number1})];
+	}
+	[# th:if = "${account_Number1} != 'account_Number1' "]
+	private void setaccount_Number1(Number account_Number1){
+		this.[(${account_Number1})] = account_Number1;
+	}
+	[/]
+	[/]
+
+
+}

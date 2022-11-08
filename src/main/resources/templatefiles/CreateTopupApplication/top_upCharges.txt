@@ -1,0 +1,37 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateTopupApplicationtop_upCharges {
+
+	[# th:if = "${type != null}"]
+	private String [(${type})];
+	public void set[(${type})](String type){
+		this.[(${type})] = type;
+	}
+	public String gettype(){
+		return this.[(${type})];
+	}
+	[# th:if = "${type} != 'type' "]
+	private void settype(String type){
+		this.[(${type})] = type;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${amount != null}"]
+	private Float [(${amount})];
+	public void set[(${amount})](Float amount){
+		this.[(${amount})] = amount;
+	}
+	public Float getamount(){
+		return this.[(${amount})];
+	}
+	[# th:if = "${amount} != 'amount' "]
+	private void setamount(Float amount){
+		this.[(${amount})] = amount;
+	}
+	[/]
+	[/]
+
+}

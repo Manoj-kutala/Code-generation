@@ -1,0 +1,64 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateTranchetranche {
+
+	private Number [(${tranche_Number})];
+	public void set[(${tranche_Number})](Number tranche_Number){
+		this.[(${tranche_Number})] = tranche_Number;
+	}
+	public Number gettranche_Number(){
+		return this.[(${tranche_Number})];
+	}
+	[# th:if = "${tranche_Number} != 'tranche_Number' "]
+	private void settranche_Number(Number tranche_Number){
+		this.[(${tranche_Number})] = tranche_Number;
+	}
+	[/]
+
+	private Float [(${tranche_Principal})];
+	public void set[(${tranche_Principal})](Float tranche_Principal){
+		this.[(${tranche_Principal})] = tranche_Principal;
+	}
+	public Float gettranche_Principal(){
+		return this.[(${tranche_Principal})];
+	}
+	[# th:if = "${tranche_Principal} != 'tranche_Principal' "]
+	private void settranche_Principal(Float tranche_Principal){
+		this.[(${tranche_Principal})] = tranche_Principal;
+	}
+	[/]
+
+	[# th:if = "${number_Of_Tranches != null}"]
+	private Number [(${number_Of_Tranches})];
+	public void set[(${number_Of_Tranches})](Number number_Of_Tranches){
+		this.[(${number_Of_Tranches})] = number_Of_Tranches;
+	}
+	public Number getnumber_Of_Tranches(){
+		return this.[(${number_Of_Tranches})];
+	}
+	[# th:if = "${number_Of_Tranches} != 'number_Of_Tranches' "]
+	private void setnumber_Of_Tranches(Number number_Of_Tranches){
+		this.[(${number_Of_Tranches})] = number_Of_Tranches;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${balance_loan_Principal != null}"]
+	private Float [(${balance_loan_Principal})];
+	public void set[(${balance_loan_Principal})](Float balance_loan_Principal){
+		this.[(${balance_loan_Principal})] = balance_loan_Principal;
+	}
+	public Float getbalance_loan_Principal(){
+		return this.[(${balance_loan_Principal})];
+	}
+	[# th:if = "${balance_loan_Principal} != 'balance_loan_Principal' "]
+	private void setbalance_loan_Principal(Float balance_loan_Principal){
+		this.[(${balance_loan_Principal})] = balance_loan_Principal;
+	}
+	[/]
+	[/]
+
+
+}

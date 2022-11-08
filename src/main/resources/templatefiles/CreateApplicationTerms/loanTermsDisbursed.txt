@@ -1,0 +1,38 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateApplicationTermsloanTermsDisbursed {
+
+
+	[# th:if = "${bank_Disbursal_date != null}"]
+	private String [(${bank_Disbursal_date})];
+	public void set[(${bank_Disbursal_date})](String bank_Disbursal_date){
+		this.[(${bank_Disbursal_date})] = bank_Disbursal_date;
+	}
+	public String getbank_Disbursal_date(){
+		return this.[(${bank_Disbursal_date})];
+	}
+	[# th:if = "${bank_Disbursal_date} != 'bank_Disbursal_date' "]
+	private void setbank_Disbursal_date(String bank_Disbursal_date){
+		this.[(${bank_Disbursal_date})] = bank_Disbursal_date;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${deal_date != null}"]
+	private String [(${deal_date})];
+	public void set[(${deal_date})](String deal_date){
+		this.[(${deal_date})] = deal_date;
+	}
+	public String getdeal_date(){
+		return this.[(${deal_date})];
+	}
+	[# th:if = "${deal_date} != 'deal_date' "]
+	private void setdeal_date(String deal_date){
+		this.[(${deal_date})] = deal_date;
+	}
+	[/]
+	[/]
+
+}

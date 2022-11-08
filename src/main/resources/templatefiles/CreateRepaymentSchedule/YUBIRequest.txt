@@ -32,8 +32,8 @@ public class [(${api_name})]Request {
 	}
 	[/]
 
-   	[# th:if = "${Repayments != null}"]
-    public CreateRepaymentScheduleRepayments[] repayments;
+   	[# th:if = "${repayments != null}"]
+    public CreateRepaymentSchedulerepayments[] repayments;
    	[/]
 
 }

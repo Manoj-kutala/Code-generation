@@ -1,0 +1,171 @@
+package DCG;
+
+import java.util.Date;
+
+public class CreateBalanceTransferApplicationbalanceTransfer {
+
+	private String [(${name_of_BT_Financier})];
+	public void set[(${name_of_BT_Financier})](String name_of_BT_Financier){
+		this.[(${name_of_BT_Financier})] = name_of_BT_Financier;
+	}
+	public String getname_of_BT_Financier(){
+		return this.[(${name_of_BT_Financier})];
+	}
+	[# th:if = "${name_of_BT_Financier} != 'name_of_BT_Financier' "]
+	private void setname_of_BT_Financier(String name_of_BT_Financier){
+		this.[(${name_of_BT_Financier})] = name_of_BT_Financier;
+	}
+	[/]
+
+	[# th:if = "${loan_Amount_of_Original_Loan != null}"]
+	private Float [(${loan_Amount_of_Original_Loan})];
+	public void set[(${loan_Amount_of_Original_Loan})](Float loan_Amount_of_Original_Loan){
+		this.[(${loan_Amount_of_Original_Loan})] = loan_Amount_of_Original_Loan;
+	}
+	public Float getloan_Amount_of_Original_Loan(){
+		return this.[(${loan_Amount_of_Original_Loan})];
+	}
+	[# th:if = "${loan_Amount_of_Original_Loan} != 'loan_Amount_of_Original_Loan' "]
+	private void setloan_Amount_of_Original_Loan(Float loan_Amount_of_Original_Loan){
+		this.[(${loan_Amount_of_Original_Loan})] = loan_Amount_of_Original_Loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${tenure_of_Original_Loan_in_months != null}"]
+	private String [(${tenure_of_Original_Loan_in_months})];
+	public void set[(${tenure_of_Original_Loan_in_months})](String tenure_of_Original_Loan_in_months){
+		this.[(${tenure_of_Original_Loan_in_months})] = tenure_of_Original_Loan_in_months;
+	}
+	public String gettenure_of_Original_Loan_in_months(){
+		return this.[(${tenure_of_Original_Loan_in_months})];
+	}
+	[# th:if = "${tenure_of_Original_Loan_in_months} != 'tenure_of_Original_Loan_in_months' "]
+	private void settenure_of_Original_Loan_in_months(String tenure_of_Original_Loan_in_months){
+		this.[(${tenure_of_Original_Loan_in_months})] = tenure_of_Original_Loan_in_months;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${balance_Tenure_of_Original_Loan_in_months != null}"]
+	private String [(${balance_Tenure_of_Original_Loan_in_months})];
+	public void set[(${balance_Tenure_of_Original_Loan_in_months})](String balance_Tenure_of_Original_Loan_in_months){
+		this.[(${balance_Tenure_of_Original_Loan_in_months})] = balance_Tenure_of_Original_Loan_in_months;
+	}
+	public String getbalance_Tenure_of_Original_Loan_in_months(){
+		return this.[(${balance_Tenure_of_Original_Loan_in_months})];
+	}
+	[# th:if = "${balance_Tenure_of_Original_Loan_in_months} != 'balance_Tenure_of_Original_Loan_in_months' "]
+	private void setbalance_Tenure_of_Original_Loan_in_months(String balance_Tenure_of_Original_Loan_in_months){
+		this.[(${balance_Tenure_of_Original_Loan_in_months})] = balance_Tenure_of_Original_Loan_in_months;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${pos_of_Original_Loan != null}"]
+	private Float [(${pos_of_Original_Loan})];
+	public void set[(${pos_of_Original_Loan})](Float pos_of_Original_Loan){
+		this.[(${pos_of_Original_Loan})] = pos_of_Original_Loan;
+	}
+	public Float getpos_of_Original_Loan(){
+		return this.[(${pos_of_Original_Loan})];
+	}
+	[# th:if = "${pos_of_Original_Loan} != 'pos_of_Original_Loan' "]
+	private void setpos_of_Original_Loan(Float pos_of_Original_Loan){
+		this.[(${pos_of_Original_Loan})] = pos_of_Original_Loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${no_of_EMI_paid_in_Base_Loan != null}"]
+	private Number [(${no_of_EMI_paid_in_Base_Loan})];
+	public void set[(${no_of_EMI_paid_in_Base_Loan})](Number no_of_EMI_paid_in_Base_Loan){
+		this.[(${no_of_EMI_paid_in_Base_Loan})] = no_of_EMI_paid_in_Base_Loan;
+	}
+	public Number getno_of_EMI_paid_in_Base_Loan(){
+		return this.[(${no_of_EMI_paid_in_Base_Loan})];
+	}
+	[# th:if = "${no_of_EMI_paid_in_Base_Loan} != 'no_of_EMI_paid_in_Base_Loan' "]
+	private void setno_of_EMI_paid_in_Base_Loan(Number no_of_EMI_paid_in_Base_Loan){
+		this.[(${no_of_EMI_paid_in_Base_Loan})] = no_of_EMI_paid_in_Base_Loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${dpd_in_last_6M_in_Base_Loan != null}"]
+	private Number [(${dpd_in_last_6M_in_Base_Loan})];
+	public void set[(${dpd_in_last_6M_in_Base_Loan})](Number dpd_in_last_6M_in_Base_Loan){
+		this.[(${dpd_in_last_6M_in_Base_Loan})] = dpd_in_last_6M_in_Base_Loan;
+	}
+	public Number getdpd_in_last_6M_in_Base_Loan(){
+		return this.[(${dpd_in_last_6M_in_Base_Loan})];
+	}
+	[# th:if = "${dpd_in_last_6M_in_Base_Loan} != 'dpd_in_last_6M_in_Base_Loan' "]
+	private void setdpd_in_last_6M_in_Base_Loan(Number dpd_in_last_6M_in_Base_Loan){
+		this.[(${dpd_in_last_6M_in_Base_Loan})] = dpd_in_last_6M_in_Base_Loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${bounces_in_last_6M_in_base_loan != null}"]
+	private Number [(${bounces_in_last_6M_in_base_loan})];
+	public void set[(${bounces_in_last_6M_in_base_loan})](Number bounces_in_last_6M_in_base_loan){
+		this.[(${bounces_in_last_6M_in_base_loan})] = bounces_in_last_6M_in_base_loan;
+	}
+	public Number getbounces_in_last_6M_in_base_loan(){
+		return this.[(${bounces_in_last_6M_in_base_loan})];
+	}
+	[# th:if = "${bounces_in_last_6M_in_base_loan} != 'bounces_in_last_6M_in_base_loan' "]
+	private void setbounces_in_last_6M_in_base_loan(Number bounces_in_last_6M_in_base_loan){
+		this.[(${bounces_in_last_6M_in_base_loan})] = bounces_in_last_6M_in_base_loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${approve_LTV_of_Original_Loan != null}"]
+	private Float [(${approve_LTV_of_Original_Loan})];
+	public void set[(${approve_LTV_of_Original_Loan})](Float approve_LTV_of_Original_Loan){
+		this.[(${approve_LTV_of_Original_Loan})] = approve_LTV_of_Original_Loan;
+	}
+	public Float getapprove_LTV_of_Original_Loan(){
+		return this.[(${approve_LTV_of_Original_Loan})];
+	}
+	[# th:if = "${approve_LTV_of_Original_Loan} != 'approve_LTV_of_Original_Loan' "]
+	private void setapprove_LTV_of_Original_Loan(Float approve_LTV_of_Original_Loan){
+		this.[(${approve_LTV_of_Original_Loan})] = approve_LTV_of_Original_Loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${ltv_of_Top_up_loan != null}"]
+	private Float [(${ltv_of_Top_up_loan})];
+	public void set[(${ltv_of_Top_up_loan})](Float ltv_of_Top_up_loan){
+		this.[(${ltv_of_Top_up_loan})] = ltv_of_Top_up_loan;
+	}
+	public Float getltv_of_Top_up_loan(){
+		return this.[(${ltv_of_Top_up_loan})];
+	}
+	[# th:if = "${ltv_of_Top_up_loan} != 'ltv_of_Top_up_loan' "]
+	private void setltv_of_Top_up_loan(Float ltv_of_Top_up_loan){
+		this.[(${ltv_of_Top_up_loan})] = ltv_of_Top_up_loan;
+	}
+	[/]
+	[/]
+
+	[# th:if = "${percentage_of_Reduction_In_Principal != null}"]
+	private Float [(${percentage_of_Reduction_In_Principal})];
+	public void set[(${percentage_of_Reduction_In_Principal})](Float percentage_of_Reduction_In_Principal){
+		this.[(${percentage_of_Reduction_In_Principal})] = percentage_of_Reduction_In_Principal;
+	}
+	public Float getpercentage_of_Reduction_In_Principal(){
+		return this.[(${percentage_of_Reduction_In_Principal})];
+	}
+	[# th:if = "${percentage_of_Reduction_In_Principal} != 'percentage_of_Reduction_In_Principal' "]
+	private void setpercentage_of_Reduction_In_Principal(Float percentage_of_Reduction_In_Principal){
+		this.[(${percentage_of_Reduction_In_Principal})] = percentage_of_Reduction_In_Principal;
+	}
+	[/]
+	[/]
+
+
+}
