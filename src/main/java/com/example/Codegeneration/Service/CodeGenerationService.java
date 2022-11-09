@@ -1,10 +1,10 @@
 package com.example.Codegeneration.Service;
 
 
-import com.example.sample.request1;
-import com.example.sample.sample1Grpc;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.yubi.oss.DCG.SDKServiceGrpc;
+import com.yubi.oss.DCG.request1;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -21,8 +21,8 @@ import java.util.*;
 @Service
 public class CodeGenerationService {
 
-    @GrpcClient("sample1")
-    public sample1Grpc.sample1BlockingStub stub1;
+    @GrpcClient("SDKService")
+    public SDKServiceGrpc.SDKServiceBlockingStub SDKServiceStub;
 
     @Autowired
     private TemplateEngine textTemplateEngine;
@@ -148,8 +148,7 @@ public class CodeGenerationService {
         sendrequest_file.write(sendrequest_text);
         sendrequest_file.close();
 
-        return stub1.func1(request1.newBuilder().setReq(outputfolder).build()).getRes();
-
+        return SDKServiceStub.getDownloadLink(request1.newBuilder().setFolderLocation(outputfolder).build()).getDownloadLink();
     }
 
     private void check(String api_name,Boolean isArray, JsonElement jsonElement) {
