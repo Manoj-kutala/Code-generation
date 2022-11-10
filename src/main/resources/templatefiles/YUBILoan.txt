@@ -5,7 +5,7 @@ import org.springframework.http.HttpEntity;
 public class YUBILoan {
 
     [# th:each="apiname : ${apiNamesWithResponses}"]
-    public [(${apiname})]Response create[(${apiname})]([(${apiname})]Request yubiRequest){
+    public [(${apiname})]Response [(${#strings.unCapitalize(apiname)})]([(${apiname})]Request yubiRequest){
 
         RequestBuilder requestBuilder =  new RequestBuilder();
         HttpEntity<[(${apiname})]Request> entity = requestBuilder.build[(${apiname})](yubiRequest);
@@ -16,7 +16,7 @@ public class YUBILoan {
 
    [/]
    [# th:each="apiname : ${apiNamesWithoutResponses}"]
-   public void create[(${apiname})]([(${apiname})]Request yubiRequest){
+   public void [(${#strings.unCapitalize(apiname)})]([(${apiname})]Request yubiRequest){
 
         RequestBuilder requestBuilder =  new RequestBuilder();
         HttpEntity<[(${apiname})]Request> entity = requestBuilder.build[(${apiname})](yubiRequest);

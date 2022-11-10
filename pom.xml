@@ -71,12 +71,12 @@
 			<artifactId>grpc-stub</artifactId>
 			<version>1.49.2</version>
 		</dependency>
-		<dependency> <!-- necessary for Java 9+ -->
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>annotations-api</artifactId>
-			<version>6.0.53</version>
-			<scope>provided</scope>
-		</dependency>
+<!--		<dependency> &lt;!&ndash; necessary for Java 9+ &ndash;&gt;-->
+<!--			<groupId>org.apache.tomcat</groupId>-->
+<!--			<artifactId>annotations-api</artifactId>-->
+<!--			<version>6.0.53</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -92,11 +92,11 @@
 			<artifactId>json</artifactId>
 			<version>20220924</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
-			<version>4.2</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.apache.commons</groupId>-->
+<!--			<artifactId>commons-collections4</artifactId>-->
+<!--			<version>4.2</version>-->
+<!--		</dependency>-->
 
 	</dependencies>
 

@@ -10,7 +10,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import java.io.FileWriter;
@@ -28,7 +27,7 @@ public class CodeGenerationService {
     private TemplateEngine textTemplateEngine;
 
     static HashMap<String, String> maps = new HashMap<>();
-    static HashMap<String, String> isArrayMaps = new HashMap<>();
+    static HashMap<String, String> metaMaps = new HashMap<>();
 
     final String key2 = "originatorFieldName";
     final String key1 = "dataFieldName";
@@ -37,12 +36,10 @@ public class CodeGenerationService {
 
         final Context context = new Context();
 
-        RestTemplate restTemplate = new RestTemplate();
         List<String> apiNamesWithResponse = new ArrayList<String>();
         List<String> apiNamesWithoutResponse = new ArrayList<String>();
 
         JSONObject jsonObject = new JSONObject(mappingfile);
-
 
         JSONArray apiList = jsonObject.getJSONArray("consolidatedAPIs");
 
@@ -51,64 +48,59 @@ public class CodeGenerationService {
         apiList.putAll(webhookList);
 
 
-
-
-        JsonParser p = new JsonParser();
+        JsonParser parser = new JsonParser();
 
 
         apiList.forEach(api -> {
             try {
-                JSONObject jsonObj = new JSONObject(api.toString());
-                System.out.println("jsonObj------->" + jsonObj);
+                JSONObject jsonApiObj = new JSONObject(api.toString());
 
                 String api_name = "";
 
-                if (jsonObj.has("api_name")) {
-                    api_name = (String) jsonObj.get("api_name");
-                } else if (jsonObj.has("webhook_name")) {
-                    api_name = (String) jsonObj.get("webhook_name");
+                if (jsonApiObj.has("api_name")) {
+                    api_name = (String) jsonApiObj.get("api_name");
+                } else if (jsonApiObj.has("webhook_name")) {
+                    api_name = (String) jsonApiObj.get("webhook_name");
                 }
-                System.out.println("api_name-------->" + api_name);
-                if(!(jsonObj.has("response_payload_attributes")))
+                System.out.println("api_name --------> " + api_name);
+                if(!(jsonApiObj.has("response_payload_attributes")))
                     apiNamesWithoutResponse.add(api_name);
-                else if ((jsonObj.get("response_payload_attributes")).toString().equals("{}"))
+                else if ((jsonApiObj.get("response_payload_attributes")).toString().equals("{}"))
                     apiNamesWithoutResponse.add(api_name);
                 else
                     apiNamesWithResponse.add(api_name);
 
 
-                maps = new HashMap<>();
-                maps.put("api_name",api_name);
-                JSONObject jsonBlock = jsonObj.getJSONObject("request_payload_attributes");
-                Iterator<String> keys = jsonBlock.keys();
+                metaMaps = new HashMap<>();
+                metaMaps.put("api_name",api_name);
+                JSONObject requestBlock = jsonApiObj.getJSONObject("request_payload_attributes");
+                Iterator<String> keys = requestBlock.keys();
                 while (keys.hasNext()) {
                     String key = keys.next();
-                    System.out.println(key + "++++++++++");
-                    System.out.println(jsonBlock.get(key));
-                    JSONObject jj = (JSONObject) jsonBlock.get(key);
-                    System.out.println((jj.get("isArray")).equals(true));
+                    System.out.println("key ---> "+key);
+                    System.out.println("block -----> "+requestBlock.get(key));
+                    JSONObject block = (JSONObject) requestBlock.get(key);
                     if (!(key.equals("metadata"))) {
-                        maps.put(key, key);
-                        isArrayMaps = new HashMap<>();
-                        check(api_name, true, p.parse(jj.toString()));
+                        metaMaps.put(key, key);
+                        maps = new HashMap<>();
+                        check(true, parser.parse(block.toString()));
                         final Context context2 = new Context();
-                        isArrayMaps.forEach((k, v) -> context2.setVariable(k, v));
+                        maps.forEach((k, v) -> context2.setVariable(k, v));
                         String request_text1 = textTemplateEngine.process("/" + api_name + "/"+key, context2);
                         FileWriter request_file1 = new FileWriter(outputPath + "/" + api_name + key+".java");
                         request_file1.write(request_text1);
                         request_file1.close();
                     } else {
-                        check(api_name, false, p.parse(jj.toString()));
+                        check(false, parser.parse(block.toString()));
                     }
                 }
                 if(apiNamesWithResponse.contains(api_name))
-                    check(api_name,false,p.parse((jsonObj.getJSONObject("response_payload_attributes")).toString()));
+                    check(false,parser.parse((jsonApiObj.getJSONObject("response_payload_attributes")).toString()));
 
-                System.out.println(maps);
+                System.out.println(metaMaps);
 
-                System.out.println("*********\n");
 
-                maps.forEach((k, v) -> context.setVariable(k, v));
+                metaMaps.forEach((k, v) -> context.setVariable(k, v));
 
                 String request_text = textTemplateEngine.process("/"+api_name+"/YubiRequest", context);
                 FileWriter request_file = new FileWriter(outputPath + "/"+api_name+"Request.java");
@@ -151,12 +143,12 @@ public class CodeGenerationService {
         return SDKServiceStub.getDownloadLink(request1.newBuilder().setFolderLocation(outputfolder).build()).getDownloadLink();
     }
 
-    private void check(String api_name,Boolean isArray, JsonElement jsonElement) {
+    private void check(Boolean block, JsonElement jsonElement) {
 
         String key = "",value ="";
         if (jsonElement.isJsonArray()) {
             for (JsonElement jsonElement1 : jsonElement.getAsJsonArray()) {
-                check(api_name,isArray, jsonElement1);
+                check(block, jsonElement1);
             }
         } else {
             if (jsonElement.isJsonObject()) {
@@ -170,13 +162,12 @@ public class CodeGenerationService {
                         key = entry.getValue().getAsString();
                     }
 
-                    if(isArray)
-                        isArrayMaps.put(key, value);
-                    else
+                    if(block)
                         maps.put(key, value);
+                    else
+                        metaMaps.put(key, value);
 
-                    check(api_name,isArray,entry.getValue());
-
+                    check(block,entry.getValue());
                 }
             }
         }
